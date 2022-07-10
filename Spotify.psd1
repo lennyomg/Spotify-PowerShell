@@ -1,6 +1,6 @@
 @{
     RootModule        = './Spotify.psm1' 
-    ModuleVersion     = '0.0.1' 
+    ModuleVersion     = '0.2.0' 
     GUID              = '153c26ff-0080-4655-bcd3-d8ffee31f6a8' 
     Author            = 'lennyomg' 
     CompanyName       = 'lennyomg' 
@@ -23,7 +23,9 @@
         'Get-SpotifyTrack',
         'Get-SpotifyArtistAlbums',
         'Get-SpotifyArtist',
-        'Get-SpotifyArtistTopTracks') 
+        'Get-SpotifyArtistTopTracks',
+        'New-SpotifyPlaylist',
+        'Get-SpotifyCurrentUser') 
     CmdletsToExport   = @()
     VariablesToExport = @() 
     AliasesToExport   = @() 

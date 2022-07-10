@@ -14,6 +14,12 @@ Path to a file to store client information and authentication token.
 .PARAMETER Force
 Forces a new authentication.
 
+.PARAMETER ClientId
+Predefined client Id (optional).
+
+.PARAMETER Scope
+Predefined list of scopes. Full access by default.
+
 .LINK
 https://developer.spotify.com/dashboard/applications
 
@@ -25,14 +31,35 @@ function Connect-SpotifyApi {
     param(
         [Parameter(Position = 0)]
         [string] $StatePath = "$HOME/spotify-pwsh-state.xml",
-        [switch] $Force
+        [switch] $Force,
+        [string] $ClientId = $null,
+        [string[]] $Scope = @(
+            "ugc-image-upload",
+            "user-modify-playback-state",
+            "user-read-playback-state",
+            "user-read-currently-playing",
+            "user-follow-modify",
+            "user-follow-read",
+            "user-read-recently-played",
+            "user-read-playback-position",
+            "user-top-read",
+            "playlist-read-collaborative",
+            "playlist-modify-public",
+            "playlist-read-private",
+            "playlist-modify-private",
+            "app-remote-control",
+            "streaming",
+            "user-read-email",
+            "user-read-private",
+            "user-library-modify",
+            "user-library-read")
     )
 
     if (!(Test-Path -Path $StatePath) -or $Force) {
 
         $state = [PSCustomObject]@{
-            Credential = Get-Credential -Message "Enter client id as username and client secret as password."
-            Scope      = Read-Host -Prompt "Scope"
+            Credential = Get-Credential -UserName $ClientId -Message "Enter client id as username and client secret as password."
+            Scope      = $Scope | Join-String -Separator " "
             Token      = $null
             Date       = Get-Date 
         }
@@ -51,8 +78,8 @@ function Connect-SpotifyApi {
     
         $global:SpotifyToken = ConvertTo-SecureString $state.Token.access_token -AsPlainText -Force
         $state | Export-Clixml -Path $StatePath
-        $file = Get-Item -Path $StatePath
-        $file.Attributes = $file.Attributes -bor "Hidden"
+        $file = Get-Item -Path $StatePath -Force
+        $file.Attributes = "Hidden"
     }
     else {
         
@@ -261,6 +288,12 @@ The new name for the playlist, for example "My New Playlist Title".
 .PARAMETER Description
 Value for playlist description as displayed in Spotify Clients and in the Web API.
 
+.PARAMETER Public
+If true the playlist will be public, if false it will be private.
+
+.PARAMETER Collaborative
+If true, the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client. Note: You can only set collaborative to true on non-public playlists.
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/change-playlist-details
 #>
@@ -271,7 +304,9 @@ function Update-SpotifyPlaylist {
         [Alias("id")] 
         [string] $PlaylistId,
         [string] $Name = $null,
-        [string] $Description = $null
+        [string] $Description = $null,
+        $Public = $null,
+        $Collaborative = $null
     )
 
     $body = @{}
@@ -282,6 +317,14 @@ function Update-SpotifyPlaylist {
 
     if ($Description) {
         $body.description = $Description
+    }
+
+    if ($null -ne $Public) {
+        $body.public = $Public
+    }
+
+    if ($null -ne $Collaborative) {
+        $body.collaborative = $Collaborative
     }
 
     Invoke-RestMethod `
@@ -615,6 +658,87 @@ function Get-SpotifyArtistTopTracks {
             -Token $global:SpotifyToken `
             -ContentType "application/json" | Select-Object -ExpandProperty tracks
     }
+}
+
+#endregion
+
+#region New-SpotifyPlaylist
+
+<#
+.SYNOPSIS
+Create playlist.
+
+.DESCRIPTION
+Create a playlist for a Spotify user. (The playlist will be empty until you add tracks.)
+
+.PARAMETER UserId
+The user's Spotify user ID. Example value: "smedjan".
+
+.PARAMETER Name
+The name for the new playlist, for example "Your Coolest Playlist". This name does not need to be unique; a user may have several playlists with the same name.
+
+.PARAMETER Description
+Value for playlist description as displayed in Spotify Clients and in the Web API.
+
+.PARAMETER Public
+Defaults to true. If true the playlist will be public, if false it will be private. To be able to create private playlists, the user must have granted the playlist-modify-private.
+
+.PARAMETER Collaborative
+Defaults to false. If true the playlist will be collaborative. Note: to create a collaborative playlist you must also set public to false. To create collaborative playlists you must have granted playlist-modify-private and playlist-modify-public.
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/create-playlist
+#>
+function New-SpotifyPlaylist {
+    param (
+        [Parameter(Mandatory)]
+        [string] $UserId,
+        [string] $Name,
+        [string] $Description = $null,
+        [bool] $Public = $false,
+        [bool] $Collaborative = $false 
+    )
+
+    $body = @{
+        name          = $Name
+        public        = $Public
+        collaborative = $Collaborative
+    }
+    
+    if ($Description) {
+        $body.description = $Description
+    }
+
+    Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/users/$($UserId)/playlists" `
+        -Method Post `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json" `
+        -Body ($body | ConvertTo-Json -Depth 99)
+}
+
+#endregion
+
+#region Get-SpotifyCurrentUser
+
+<#
+.SYNOPSIS
+Get current user's profile.
+
+.DESCRIPTION
+Get detailed profile information about the current user (including the current user's username).
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/get-current-users-profile
+#>
+function Get-SpotifyCurrentUser {
+    Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me" `
+        -Method Get `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json" 
 }
 
 #endregion
