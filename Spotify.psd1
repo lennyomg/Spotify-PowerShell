@@ -25,7 +25,8 @@
         'Get-SpotifyArtist',
         'Get-SpotifyArtistTopTracks',
         'New-SpotifyPlaylist',
-        'Get-SpotifyCurrentUser') 
+        'Get-SpotifyCurrentUser',
+        'Get-SpotifyPlaylistCover') 
     CmdletsToExport   = @()
     VariablesToExport = @() 
     AliasesToExport   = @() 
