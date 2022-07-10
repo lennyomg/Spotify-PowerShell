@@ -747,16 +747,16 @@ function Get-SpotifyCurrentUser {
 
 <#
 .SYNOPSIS
-Get playlist.
+Get playlist cover image.
 
 .DESCRIPTION 
-Get a playlist owned by a Spotify user.
+Get the current image associated with a specific playlist.
 
 .PARAMETER PlaylistId
 The Spotify ID of the playlist. Example value: "3cEYpjA9oz9GiPac4AsH4n".
 
 .LINK
-https://developer.spotify.com/documentation/web-api/reference/#/operations/get-playlist
+https://developer.spotify.com/documentation/web-api/reference/#/operations/get-playlist-cover
 #>
 function Get-SpotifyPlaylistCover {
     [CmdletBinding()]
