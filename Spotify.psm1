@@ -20,6 +20,15 @@ Predefined client Id (optional).
 .PARAMETER Scope
 Predefined list of scopes. Full access by default.
 
+.EXAMPLE
+Connect-SpotifyApi
+
+.EXAMPLE
+Connect-SpotifyApi -Force
+
+.EXAMPLE
+Connect-SpotifyApi -Force -ClientId "1995f32ef11843249ddd581b8371d58f" -Scope "playlist-modify-private", "user-follow-read"
+
 .LINK
 https://developer.spotify.com/dashboard/applications
 
@@ -110,6 +119,9 @@ Get full details of the items of a playlist owned by a Spotify user.
 .PARAMETER PlaylistId
 The Spotify ID of the playlist. Example value: "3cEYpjA9oz9GiPac4AsH4n".
 
+.EXAMPLE
+Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n" | Select-Object -ExpandProperty track
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-playlists-tracks
 #>
@@ -185,6 +197,13 @@ The Spotify ID of the playlist. Example value: "3cEYpjA9oz9GiPac4AsH4n".
 .PARAMETER TrackUri
 An array of Spotify URIs of the tracks or episodes to remove. For example: @("spotify:track:4iV5W9uYEdYUVa79Axb7Rh", "spotify:track:1301WleyT98MSxVHPZCA6M").
 
+.EXAMPLE
+"3cEYpjA9oz9GiPac4AsH4n"
+| Get-SpotifyPlaylistTracks
+| Select-Object -ExpandProperty track
+| Select-Object -ExpandProperty uri
+| Remove-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n"
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/remove-tracks-playlist
 #>
@@ -234,6 +253,14 @@ The Spotify ID of the playlist. Example value: "3cEYpjA9oz9GiPac4AsH4n".
 
 .PARAMETER TrackUri
 An array of Spotify URIs of the tracks or episodes to remove. For example: @("spotify:track:4iV5W9uYEdYUVa79Axb7Rh", "spotify:track:1301WleyT98MSxVHPZCA6M").
+
+.EXAMPLE
+Get-SpotifySavedAlbums
+| Select-Object -ExpandProperty album
+| Get-SpotifyAlbumTracks
+| Select-Object -ExpandProperty uri -Unique
+| Sort-Object { Get-Random }
+| Add-SpotifyPlaylistTracks "69kakrmDURRcDTMOnI9PXX"
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/add-tracks-to-playlist
@@ -347,6 +374,9 @@ Get current user's playlists.
 .DESCRIPTION
 Get a list of the playlists owned or followed by the current Spotify user.
 
+.EXAMPLE
+Get-SpotifySavedAlbums | Select-Object -ExpandProperty album
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-a-list-of-current-users-playlists
 #>
@@ -430,6 +460,13 @@ Get followed artists.
 
 .DESCRIPTION
 Get the current user's followed artists.
+
+.EXAMPLE
+Get-SpotifySavedArtists
+| Get-SpotifyArtistTopTracks
+| Select-Object -ExpandProperty uri
+| Sort-Object { Get-Random }
+| Add-SpotifyPlaylistTracks "3iCXOQzSHkzfXXmdUu7Qdf"
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-followed
@@ -639,6 +676,9 @@ The Spotify ID of the artist. Example value: "0TnOYISbd1XYRBk9myaseg".
 
 .PARAMETER Market
 An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned. Example value: "ES".
+
+.EXAMPLE
+Get-SpotifySavedArtists | Get-SpotifyArtistTopTracks
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-top-tracks
