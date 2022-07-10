@@ -13,30 +13,9 @@ Get-SpotifySavedAlbums
 | Format-Wide name
 ```
 
-### Supported API
+### Documentation
 
-Playlists  
-* Get-SpotifyPlaylist    
-* Update-SpotifyPlaylist       
-* Get-SpotifyPlaylistTracks   
-* Add-SpotifyPlaylistTracks 
-* Remove-SpotifyPlaylistTracks
-* Get-SpotifySavedPlaylists
-
-Albums 
-* Get-SpotifyAlbum        
-* Get-SpotifyAlbumTracks    
-* Get-SpotifySavedAlbums
-
-Tracks      
-* Get-SpotifyTrack           
-* Get-SpotifySavedTracks 
-
-Artists
-* Get-SpotifyArtist
-* Get-SpotifyArtistAlbums
-* Get-SpotifyArtistTopTracks
-* Get-SpotifySavedArtists 
+https://github.com/lennyomg/Spotify-PowerShell/wiki
 
 ### Links
 
