@@ -41,7 +41,7 @@ function Connect-SpotifyApi {
         [Parameter(Position = 0)]
         [string] $StatePath = "$HOME/spotify-pwsh-state.xml",
         [switch] $Force,
-        [string] $ClientId = $null,
+        [string] $ClientId = "",
         [string[]] $Scope = @(
             "ugc-image-upload",
             "user-modify-playback-state",
@@ -66,8 +66,11 @@ function Connect-SpotifyApi {
 
     if (!(Test-Path -Path $StatePath) -or $Force) {
 
+        $credentialArgs = @{}
+        if ("" -ne $ClientId) { $credentialArgs.UserName = $ClientId }
+
         $state = [PSCustomObject]@{
-            Credential = Get-Credential -UserName $ClientId -Message "Enter client id as username and client secret as password."
+            Credential = Get-Credential @credentialArgs -Message "Enter client id as username and client secret as password."
             Scope      = $Scope | Join-String -Separator " "
             Token      = $null
             Date       = Get-Date 
@@ -86,8 +89,10 @@ function Connect-SpotifyApi {
             -ContentType "application/x-www-form-urlencoded"
     
         $global:SpotifyToken = ConvertTo-SecureString $state.Token.access_token -AsPlainText -Force
-        $state | Export-Clixml -Path $StatePath
+        $state | Export-Clixml -Path $StatePath -Force
         $file = Get-Item -Path $StatePath -Force
+        $file.Attributes = "Hidden"
+        $file.Attributes | Out-Null
         $file.Attributes = "Hidden"
     }
     else {
