@@ -76,7 +76,7 @@ function Connect-SpotifyApi {
             Date       = Get-Date 
         }
 
-        Start-Process "https://accounts.spotify.com/authorize?client_id=$($state.Credential.UserName)&response_type=code&scope=$($state.Scope)&redirect_uri=http://lennyomg.github.io/WebRequestDump" | Out-Null
+        Start-Process "https://accounts.spotify.com/authorize?client_id=$($state.Credential.UserName)&response_type=code&scope=$($state.Scope)&redirect_uri=https://lennyomg.github.io/Spotify-PowerShell/" | Out-Null
         Write-Host "Proceed in a browser and copy the autorization code ('code' GET paramater) to the clipboard."
         Pause
     
