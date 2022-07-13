@@ -83,7 +83,7 @@ function Connect-SpotifyApi {
         $state.Token = Invoke-RestMethod `
             -Uri "https://accounts.spotify.com/api/token" `
             -Method Post `
-            -Body "grant_type=authorization_code&code=$(Get-Clipboard)&redirect_uri=http://lennyomg.github.io/Spotify-PowerShell/index.html" `
+            -Body "grant_type=authorization_code&code=$(Get-Clipboard)&redirect_uri=https://lennyomg.github.io/Spotify-PowerShell/index.html" `
             -Authentication Basic `
             -Credential $state.Credential `
             -ContentType "application/x-www-form-urlencoded"
