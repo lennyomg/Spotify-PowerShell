@@ -1,6 +1,6 @@
 @{
     RootModule        = './Spotify.psm1' 
-    ModuleVersion     = '0.3.2' 
+    ModuleVersion     = '0.4.0' 
     GUID              = '153c26ff-0080-4655-bcd3-d8ffee31f6a8' 
     Author            = 'lennyomg' 
     CompanyName       = 'lennyomg' 
@@ -38,6 +38,8 @@
             LicenseUri = 'https://github.com/lennyomg/Spotify-PowerShell' 
             ProjectUri = 'https://github.com/lennyomg/Spotify-PowerShell' 
             Prerelease = 'preview' 
+            
         } 
     }
+    HelpInfoURI = 'https://github.com/lennyomg/Spotify-PowerShell/wiki'
 }

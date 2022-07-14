@@ -37,6 +37,7 @@ https://developer.spotify.com/documentation/general/guides/authorization/scopes
 
 #>
 function Connect-SpotifyApi {
+    [CmdletBinding()]
     param(
         [Parameter(Position = 0)]
         [string] $StatePath = "$HOME/spotify-pwsh-state.xml",
@@ -508,6 +509,7 @@ The Spotify ID of the album. Example value: "4aawyAB9vmqN3uQ7FjRGTy".
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-albums-tracks
 #>
 function Get-SpotifyAlbumTracks {
+    [CmdletBinding()]
     param (
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")]
@@ -546,6 +548,7 @@ The Spotify ID of the album. Example value: "4aawyAB9vmqN3uQ7FjRGTy".
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-album
 #>
 function Get-SpotifyAlbum {
+    [CmdletBinding()]
     param (
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")] 
@@ -579,6 +582,7 @@ The Spotify ID for the track. Example value: "11dFghVXANMlKmJXsNCbNl".
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-track
 #>
 function Get-SpotifyTrack {
+    [CmdletBinding()]
     param (
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")] 
@@ -612,6 +616,7 @@ The Spotify ID of the artist. Example value: "0TnOYISbd1XYRBk9myaseg".
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-albums
 #>
 function Get-SpotifyArtistAlbums {
+    [CmdletBinding()]
     param (
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")]
@@ -650,6 +655,7 @@ The Spotify ID of the artist. Example value: "0TnOYISbd1XYRBk9myaseg".
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artist
 #>
 function Get-SpotifyArtist {
+    [CmdletBinding()]
     param (
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")] 
@@ -689,6 +695,7 @@ Get-SpotifySavedArtists | Get-SpotifyArtistTopTracks
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-top-tracks
 #>
 function Get-SpotifyArtistTopTracks {
+    [CmdletBinding()]
     param (
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")] 
@@ -735,9 +742,11 @@ Defaults to false. If true the playlist will be collaborative. Note: to create a
 https://developer.spotify.com/documentation/web-api/reference/#/operations/create-playlist
 #>
 function New-SpotifyPlaylist {
+    [CmdletBinding()]
     param (
         [Parameter(Mandatory)]
         [string] $UserId,
+        [Parameter(Mandatory)]
         [string] $Name,
         [string] $Description = $null,
         [bool] $Public = $false,
