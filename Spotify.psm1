@@ -37,7 +37,7 @@ https://developer.spotify.com/documentation/general/guides/authorization/scopes
 
 #>
 function Connect-SpotifyApi {
-    [CmdletBinding()]
+    [CmdletBinding(PositionalBinding = $false)]
     param(
         [Parameter(Position = 0)]
         [string] $StatePath = "$HOME/spotify-pwsh-state.xml",
@@ -134,7 +134,7 @@ https://developer.spotify.com/documentation/web-api/reference/#/operations/get-p
 function Get-SpotifyPlaylistTracks {
     [CmdletBinding()]
     param (
-        [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 1)]
+        [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")]
         [string] $PlaylistId
     )
@@ -219,7 +219,7 @@ function Remove-SpotifyPlaylistTracks {
         [Parameter(Mandatory, Position = 0)]
         [string] $PlaylistId,
 
-        [Parameter(Mandatory, ValueFromPipeline)]
+        [Parameter(Mandatory, ValueFromPipeline, Position = 1)]
         [string[]] $TrackUri
     )
     end {
@@ -277,7 +277,7 @@ function Add-SpotifyPlaylistTracks {
         [Parameter(Mandatory, Position = 0)]
         [string] $PlaylistId,
 
-        [Parameter(Mandatory, ValueFromPipeline)]
+        [Parameter(Mandatory, ValueFromPipeline, Position = 1)]
         [string[]] $TrackUri
     )
     end {
@@ -331,7 +331,7 @@ If true, the playlist will become collaborative and other users will be able to 
 https://developer.spotify.com/documentation/web-api/reference/#/operations/change-playlist-details
 #>
 function Update-SpotifyPlaylist {
-    [CmdletBinding()]
+    [CmdletBinding(PositionalBinding = $false)]
     param (
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")] 
@@ -695,7 +695,7 @@ Get-SpotifySavedArtists | Get-SpotifyArtistTopTracks
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-top-tracks
 #>
 function Get-SpotifyArtistTopTracks {
-    [CmdletBinding()]
+    [CmdletBinding(PositionalBinding = $false)]
     param (
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")] 
@@ -742,7 +742,7 @@ Defaults to false. If true the playlist will be collaborative. Note: to create a
 https://developer.spotify.com/documentation/web-api/reference/#/operations/create-playlist
 #>
 function New-SpotifyPlaylist {
-    [CmdletBinding()]
+    [CmdletBinding(PositionalBinding = $false)]
     param (
         [Parameter(Mandatory)]
         [string] $UserId,
