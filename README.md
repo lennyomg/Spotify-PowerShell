@@ -63,6 +63,20 @@ Merge-SpotifyPlaylist ``
     -Source "7yml7RjHjsJ5XBLxAeRZZy", "37i9dQZF1DX82GYcclJ3Ug", "37i9dQZF1DXcF6B6QPhFDv"
 ```
 
+Make a custom request using the existing autorization token.
+
+```
+Import-Module "./Spotify.psm1"
+Connect-SpotifyApi
+
+Invoke-RestMethod `
+    -Uri "https://api.spotify.com/v1/me" `
+    -Method Get `
+    -Authentication Bearer `
+    -Token $global:SpotifyToken `
+    -ContentType "application/json" 
+```
+
 ### Docs
 
 * https://github.com/lennyomg/Spotify-PowerShell/wiki
