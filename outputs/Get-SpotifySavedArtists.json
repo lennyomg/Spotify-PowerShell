@@ -1,0 +1,112 @@
+[
+  {
+    "external_urls": {
+      "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+    },
+    "followers": {
+      "href": null,
+      "total": 17504281
+    },
+    "genres": [
+      "art pop",
+      "pop"
+    ],
+    "href": "https://api.spotify.com/v1/artists/00FQb4jTyendYWaN8pK0wa",
+    "id": "00FQb4jTyendYWaN8pK0wa",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5ebc5903678d3db18e271e42be0",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab67616100005174c5903678d3db18e271e42be0",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f178c5903678d3db18e271e42be0",
+        "width": 160
+      }
+    ],
+    "name": "Lana Del Rey",
+    "popularity": 86,
+    "type": "artist",
+    "uri": "spotify:artist:00FQb4jTyendYWaN8pK0wa"
+  },
+  {
+    "external_urls": {
+      "spotify": "https://open.spotify.com/artist/0KDuKk6YdEu3hR56HtXmxt"
+    },
+    "followers": {
+      "href": null,
+      "total": 406376
+    },
+    "genres": [
+      "alternative metal",
+      "nu metal",
+      "post-hardcore"
+    ],
+    "href": "https://api.spotify.com/v1/artists/0KDuKk6YdEu3hR56HtXmxt",
+    "id": "0KDuKk6YdEu3hR56HtXmxt",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5eb0e061bab5e518653a6018db3",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab676161000051740e061bab5e518653a6018db3",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f1780e061bab5e518653a6018db3",
+        "width": 160
+      }
+    ],
+    "name": "Story Of The Year",
+    "popularity": 54,
+    "type": "artist",
+    "uri": "spotify:artist:0KDuKk6YdEu3hR56HtXmxt"
+  },
+  {
+    "external_urls": {
+      "spotify": "https://open.spotify.com/artist/0NJ6wlOAsAJ1PN4VRdTPKA"
+    },
+    "followers": {
+      "href": null,
+      "total": 527598
+    },
+    "genres": [
+      "medieval folk",
+      "nordic folk",
+      "viking folk"
+    ],
+    "href": "https://api.spotify.com/v1/artists/0NJ6wlOAsAJ1PN4VRdTPKA",
+    "id": "0NJ6wlOAsAJ1PN4VRdTPKA",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5eb7695fb8ac766d3c79491974c",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab676161000051747695fb8ac766d3c79491974c",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f1787695fb8ac766d3c79491974c",
+        "width": 160
+      }
+    ],
+    "name": "Wardruna",
+    "popularity": 56,
+    "type": "artist",
+    "uri": "spotify:artist:0NJ6wlOAsAJ1PN4VRdTPKA"
+  }
+]

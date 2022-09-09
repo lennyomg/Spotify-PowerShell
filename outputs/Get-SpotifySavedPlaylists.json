@@ -1,0 +1,110 @@
+[
+  {
+    "collaborative": false,
+    "description": "The best indie rock vibes — classic and current. ",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX2sUQwD7tbmL"
+    },
+    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX2sUQwD7tbmL",
+    "id": "37i9dQZF1DX2sUQwD7tbmL",
+    "images": [
+      {
+        "height": null,
+        "url": "https://i.scdn.co/image/ab67706f000000032390c211511e2d985935b267",
+        "width": null
+      }
+    ],
+    "name": "Feel-Good Indie Rock",
+    "owner": {
+      "display_name": "Spotify",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/spotify"
+      },
+      "href": "https://api.spotify.com/v1/users/spotify",
+      "id": "spotify",
+      "type": "user",
+      "uri": "spotify:user:spotify"
+    },
+    "primary_color": null,
+    "public": false,
+    "snapshot_id": "MTY2MjEyMzYwMCwwMDAwMDAwMDQzYTJhZmMzOTkxNWU0NTRiM2U5MmNkYjBlNjE3Y2U1",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX2sUQwD7tbmL/tracks",
+      "total": 120
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:37i9dQZF1DX2sUQwD7tbmL"
+  },
+  {
+    "collaborative": false,
+    "description": "Feel-good <a href=\"spotify:genre:edm_dance\">dance music</a>!",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWSf2RDTDayIx"
+    },
+    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSf2RDTDayIx",
+    "id": "37i9dQZF1DWSf2RDTDayIx",
+    "images": [
+      {
+        "height": null,
+        "url": "https://i.scdn.co/image/ab67706f0000000325d50fa7cc51b307364050f5",
+        "width": null
+      }
+    ],
+    "name": "Happy Beats",
+    "owner": {
+      "display_name": "Spotify",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/spotify"
+      },
+      "href": "https://api.spotify.com/v1/users/spotify",
+      "id": "spotify",
+      "type": "user",
+      "uri": "spotify:user:spotify"
+    },
+    "primary_color": null,
+    "public": false,
+    "snapshot_id": "MTY2MTQ4NjQ2MCwwMDAwMDAwMDAzMGRjYWEwY2JmMTJkMDJkYjZhYTAxMTMxMDc2ZGFi",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSf2RDTDayIx/tracks",
+      "total": 150
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:37i9dQZF1DWSf2RDTDayIx"
+  },
+  {
+    "collaborative": false,
+    "description": "Setting sights on banging <a href=\"spotify:genre:trance_progressive\">trance and progressive</a>.",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX91oIci4su1D"
+    },
+    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX91oIci4su1D",
+    "id": "37i9dQZF1DX91oIci4su1D",
+    "images": [
+      {
+        "height": null,
+        "url": "https://i.scdn.co/image/ab67706f000000039dab68973bc338db60e06d51",
+        "width": null
+      }
+    ],
+    "name": "Trance Mission",
+    "owner": {
+      "display_name": "Spotify",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/spotify"
+      },
+      "href": "https://api.spotify.com/v1/users/spotify",
+      "id": "spotify",
+      "type": "user",
+      "uri": "spotify:user:spotify"
+    },
+    "primary_color": null,
+    "public": false,
+    "snapshot_id": "MTY2MjA5MTI2MCwwMDAwMDAwMGM1YzE2YWI3YWY1NmE4NGUwNzMwODk0OTA3OTU1NThj",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX91oIci4su1D/tracks",
+      "total": 200
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:37i9dQZF1DX91oIci4su1D"
+  }
+]

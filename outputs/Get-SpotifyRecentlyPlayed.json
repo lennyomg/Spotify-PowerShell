@@ -1,0 +1,299 @@
+[
+  {
+    "track": {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6aO8YChuRr7mO8UGnS7MX9"
+            },
+            "href": "https://api.spotify.com/v1/artists/6aO8YChuRr7mO8UGnS7MX9",
+            "id": "6aO8YChuRr7mO8UGnS7MX9",
+            "name": "4MX",
+            "type": "artist",
+            "uri": "spotify:artist:6aO8YChuRr7mO8UGnS7MX9"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3Md0O4lkOTUMbKhf3vVh2S"
+        },
+        "href": "https://api.spotify.com/v1/albums/3Md0O4lkOTUMbKhf3vVh2S",
+        "id": "3Md0O4lkOTUMbKhf3vVh2S",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27338ab728990a39377faf5912e",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0238ab728990a39377faf5912e",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485138ab728990a39377faf5912e",
+            "width": 64
+          }
+        ],
+        "name": "Aurora Boreale",
+        "release_date": "2021-02-12",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": "spotify:album:3Md0O4lkOTUMbKhf3vVh2S"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6aO8YChuRr7mO8UGnS7MX9"
+          },
+          "href": "https://api.spotify.com/v1/artists/6aO8YChuRr7mO8UGnS7MX9",
+          "id": "6aO8YChuRr7mO8UGnS7MX9",
+          "name": "4MX",
+          "type": "artist",
+          "uri": "spotify:artist:6aO8YChuRr7mO8UGnS7MX9"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AL"
+      ],
+      "disc_number": 1,
+      "duration_ms": 353013,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "QZFZ32188795"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4VBf5R5BJ59b83Wn5vEMry"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4VBf5R5BJ59b83Wn5vEMry",
+      "id": "4VBf5R5BJ59b83Wn5vEMry",
+      "is_local": false,
+      "name": "Aurora Boreale",
+      "popularity": 31,
+      "preview_url": "https://p.scdn.co/mp3-preview/870aa7d6ca803f54ee3dbd618600dbf9084527f3?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:4VBf5R5BJ59b83Wn5vEMry"
+    },
+    "played_at": "2022-09-06T21:27:42.365Z",
+    "context": null
+  },
+  {
+    "track": {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3wdwWQXJbqpJJbMdp7KfEJ"
+            },
+            "href": "https://api.spotify.com/v1/artists/3wdwWQXJbqpJJbMdp7KfEJ",
+            "id": "3wdwWQXJbqpJJbMdp7KfEJ",
+            "name": "BCee",
+            "type": "artist",
+            "uri": "spotify:artist:3wdwWQXJbqpJJbMdp7KfEJ"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7aPOfpCiVKzhW7dCj16ODr"
+            },
+            "href": "https://api.spotify.com/v1/artists/7aPOfpCiVKzhW7dCj16ODr",
+            "id": "7aPOfpCiVKzhW7dCj16ODr",
+            "name": "Kubiks",
+            "type": "artist",
+            "uri": "spotify:artist:7aPOfpCiVKzhW7dCj16ODr"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/01H4MU0LTIrXnABHv8iCy9"
+        },
+        "href": "https://api.spotify.com/v1/albums/01H4MU0LTIrXnABHv8iCy9",
+        "id": "01H4MU0LTIrXnABHv8iCy9",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273af0a55d26344e6e371d9d37f",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02af0a55d26344e6e371d9d37f",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851af0a55d26344e6e371d9d37f",
+            "width": 64
+          }
+        ],
+        "name": "The Evolution EP",
+        "release_date": "2022-04-15",
+        "release_date_precision": "day",
+        "total_tracks": 4,
+        "type": "album",
+        "uri": "spotify:album:01H4MU0LTIrXnABHv8iCy9"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3wdwWQXJbqpJJbMdp7KfEJ"
+          },
+          "href": "https://api.spotify.com/v1/artists/3wdwWQXJbqpJJbMdp7KfEJ",
+          "id": "3wdwWQXJbqpJJbMdp7KfEJ",
+          "name": "BCee",
+          "type": "artist",
+          "uri": "spotify:artist:3wdwWQXJbqpJJbMdp7KfEJ"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/7aPOfpCiVKzhW7dCj16ODr"
+          },
+          "href": "https://api.spotify.com/v1/artists/7aPOfpCiVKzhW7dCj16ODr",
+          "id": "7aPOfpCiVKzhW7dCj16ODr",
+          "name": "Kubiks",
+          "type": "artist",
+          "uri": "spotify:artist:7aPOfpCiVKzhW7dCj16ODr"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3okhrC6DbZJOUhPTiUkwM6"
+          },
+          "href": "https://api.spotify.com/v1/artists/3okhrC6DbZJOUhPTiUkwM6",
+          "id": "3okhrC6DbZJOUhPTiUkwM6",
+          "name": "Rebekah Fitch",
+          "type": "artist",
+          "uri": "spotify:artist:3okhrC6DbZJOUhPTiUkwM6"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AL"
+      ],
+      "disc_number": 1,
+      "duration_ms": 314582,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "GBRF52200015"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1jO5MOeIbsyhY9ZGlM3gWI"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1jO5MOeIbsyhY9ZGlM3gWI",
+      "id": "1jO5MOeIbsyhY9ZGlM3gWI",
+      "is_local": false,
+      "name": "Believe It",
+      "popularity": 32,
+      "preview_url": "https://p.scdn.co/mp3-preview/8e439f4b5ffc69b653f606018b117451a63496ea?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:1jO5MOeIbsyhY9ZGlM3gWI"
+    },
+    "played_at": "2022-09-06T21:21:48.922Z",
+    "context": null
+  },
+  {
+    "track": {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2648rIoX4aFFXNipSvyBUD"
+            },
+            "href": "https://api.spotify.com/v1/artists/2648rIoX4aFFXNipSvyBUD",
+            "id": "2648rIoX4aFFXNipSvyBUD",
+            "name": "Koherent",
+            "type": "artist",
+            "uri": "spotify:artist:2648rIoX4aFFXNipSvyBUD"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5UGUBeYZSWd1qjsWC7LRYO"
+        },
+        "href": "https://api.spotify.com/v1/albums/5UGUBeYZSWd1qjsWC7LRYO",
+        "id": "5UGUBeYZSWd1qjsWC7LRYO",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273493bc62b54bf16cf366bfd95",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02493bc62b54bf16cf366bfd95",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851493bc62b54bf16cf366bfd95",
+            "width": 64
+          }
+        ],
+        "name": "Endless Haze",
+        "release_date": "2021-01-15",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": "spotify:album:5UGUBeYZSWd1qjsWC7LRYO"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2648rIoX4aFFXNipSvyBUD"
+          },
+          "href": "https://api.spotify.com/v1/artists/2648rIoX4aFFXNipSvyBUD",
+          "id": "2648rIoX4aFFXNipSvyBUD",
+          "name": "Koherent",
+          "type": "artist",
+          "uri": "spotify:artist:2648rIoX4aFFXNipSvyBUD"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AL"
+      ],
+      "disc_number": 1,
+      "duration_ms": 294632,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "GBPWR2100001"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/657ok2Bk1W8xDJfPBFi73X"
+      },
+      "href": "https://api.spotify.com/v1/tracks/657ok2Bk1W8xDJfPBFi73X",
+      "id": "657ok2Bk1W8xDJfPBFi73X",
+      "is_local": false,
+      "name": "Endless Haze",
+      "popularity": 45,
+      "preview_url": "https://p.scdn.co/mp3-preview/15e2872aab74794b48ab3461039850b174c6cf95?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:657ok2Bk1W8xDJfPBFi73X"
+    },
+    "played_at": "2022-09-06T21:11:29.965Z",
+    "context": null
+  }
+]

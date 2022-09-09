@@ -1,0 +1,39 @@
+{
+  "collaborative": false,
+  "description": null,
+  "external_urls": {
+    "spotify": "https://open.spotify.com/playlist/6xBd4wJ9vSaTwIBbArtoHs"
+  },
+  "followers": {
+    "href": null,
+    "total": 0
+  },
+  "href": "https://api.spotify.com/v1/playlists/6xBd4wJ9vSaTwIBbArtoHs",
+  "id": "6xBd4wJ9vSaTwIBbArtoHs",
+  "images": [],
+  "name": "test",
+  "owner": {
+    "display_name": "REDACTED",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/user/REDACTED"
+    },
+    "href": "https://api.spotify.com/v1/users/REDACTED",
+    "id": "REDACTED",
+    "type": "user",
+    "uri": "spotify:user:REDACTED"
+  },
+  "primary_color": null,
+  "public": false,
+  "snapshot_id": "MSw0MDMzZDdiNmU5NmQ4MDkwNzQ3NjhhMjk4OGY4NGQ0ZjNkODc0ZGM5",
+  "tracks": {
+    "href": "https://api.spotify.com/v1/playlists/6xBd4wJ9vSaTwIBbArtoHs/tracks",
+    "items": [],
+    "limit": 100,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 0
+  },
+  "type": "playlist",
+  "uri": "spotify:playlist:6xBd4wJ9vSaTwIBbArtoHs"
+}

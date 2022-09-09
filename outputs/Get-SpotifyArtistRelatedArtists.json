@@ -1,0 +1,113 @@
+[
+  {
+    "external_urls": {
+      "spotify": "https://open.spotify.com/artist/163tK9Wjr9P9DmM0AVK7lm"
+    },
+    "followers": {
+      "href": null,
+      "total": 9941343
+    },
+    "genres": [
+      "art pop",
+      "dance pop",
+      "metropopolis"
+    ],
+    "href": "https://api.spotify.com/v1/artists/163tK9Wjr9P9DmM0AVK7lm",
+    "id": "163tK9Wjr9P9DmM0AVK7lm",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5ebc4902f080d3620b3e6da80c3",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab67616100005174c4902f080d3620b3e6da80c3",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f178c4902f080d3620b3e6da80c3",
+        "width": 160
+      }
+    ],
+    "name": "Lorde",
+    "popularity": 76,
+    "type": "artist",
+    "uri": "spotify:artist:163tK9Wjr9P9DmM0AVK7lm"
+  },
+  {
+    "external_urls": {
+      "spotify": "https://open.spotify.com/artist/6CwfuxIqcltXDGjfZsMd9A"
+    },
+    "followers": {
+      "href": null,
+      "total": 3932166
+    },
+    "genres": [
+      "art pop",
+      "dance pop",
+      "metropopolis"
+    ],
+    "href": "https://api.spotify.com/v1/artists/6CwfuxIqcltXDGjfZsMd9A",
+    "id": "6CwfuxIqcltXDGjfZsMd9A",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5eb951d80a1db6ae486a5ce5f36",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab67616100005174951d80a1db6ae486a5ce5f36",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f178951d80a1db6ae486a5ce5f36",
+        "width": 160
+      }
+    ],
+    "name": "MARINA",
+    "popularity": 73,
+    "type": "artist",
+    "uri": "spotify:artist:6CwfuxIqcltXDGjfZsMd9A"
+  },
+  {
+    "external_urls": {
+      "spotify": "https://open.spotify.com/artist/7pyhre5oEEFMqcgMEvJY7q"
+    },
+    "followers": {
+      "href": null,
+      "total": 525801
+    },
+    "genres": [
+      "art pop",
+      "candy pop",
+      "electropop"
+    ],
+    "href": "https://api.spotify.com/v1/artists/7pyhre5oEEFMqcgMEvJY7q",
+    "id": "7pyhre5oEEFMqcgMEvJY7q",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5ebc9eceb126fe58104c719d25a",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab67616100005174c9eceb126fe58104c719d25a",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f178c9eceb126fe58104c719d25a",
+        "width": 160
+      }
+    ],
+    "name": "Sky Ferreira",
+    "popularity": 53,
+    "type": "artist",
+    "uri": "spotify:artist:7pyhre5oEEFMqcgMEvJY7q"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "country": "US",
+  "display_name": "REDACTED",
+  "email": "REDACTED@gmail.com",
+  "explicit_content": {
+    "filter_enabled": false,
+    "filter_locked": false
+  },
+  "external_urls": {
+    "spotify": "https://open.spotify.com/user/REDACTED"
+  },
+  "followers": {
+    "href": null,
+    "total": 0
+  },
+  "href": "https://api.spotify.com/v1/users/REDACTED",
+  "id": "REDACTED",
+  "images": [],
+  "product": "premium",
+  "type": "user",
+  "uri": "spotify:user:REDACTED"
+}

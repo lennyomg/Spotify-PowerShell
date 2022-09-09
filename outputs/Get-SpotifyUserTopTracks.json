@@ -1,0 +1,257 @@
+[
+  {
+    "album": {
+      "album_type": "SINGLE",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3h6F7NaadGF3Ayf3FJBjdR"
+          },
+          "href": "https://api.spotify.com/v1/artists/3h6F7NaadGF3Ayf3FJBjdR",
+          "id": "3h6F7NaadGF3Ayf3FJBjdR",
+          "name": "BRIDEAR",
+          "type": "artist",
+          "uri": "spotify:artist:3h6F7NaadGF3Ayf3FJBjdR"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AT",
+        "BG"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/1RaI7XmyrWFTFW16Ci3pfj"
+      },
+      "href": "https://api.spotify.com/v1/albums/1RaI7XmyrWFTFW16Ci3pfj",
+      "id": "1RaI7XmyrWFTFW16Ci3pfj",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2738c8ca6d46f45d5cf225b2c8c",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e028c8ca6d46f45d5cf225b2c8c",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048518c8ca6d46f45d5cf225b2c8c",
+          "width": 64
+        }
+      ],
+      "name": "Ray of Chaos",
+      "release_date": "2022-04-08",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "type": "album",
+      "uri": "spotify:album:1RaI7XmyrWFTFW16Ci3pfj"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3h6F7NaadGF3Ayf3FJBjdR"
+        },
+        "href": "https://api.spotify.com/v1/artists/3h6F7NaadGF3Ayf3FJBjdR",
+        "id": "3h6F7NaadGF3Ayf3FJBjdR",
+        "name": "BRIDEAR",
+        "type": "artist",
+        "uri": "spotify:artist:3h6F7NaadGF3Ayf3FJBjdR"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AT",
+      "BG"
+    ],
+    "disc_number": 1,
+    "duration_ms": 289043,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "JPB602201900"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/6jPGp30d2dxYcWSnDAl3iE"
+    },
+    "href": "https://api.spotify.com/v1/tracks/6jPGp30d2dxYcWSnDAl3iE",
+    "id": "6jPGp30d2dxYcWSnDAl3iE",
+    "is_local": false,
+    "name": "Ray of Chaos",
+    "popularity": 11,
+    "preview_url": "https://p.scdn.co/mp3-preview/05b6272c4505cb09f3b910d416dc0cd9250789b5?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 1,
+    "type": "track",
+    "uri": "spotify:track:6jPGp30d2dxYcWSnDAl3iE"
+  },
+  {
+    "album": {
+      "album_type": "ALBUM",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4QnuZOyl4C9d1keyOZXJ21"
+          },
+          "href": "https://api.spotify.com/v1/artists/4QnuZOyl4C9d1keyOZXJ21",
+          "id": "4QnuZOyl4C9d1keyOZXJ21",
+          "name": "Future Palace",
+          "type": "artist",
+          "uri": "spotify:artist:4QnuZOyl4C9d1keyOZXJ21"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AT"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3PsbQWb1jzu1TieGQwvjd7"
+      },
+      "href": "https://api.spotify.com/v1/albums/3PsbQWb1jzu1TieGQwvjd7",
+      "id": "3PsbQWb1jzu1TieGQwvjd7",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2736d6b13d1fc6d3af5ae92f61e",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e026d6b13d1fc6d3af5ae92f61e",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048516d6b13d1fc6d3af5ae92f61e",
+          "width": 64
+        }
+      ],
+      "name": "Run",
+      "release_date": "2022-06-10",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "type": "album",
+      "uri": "spotify:album:3PsbQWb1jzu1TieGQwvjd7"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4QnuZOyl4C9d1keyOZXJ21"
+        },
+        "href": "https://api.spotify.com/v1/artists/4QnuZOyl4C9d1keyOZXJ21",
+        "id": "4QnuZOyl4C9d1keyOZXJ21",
+        "name": "Future Palace",
+        "type": "artist",
+        "uri": "spotify:artist:4QnuZOyl4C9d1keyOZXJ21"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AT"
+    ],
+    "disc_number": 1,
+    "duration_ms": 204040,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "DEYO62100129"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/4hZIolup6cgYhrzzGq46aq"
+    },
+    "href": "https://api.spotify.com/v1/tracks/4hZIolup6cgYhrzzGq46aq",
+    "id": "4hZIolup6cgYhrzzGq46aq",
+    "is_local": false,
+    "name": "Dead Inside",
+    "popularity": 48,
+    "preview_url": "https://p.scdn.co/mp3-preview/2ce6dbcc1697e9c1b60685ab8f4e37a879014d6d?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 2,
+    "type": "track",
+    "uri": "spotify:track:4hZIolup6cgYhrzzGq46aq"
+  },
+  {
+    "album": {
+      "album_type": "ALBUM",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4QnuZOyl4C9d1keyOZXJ21"
+          },
+          "href": "https://api.spotify.com/v1/artists/4QnuZOyl4C9d1keyOZXJ21",
+          "id": "4QnuZOyl4C9d1keyOZXJ21",
+          "name": "Future Palace",
+          "type": "artist",
+          "uri": "spotify:artist:4QnuZOyl4C9d1keyOZXJ21"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AT"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3PsbQWb1jzu1TieGQwvjd7"
+      },
+      "href": "https://api.spotify.com/v1/albums/3PsbQWb1jzu1TieGQwvjd7",
+      "id": "3PsbQWb1jzu1TieGQwvjd7",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2736d6b13d1fc6d3af5ae92f61e",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e026d6b13d1fc6d3af5ae92f61e",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048516d6b13d1fc6d3af5ae92f61e",
+          "width": 64
+        }
+      ],
+      "name": "Run",
+      "release_date": "2022-06-10",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "type": "album",
+      "uri": "spotify:album:3PsbQWb1jzu1TieGQwvjd7"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4QnuZOyl4C9d1keyOZXJ21"
+        },
+        "href": "https://api.spotify.com/v1/artists/4QnuZOyl4C9d1keyOZXJ21",
+        "id": "4QnuZOyl4C9d1keyOZXJ21",
+        "name": "Future Palace",
+        "type": "artist",
+        "uri": "spotify:artist:4QnuZOyl4C9d1keyOZXJ21"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AT"
+    ],
+    "disc_number": 1,
+    "duration_ms": 252440,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "DEYO62100133"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/14mMAG6mEkitd89AJAgbg3"
+    },
+    "href": "https://api.spotify.com/v1/tracks/14mMAG6mEkitd89AJAgbg3",
+    "id": "14mMAG6mEkitd89AJAgbg3",
+    "is_local": false,
+    "name": "Sleep Tight",
+    "popularity": 33,
+    "preview_url": "https://p.scdn.co/mp3-preview/164341dc08ebdb7e2a42ab3a7e4bd82fa84f9d49?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 6,
+    "type": "track",
+    "uri": "spotify:track:14mMAG6mEkitd89AJAgbg3"
+  }
+]

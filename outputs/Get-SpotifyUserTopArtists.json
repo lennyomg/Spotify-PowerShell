@@ -1,0 +1,112 @@
+[
+  {
+    "external_urls": {
+      "spotify": "https://open.spotify.com/artist/00oL7zWxmWveTsKF7DnIRd"
+    },
+    "followers": {
+      "href": null,
+      "total": 100958
+    },
+    "genres": [
+      "horror synth",
+      "soundtrack"
+    ],
+    "href": "https://api.spotify.com/v1/artists/00oL7zWxmWveTsKF7DnIRd",
+    "id": "00oL7zWxmWveTsKF7DnIRd",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5eb88f71e301f3b88aa37dc4c07",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab6761610000517488f71e301f3b88aa37dc4c07",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f17888f71e301f3b88aa37dc4c07",
+        "width": 160
+      }
+    ],
+    "name": "Kyle Dixon & Michael Stein",
+    "popularity": 61,
+    "type": "artist",
+    "uri": "spotify:artist:00oL7zWxmWveTsKF7DnIRd"
+  },
+  {
+    "external_urls": {
+      "spotify": "https://open.spotify.com/artist/4QnuZOyl4C9d1keyOZXJ21"
+    },
+    "followers": {
+      "href": null,
+      "total": 21805
+    },
+    "genres": [
+      "german post-hardcore",
+      "metalcore",
+      "slayer"
+    ],
+    "href": "https://api.spotify.com/v1/artists/4QnuZOyl4C9d1keyOZXJ21",
+    "id": "4QnuZOyl4C9d1keyOZXJ21",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5eb03b8733493d0b6f07cf9b2ca",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab6761610000517403b8733493d0b6f07cf9b2ca",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f17803b8733493d0b6f07cf9b2ca",
+        "width": 160
+      }
+    ],
+    "name": "Future Palace",
+    "popularity": 43,
+    "type": "artist",
+    "uri": "spotify:artist:4QnuZOyl4C9d1keyOZXJ21"
+  },
+  {
+    "external_urls": {
+      "spotify": "https://open.spotify.com/artist/4DX0ctdZRMWec9KCiigIXy"
+    },
+    "followers": {
+      "href": null,
+      "total": 15719
+    },
+    "genres": [
+      "dark rock",
+      "melodic metal",
+      "slayer"
+    ],
+    "href": "https://api.spotify.com/v1/artists/4DX0ctdZRMWec9KCiigIXy",
+    "id": "4DX0ctdZRMWec9KCiigIXy",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab6761610000e5eb3182f500e9cfa29b8a51740e",
+        "width": 640
+      },
+      {
+        "height": 320,
+        "url": "https://i.scdn.co/image/ab676161000051743182f500e9cfa29b8a51740e",
+        "width": 320
+      },
+      {
+        "height": 160,
+        "url": "https://i.scdn.co/image/ab6761610000f1783182f500e9cfa29b8a51740e",
+        "width": 160
+      }
+    ],
+    "name": "Enemy Inside",
+    "popularity": 41,
+    "type": "artist",
+    "uri": "spotify:artist:4DX0ctdZRMWec9KCiigIXy"
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "album": {
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/0vTVU0KH0CVzijsoKGsTPl"
+        },
+        "href": "https://api.spotify.com/v1/artists/0vTVU0KH0CVzijsoKGsTPl",
+        "id": "0vTVU0KH0CVzijsoKGsTPl",
+        "name": "Barry Can't Swim",
+        "type": "artist",
+        "uri": "spotify:artist:0vTVU0KH0CVzijsoKGsTPl"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/3Sl6q9q5oRkU5fD3V9SNyQ"
+    },
+    "href": "https://api.spotify.com/v1/albums/3Sl6q9q5oRkU5fD3V9SNyQ",
+    "id": "3Sl6q9q5oRkU5fD3V9SNyQ",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b27391505df8575fc81a5b2359f5",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e0291505df8575fc81a5b2359f5",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d0000485191505df8575fc81a5b2359f5",
+        "width": 64
+      }
+    ],
+    "name": "More Content",
+    "release_date": "2022-06-24",
+    "release_date_precision": "day",
+    "total_tracks": 4,
+    "type": "album",
+    "uri": "spotify:album:3Sl6q9q5oRkU5fD3V9SNyQ"
+  },
+  "artists": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0vTVU0KH0CVzijsoKGsTPl"
+      },
+      "href": "https://api.spotify.com/v1/artists/0vTVU0KH0CVzijsoKGsTPl",
+      "id": "0vTVU0KH0CVzijsoKGsTPl",
+      "name": "Barry Can't Swim",
+      "type": "artist",
+      "uri": "spotify:artist:0vTVU0KH0CVzijsoKGsTPl"
+    }
+  ],
+  "available_markets": [
+    "AD",
+    "AE",
+    "AL"
+  ],
+  "disc_number": 1,
+  "duration_ms": 181873,
+  "explicit": false,
+  "external_ids": {
+    "isrc": "GBCFB2200130"
+  },
+  "external_urls": {
+    "spotify": "https://open.spotify.com/track/2wynpXzuXf6Cvf2MqHYA9Z"
+  },
+  "href": "https://api.spotify.com/v1/tracks/2wynpXzuXf6Cvf2MqHYA9Z",
+  "id": "2wynpXzuXf6Cvf2MqHYA9Z",
+  "is_local": false,
+  "name": "Sonder",
+  "popularity": 57,
+  "preview_url": "https://p.scdn.co/mp3-preview/5ab3b2eb22367716fd4b4cd8cc854ca7b605561e?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+  "track_number": 1,
+  "type": "track",
+  "uri": "spotify:track:2wynpXzuXf6Cvf2MqHYA9Z"
+}

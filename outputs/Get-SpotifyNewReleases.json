@@ -1,0 +1,145 @@
+[
+  {
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/5f7VJjfbwm532GiveGC0ZK"
+        },
+        "href": "https://api.spotify.com/v1/artists/5f7VJjfbwm532GiveGC0ZK",
+        "id": "5f7VJjfbwm532GiveGC0ZK",
+        "name": "Lil Baby",
+        "type": "artist",
+        "uri": "spotify:artist:5f7VJjfbwm532GiveGC0ZK"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/4y77zrDMRkZznufMBScSal"
+    },
+    "href": "https://api.spotify.com/v1/albums/4y77zrDMRkZznufMBScSal",
+    "id": "4y77zrDMRkZznufMBScSal",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b27385467325338ec0c25e10f226",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e0285467325338ec0c25e10f226",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d0000485185467325338ec0c25e10f226",
+        "width": 64
+      }
+    ],
+    "name": "Detox",
+    "release_date": "2022-09-02",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "type": "album",
+    "uri": "spotify:album:4y77zrDMRkZznufMBScSal"
+  },
+  {
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH"
+        },
+        "href": "https://api.spotify.com/v1/artists/7Ln80lUS6He07XvHI8qqHH",
+        "id": "7Ln80lUS6He07XvHI8qqHH",
+        "name": "Arctic Monkeys",
+        "type": "artist",
+        "uri": "spotify:artist:7Ln80lUS6He07XvHI8qqHH"
+      }
+    ],
+    "available_markets": [
+      "AU",
+      "NZ"
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/6VFHU5EnBGKQI19piyGQSZ"
+    },
+    "href": "https://api.spotify.com/v1/albums/6VFHU5EnBGKQI19piyGQSZ",
+    "id": "6VFHU5EnBGKQI19piyGQSZ",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273e3244b6267bfca61c83b0678",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02e3244b6267bfca61c83b0678",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851e3244b6267bfca61c83b0678",
+        "width": 64
+      }
+    ],
+    "name": "There’d Better Be A Mirrorball",
+    "release_date": "2022-08-30",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "type": "album",
+    "uri": "spotify:album:6VFHU5EnBGKQI19piyGQSZ"
+  },
+  {
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/5lwmRuXgjX8xIwlnauTZIP"
+        },
+        "href": "https://api.spotify.com/v1/artists/5lwmRuXgjX8xIwlnauTZIP",
+        "id": "5lwmRuXgjX8xIwlnauTZIP",
+        "name": "Romeo Santos",
+        "type": "artist",
+        "uri": "spotify:artist:5lwmRuXgjX8xIwlnauTZIP"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/3kGn13mW34Ookfj6yiY8BF"
+    },
+    "href": "https://api.spotify.com/v1/albums/3kGn13mW34Ookfj6yiY8BF",
+    "id": "3kGn13mW34Ookfj6yiY8BF",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273362b5dc3108e080143be49d5",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02362b5dc3108e080143be49d5",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851362b5dc3108e080143be49d5",
+        "width": 64
+      }
+    ],
+    "name": "Fórmula, Vol. 3",
+    "release_date": "2022-09-01",
+    "release_date_precision": "day",
+    "total_tracks": 21,
+    "type": "album",
+    "uri": "spotify:album:3kGn13mW34Ookfj6yiY8BF"
+  }
+]

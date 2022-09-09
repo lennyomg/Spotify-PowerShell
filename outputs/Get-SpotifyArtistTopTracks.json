@@ -1,0 +1,230 @@
+[
+  {
+    "album": {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+          },
+          "href": "https://api.spotify.com/v1/artists/00FQb4jTyendYWaN8pK0wa",
+          "id": "00FQb4jTyendYWaN8pK0wa",
+          "name": "Lana Del Rey",
+          "type": "artist",
+          "uri": "spotify:artist:00FQb4jTyendYWaN8pK0wa"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/0Dt3FbpMQwjoT5KNAw0IXR"
+      },
+      "href": "https://api.spotify.com/v1/albums/0Dt3FbpMQwjoT5KNAw0IXR",
+      "id": "0Dt3FbpMQwjoT5KNAw0IXR",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273f894be72a77b1488292672c7",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02f894be72a77b1488292672c7",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851f894be72a77b1488292672c7",
+          "width": 64
+        }
+      ],
+      "name": "Born To Die – Paradise Edition (Special Version)",
+      "release_date": "2012-01-01",
+      "release_date_precision": "day",
+      "total_tracks": 24,
+      "type": "album",
+      "uri": "spotify:album:0Dt3FbpMQwjoT5KNAw0IXR"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+        },
+        "href": "https://api.spotify.com/v1/artists/00FQb4jTyendYWaN8pK0wa",
+        "id": "00FQb4jTyendYWaN8pK0wa",
+        "name": "Lana Del Rey",
+        "type": "artist",
+        "uri": "spotify:artist:00FQb4jTyendYWaN8pK0wa"
+      }
+    ],
+    "disc_number": 1,
+    "duration_ms": 264773,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "GBUM71111565"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/1Ist6PR2BZR3n2z2Y5R6S1"
+    },
+    "href": "https://api.spotify.com/v1/tracks/1Ist6PR2BZR3n2z2Y5R6S1",
+    "id": "1Ist6PR2BZR3n2z2Y5R6S1",
+    "is_local": false,
+    "is_playable": true,
+    "name": "Summertime Sadness",
+    "popularity": 73,
+    "preview_url": "https://p.scdn.co/mp3-preview/d79797d73d71e58283ac93bb12a9d6d00b6f82e8?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 11,
+    "type": "track",
+    "uri": "spotify:track:1Ist6PR2BZR3n2z2Y5R6S1"
+  },
+  {
+    "album": {
+      "album_type": "single",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+          },
+          "href": "https://api.spotify.com/v1/artists/00FQb4jTyendYWaN8pK0wa",
+          "id": "00FQb4jTyendYWaN8pK0wa",
+          "name": "Lana Del Rey",
+          "type": "artist",
+          "uri": "spotify:artist:00FQb4jTyendYWaN8pK0wa"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/1D92WOHWUI2AGQCCdplcXL"
+      },
+      "href": "https://api.spotify.com/v1/albums/1D92WOHWUI2AGQCCdplcXL",
+      "id": "1D92WOHWUI2AGQCCdplcXL",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d7fb3e4c63020039d1cff6b2",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02d7fb3e4c63020039d1cff6b2",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d7fb3e4c63020039d1cff6b2",
+          "width": 64
+        }
+      ],
+      "name": "Young And Beautiful",
+      "release_date": "2013-01-01",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "type": "album",
+      "uri": "spotify:album:1D92WOHWUI2AGQCCdplcXL"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+        },
+        "href": "https://api.spotify.com/v1/artists/00FQb4jTyendYWaN8pK0wa",
+        "id": "00FQb4jTyendYWaN8pK0wa",
+        "name": "Lana Del Rey",
+        "type": "artist",
+        "uri": "spotify:artist:00FQb4jTyendYWaN8pK0wa"
+      }
+    ],
+    "disc_number": 1,
+    "duration_ms": 236053,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "GBUM71301823"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/2nMeu6UenVvwUktBCpLMK9"
+    },
+    "href": "https://api.spotify.com/v1/tracks/2nMeu6UenVvwUktBCpLMK9",
+    "id": "2nMeu6UenVvwUktBCpLMK9",
+    "is_local": false,
+    "is_playable": true,
+    "name": "Young And Beautiful",
+    "popularity": 82,
+    "preview_url": "https://p.scdn.co/mp3-preview/9184553999df01908883b563a5c89545a2673b21?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 1,
+    "type": "track",
+    "uri": "spotify:track:2nMeu6UenVvwUktBCpLMK9"
+  },
+  {
+    "album": {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+          },
+          "href": "https://api.spotify.com/v1/artists/00FQb4jTyendYWaN8pK0wa",
+          "id": "00FQb4jTyendYWaN8pK0wa",
+          "name": "Lana Del Rey",
+          "type": "artist",
+          "uri": "spotify:artist:00FQb4jTyendYWaN8pK0wa"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/1ORxRsK3MrSLvh7VQTF01F"
+      },
+      "href": "https://api.spotify.com/v1/albums/1ORxRsK3MrSLvh7VQTF01F",
+      "id": "1ORxRsK3MrSLvh7VQTF01F",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2731624590458126fc8b8c64c2f",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e021624590458126fc8b8c64c2f",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048511624590458126fc8b8c64c2f",
+          "width": 64
+        }
+      ],
+      "name": "Ultraviolence (Deluxe)",
+      "release_date": "2014-01-01",
+      "release_date_precision": "day",
+      "total_tracks": 14,
+      "type": "album",
+      "uri": "spotify:album:1ORxRsK3MrSLvh7VQTF01F"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+        },
+        "href": "https://api.spotify.com/v1/artists/00FQb4jTyendYWaN8pK0wa",
+        "id": "00FQb4jTyendYWaN8pK0wa",
+        "name": "Lana Del Rey",
+        "type": "artist",
+        "uri": "spotify:artist:00FQb4jTyendYWaN8pK0wa"
+      }
+    ],
+    "disc_number": 1,
+    "duration_ms": 351640,
+    "explicit": true,
+    "external_ids": {
+      "isrc": "GBUM71402169"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/1NZs6n6hl8UuMaX0UC0YTz"
+    },
+    "href": "https://api.spotify.com/v1/tracks/1NZs6n6hl8UuMaX0UC0YTz",
+    "id": "1NZs6n6hl8UuMaX0UC0YTz",
+    "is_local": false,
+    "is_playable": true,
+    "name": "Brooklyn Baby",
+    "popularity": 81,
+    "preview_url": "https://p.scdn.co/mp3-preview/444a7447fa13dae716e70105508398ad0750e6bf?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 4,
+    "type": "track",
+    "uri": "spotify:track:1NZs6n6hl8UuMaX0UC0YTz"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "collaborative": false,
+    "description": "",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/5fAB7mgqwig7yVsEvyPOqw"
+    },
+    "href": "https://api.spotify.com/v1/playlists/5fAB7mgqwig7yVsEvyPOqw",
+    "id": "5fAB7mgqwig7yVsEvyPOqw",
+    "images": [
+      {
+        "height": null,
+        "url": "https://i.scdn.co/image/ab67706c0000bebb7df5bb2f11f1cda3433d9bbd",
+        "width": null
+      }
+    ],
+    "name": "Mark Hoppus Collabs",
+    "owner": {
+      "display_name": "Esteban Toro",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/12186270034"
+      },
+      "href": "https://api.spotify.com/v1/users/12186270034",
+      "id": "12186270034",
+      "type": "user",
+      "uri": "spotify:user:12186270034"
+    },
+    "primary_color": null,
+    "public": null,
+    "snapshot_id": "NDEsNDQ5OTQ0NzMxMDI3MDYxNWJlMTBhOGQ5NWRiOWE4YzEzMWU3ZDYwMQ==",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/5fAB7mgqwig7yVsEvyPOqw/tracks",
+      "total": 37
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:5fAB7mgqwig7yVsEvyPOqw"
+  },
+  {
+    "collaborative": false,
+    "description": "This is Mark Hummel. The essential tracks, all in one playlist.",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO3PlF7c"
+    },
+    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO3PlF7c",
+    "id": "37i9dQZF1DZ06evO3PlF7c",
+    "images": [
+      {
+        "height": null,
+        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO3PlF7c-large.jpg",
+        "width": null
+      }
+    ],
+    "name": "This Is Mark Hummel",
+    "owner": {
+      "display_name": "Spotify",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/spotify"
+      },
+      "href": "https://api.spotify.com/v1/users/spotify",
+      "id": "spotify",
+      "type": "user",
+      "uri": "spotify:user:spotify"
+    },
+    "primary_color": null,
+    "public": null,
+    "snapshot_id": "Mjc3MDc4NDgsMDAwMDAwMDBhMDc3M2I2ZDBmMzc3YTYxZjdkYTlmYjA5MTg2ZTMzMQ==",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO3PlF7c/tracks",
+      "total": 50
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:37i9dQZF1DZ06evO3PlF7c"
+  },
+  {
+    "collaborative": false,
+    "description": "",
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/0KgmXaU90Atf9stf0zSUpF"
+    },
+    "href": "https://api.spotify.com/v1/playlists/0KgmXaU90Atf9stf0zSUpF",
+    "id": "0KgmXaU90Atf9stf0zSUpF",
+    "images": [
+      {
+        "height": null,
+        "url": "https://i.scdn.co/image/ab67706c0000bebb0e1c5006c9037256e74a7871",
+        "width": null
+      }
+    ],
+    "name": "mark hoppus fan club",
+    "owner": {
+      "display_name": "Hayley Forstot",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/hmforstot"
+      },
+      "href": "https://api.spotify.com/v1/users/hmforstot",
+      "id": "hmforstot",
+      "type": "user",
+      "uri": "spotify:user:hmforstot"
+    },
+    "primary_color": null,
+    "public": null,
+    "snapshot_id": "MTM1LGQ5MmY3NTY4NWM3YjUyMTU2OGYxZGNkMjRiOTNlMzE2YjFlZjhlZmI=",
+    "tracks": {
+      "href": "https://api.spotify.com/v1/playlists/0KgmXaU90Atf9stf0zSUpF/tracks",
+      "total": 113
+    },
+    "type": "playlist",
+    "uri": "spotify:playlist:0KgmXaU90Atf9stf0zSUpF"
+  }
+]

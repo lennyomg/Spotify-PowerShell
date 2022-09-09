@@ -1,6 +1,13 @@
 
 # PowerShell for Spotify
 
+### Installation
+
+Download `Spotify.psm1` and `Spotify.psd1` and run:
+```
+Import-Module "<path>/Spotify.psm1"
+```
+
 ### First run
 
 1. Register a [Spotify developer account](https://developer.spotify.com).
@@ -8,6 +15,10 @@
 3. Open application settings and add `https://lennyomg.github.io/Spotify-PowerShell/index.html` to the Redirect URIs list.
 4. Install or import the module.
 5. Run `Connect-SpotifyApi -Force` and follow instructions.
+
+### Connect-SpotifyApi
+
+The command `Connect-SpotifyApi` refreshes Spotify autorization token. Put this command at the top of your script. Call this command if you get the "401 token expired" error. 
 
 ### Examples
 
@@ -49,7 +60,7 @@ function Merge-SpotifyPlaylist {
     | Where-Object -Property is_local -EQ $false
     | Where-Object -Property explicit -EQ $false
     | Sort-Object { Get-Random }
-    | Where-Object { $_.artists[0].name -NotIn @("Rammstein", "Nirvana", "The 1975", "The Offspring", "Green Day", "Bad Religion") }
+    | Where-Object { $_.artists[0].name -NotIn @("The 1975", "The Offspring", ) }
     | Select-Object -ExpandProperty uri -Unique
     | Add-SpotifyPlaylistTracks -PlaylistId $Target
 
@@ -76,6 +87,21 @@ Invoke-RestMethod `
     -Token $global:SpotifyToken `
     -ContentType "application/json" 
 ```
+
+### Tests
+
+Install [Pester](https://pester.dev) and run:
+```
+. $PSScriptRoot/functions/Connect-SpotifyApi.ps1
+. $PSScriptRoot/Tests.ps1
+
+Connect-SpotifyApi
+Invoke-Pester $PSScriptRoot/*.Tests.ps1 -ExcludeTagFilter Output
+```
+
+### Build
+
+`Build.ps1` runs tests, compiles all commands into one PSM1 file, and update module metadata.
 
 ### Docs
 

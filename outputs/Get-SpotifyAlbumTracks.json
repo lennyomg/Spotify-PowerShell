@@ -1,0 +1,101 @@
+[
+  {
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/13dTrWNNrnZ3AkgNyQNKP5"
+        },
+        "href": "https://api.spotify.com/v1/artists/13dTrWNNrnZ3AkgNyQNKP5",
+        "id": "13dTrWNNrnZ3AkgNyQNKP5",
+        "name": "The Linda Lindas",
+        "type": "artist",
+        "uri": "spotify:artist:13dTrWNNrnZ3AkgNyQNKP5"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "disc_number": 1,
+    "duration_ms": 155335,
+    "explicit": false,
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/1Wn0A9wVEQXj2JVbdsclpi"
+    },
+    "href": "https://api.spotify.com/v1/tracks/1Wn0A9wVEQXj2JVbdsclpi",
+    "id": "1Wn0A9wVEQXj2JVbdsclpi",
+    "is_local": false,
+    "name": "Oh!",
+    "preview_url": "https://p.scdn.co/mp3-preview/32a1540fac7c380f7b2aacce663d9d474cf2405b?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 1,
+    "type": "track",
+    "uri": "spotify:track:1Wn0A9wVEQXj2JVbdsclpi"
+  },
+  {
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/13dTrWNNrnZ3AkgNyQNKP5"
+        },
+        "href": "https://api.spotify.com/v1/artists/13dTrWNNrnZ3AkgNyQNKP5",
+        "id": "13dTrWNNrnZ3AkgNyQNKP5",
+        "name": "The Linda Lindas",
+        "type": "artist",
+        "uri": "spotify:artist:13dTrWNNrnZ3AkgNyQNKP5"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "disc_number": 1,
+    "duration_ms": 186465,
+    "explicit": false,
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/4Pa5KeSpeVbr6ubFTiG6If"
+    },
+    "href": "https://api.spotify.com/v1/tracks/4Pa5KeSpeVbr6ubFTiG6If",
+    "id": "4Pa5KeSpeVbr6ubFTiG6If",
+    "is_local": false,
+    "name": "Growing Up",
+    "preview_url": "https://p.scdn.co/mp3-preview/70151efd6155106f346dcb328579634c3adc91b6?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 2,
+    "type": "track",
+    "uri": "spotify:track:4Pa5KeSpeVbr6ubFTiG6If"
+  },
+  {
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/13dTrWNNrnZ3AkgNyQNKP5"
+        },
+        "href": "https://api.spotify.com/v1/artists/13dTrWNNrnZ3AkgNyQNKP5",
+        "id": "13dTrWNNrnZ3AkgNyQNKP5",
+        "name": "The Linda Lindas",
+        "type": "artist",
+        "uri": "spotify:artist:13dTrWNNrnZ3AkgNyQNKP5"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "disc_number": 1,
+    "duration_ms": 122979,
+    "explicit": false,
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/1EB2ebXM3xJ1rviiToOr2o"
+    },
+    "href": "https://api.spotify.com/v1/tracks/1EB2ebXM3xJ1rviiToOr2o",
+    "id": "1EB2ebXM3xJ1rviiToOr2o",
+    "is_local": false,
+    "name": "Fine",
+    "preview_url": "https://p.scdn.co/mp3-preview/077c2962889feb58c69bd409fbc77f4848661b56?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 4,
+    "type": "track",
+    "uri": "spotify:track:1EB2ebXM3xJ1rviiToOr2o"
+  }
+]

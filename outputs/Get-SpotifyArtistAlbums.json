@@ -1,0 +1,149 @@
+[
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+        },
+        "href": "https://api.spotify.com/v1/artists/00FQb4jTyendYWaN8pK0wa",
+        "id": "00FQb4jTyendYWaN8pK0wa",
+        "name": "Lana Del Rey",
+        "type": "artist",
+        "uri": "spotify:artist:00FQb4jTyendYWaN8pK0wa"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/2wwCc6fcyhp1tfY3J6Javr"
+    },
+    "href": "https://api.spotify.com/v1/albums/2wwCc6fcyhp1tfY3J6Javr",
+    "id": "2wwCc6fcyhp1tfY3J6Javr",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b2736946deb6f548e464b385ee0e",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e026946deb6f548e464b385ee0e",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d000048516946deb6f548e464b385ee0e",
+        "width": 64
+      }
+    ],
+    "name": "Blue Banisters",
+    "release_date": "2021-10-22",
+    "release_date_precision": "day",
+    "total_tracks": 15,
+    "type": "album",
+    "uri": "spotify:album:2wwCc6fcyhp1tfY3J6Javr"
+  },
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+        },
+        "href": "https://api.spotify.com/v1/artists/00FQb4jTyendYWaN8pK0wa",
+        "id": "00FQb4jTyendYWaN8pK0wa",
+        "name": "Lana Del Rey",
+        "type": "artist",
+        "uri": "spotify:artist:00FQb4jTyendYWaN8pK0wa"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/6QeosPQpJckkW0Obir5RT8"
+    },
+    "href": "https://api.spotify.com/v1/albums/6QeosPQpJckkW0Obir5RT8",
+    "id": "6QeosPQpJckkW0Obir5RT8",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273ca929c6e766cb8591a286e0d",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02ca929c6e766cb8591a286e0d",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851ca929c6e766cb8591a286e0d",
+        "width": 64
+      }
+    ],
+    "name": "Chemtrails Over The Country Club",
+    "release_date": "2021-03-19",
+    "release_date_precision": "day",
+    "total_tracks": 11,
+    "type": "album",
+    "uri": "spotify:album:6QeosPQpJckkW0Obir5RT8"
+  },
+  {
+    "album_group": "album",
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa"
+        },
+        "href": "https://api.spotify.com/v1/artists/00FQb4jTyendYWaN8pK0wa",
+        "id": "00FQb4jTyendYWaN8pK0wa",
+        "name": "Lana Del Rey",
+        "type": "artist",
+        "uri": "spotify:artist:00FQb4jTyendYWaN8pK0wa"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/7xYiTrbTL57QO0bb4hXIKo"
+    },
+    "href": "https://api.spotify.com/v1/albums/7xYiTrbTL57QO0bb4hXIKo",
+    "id": "7xYiTrbTL57QO0bb4hXIKo",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b27395e2fd1accb339fa14878190",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e0295e2fd1accb339fa14878190",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d0000485195e2fd1accb339fa14878190",
+        "width": 64
+      }
+    ],
+    "name": "Lust For Life",
+    "release_date": "2017-07-21",
+    "release_date_precision": "day",
+    "total_tracks": 16,
+    "type": "album",
+    "uri": "spotify:album:7xYiTrbTL57QO0bb4hXIKo"
+  }
+]
