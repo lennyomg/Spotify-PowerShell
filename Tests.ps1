@@ -136,30 +136,39 @@ function Update-CommandOutput {
         [scriptblock] $Command
     )
 
-    function Shrink($o) { 
-        foreach ($p in $o.PSObject.Properties) {
-            $v = $o.($p.name)
-            switch ($p.TypeNameOfValue) {
-                "System.Object[]" { 
-                    $v = $v.Count -gt 3 ? ($v[0], $v[1], $v[3]) : $v
-                    $o.($p.name) = $v
-                    $v | ForEach-Object { Shrink $_ }
-                }
-                "System.Management.Automation.PSCustomObject" { 
-                    Shrink $v 
+    $cases = @(
+        @{ 
+            n = ($Command | Out-String).Trim().Split(" ")[0]
+            c = $Command
+        }
+    )
+
+    Context "Output" {
+
+        BeforeAll {
+            function Shrink($o) { 
+                foreach ($p in $o.PSObject.Properties) {
+                    $v = $o.($p.name)
+                    switch ($p.TypeNameOfValue) {
+                        "System.Object[]" { 
+                            $v = $v.Count -gt 3 ? ($v[0], $v[1], $v[3]) : $v
+                            $o.($p.name) = $v
+                            $v | ForEach-Object { Shrink $_ }
+                        }
+                        "System.Management.Automation.PSCustomObject" { 
+                            Shrink $v 
+                        }
+                    }
                 }
             }
         }
-    }
-    $name = ($Command | Out-String).Trim().Split(" ")[0]
 
-    Context "Output" {
-        It $name {
-            $out = [pscustomobject]@{ item = (& $Command) }
+        It "<n>" -ForEach $cases {
+            $out = [pscustomobject]@{ item = (& $c) }
             Shrink $out
             $out = $out.item | ConvertTo-Json -Depth 99 
             Get-Content "$($PSScriptRoot)/pi.txt" -ErrorAction SilentlyContinue | ForEach-Object { $out = $out -replace $_, "REDACTED" } 
-            $out | Out-File "$($PSScriptRoot)/outputs/$($name).json"
+            $out | Out-File "$($PSScriptRoot)/outputs/$($n).json"
         }
     }
 }
