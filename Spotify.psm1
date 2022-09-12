@@ -655,6 +655,123 @@ function Get-SpotifyMarkets {
 
 <#
 .SYNOPSIS
+Add item to playback queue.
+
+.DESCRIPTION
+Add an item to the end of the user's current playback queue.
+
+.PARAMETER Uri
+The uri of the item to add to the queue. Must be a track or an episode uri.
+Example value: "spotify:track:4iV5W9uYEdYUVa79Axb7Rh".
+
+.PARAMETER DeviceId
+The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+Example value: "0d1841b0976bae2a3a310dd74c0f3df354899bc8".
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/add-to-queue
+#>
+function Add-SpotifyQueueItem {
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
+        [ValidateNotNullOrEmpty()]
+        [Alias("uri")]
+        [string] $ItemUri,
+
+        [Parameter(Position = 1)]
+        [ValidateNotNullOrEmpty()]
+        [string] $DeviceId
+    )
+    process {
+        $null = Invoke-RestMethod `
+            -Uri "https://api.spotify.com/v1/me/player/queue?uri=$($ItemUri)$($DeviceId ? "&device_id=$($DeviceId)" : $null)" `
+            -Method Post `
+            -Authentication Bearer `
+            -Token $global:SpotifyToken `
+            -ContentType "application/json"
+    }
+}
+
+<#
+.SYNOPSIS
+Get currently playing tracks.
+
+.DESCRIPTION
+Get the object currently being played on the user's Spotify account.
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/get-the-users-currently-playing-track
+#>
+function Get-SpotifyCurrentlyPlaying {
+    Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/currently-playing" `
+        -Method Get `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json"
+}
+
+<#
+.SYNOPSIS
+Get available devices.
+
+.DESCRIPTION
+Get information about a user’s available devices. Returns empty list if there is no active devices.
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/get-a-users-available-devices
+#>
+function Get-SpotifyDevices {
+    Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/devices" `
+        -Method Get `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json" | Select-Object -ExpandProperty devices
+}
+
+<#
+.SYNOPSIS
+Get playback state.
+
+.DESCRIPTION
+Get information about the user’s current playback state, including track or episode, progress, and active device.
+Returns emtpy object if there is not active playback.
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/get-information-about-the-users-current-playback
+#>
+function Get-SpotifyPlaybackState {
+    Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player" `
+        -Method Get `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json"
+}
+
+<#
+.SYNOPSIS
+Get the user's queue.
+
+.DESCRIPTION
+Get the list of objects that make up the user's queue.
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/get-queue
+#>
+function Get-SpotifyQueue {
+    Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/queue" `
+        -Method Get `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json"
+}
+
+<#
+.SYNOPSIS
 Get recently played tracks.
 
 .DESCRIPTION
@@ -678,6 +795,423 @@ function Get-SpotifyRecentlyPlayed {
                 -ContentType "application/json"; $r 
         } 
     } | Select-Object -ExpandProperty items
+}
+
+<#
+.SYNOPSIS
+Transfer playback.
+
+.DESCRIPTION
+Transfer playback to a new device and determine if it should start playing.
+
+.PARAMETER DeviceId
+ID of the device on which playback should be started/transferred.
+
+.EXAMPLE
+Move-SpotifyPlayback "74ASZWbe4lXaubB36ztrGX"
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/transfer-a-users-playback
+#>
+function Move-SpotifyPlayback {
+    param (
+        [Parameter(Mandatory, Position = 0)]
+        [ValidateNotNullOrEmpty()]
+        [string] $DeviceId
+    )
+    $null = Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player" `
+        -Method Put `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json" `
+        -Body ([pscustomobject]@{ device_ids = @($DeviceId) } | ConvertTo-Json -Depth 99)
+}
+
+<#
+.SYNOPSIS
+Resume playback.
+
+.DESCRIPTION
+Resume current playback on the user's active device.
+
+.PARAMETER DeviceId
+The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+Example value: "0d1841b0976bae2a3a310dd74c0f3df354899bc8".
+
+.EXAMPLE
+Resume-SpotifyPlayback
+
+.EXAMPLE
+Resume-SpotifyPlayback "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/start-a-users-playback
+#>
+function Resume-SpotifyPlayback {
+    param (
+        [Parameter(Position = 0)]
+        [ValidateNotNullOrEmpty()]
+        [string] $DeviceId
+    )
+    $null = Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/play$($DeviceId ? "?device_id=$($DeviceId)" : $null)" `
+        -Method Put `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json"
+}
+
+<#
+.SYNOPSIS
+Seek to position.
+
+.DESCRIPTION
+Seeks to the given position in the user’s currently playing track.
+
+.PARAMETER Position
+The position in milliseconds to seek to. Must be a positive number. Passing in a position that is greater than the length of the track will cause the player to start playing the next song.
+Example value: 25000.
+
+.PARAMETER DeviceId
+The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+Example value: "0d1841b0976bae2a3a310dd74c0f3df354899bc8".
+
+.EXAMPLE
+Set-SpotifyPlaybackPosition 25000
+
+.EXAMPLE
+Set-SpotifyPlaybackPosition -Position 25000 -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/seek-to-position-in-currently-playing-track
+#>
+function Set-SpotifyPlaybackPosition {
+    param (
+        [Parameter(Mandatory, Position = 0)]
+        [ValidateRange(0, 2147483647)]
+        [int] $Position,
+
+        [Parameter(Position = 1)]
+        [ValidateNotNullOrEmpty()]
+        [string] $DeviceId
+    )
+    $null = Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/seek?position_ms=$($Position)$($DeviceId ? "&device_id=$($DeviceId)" : $null)" `
+        -Method Put `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json"
+}
+
+<#
+.SYNOPSIS
+Set repeat mode.
+
+.DESCRIPTION
+Set the repeat mode for the user's playback. Options are repeat-track, repeat-context, and off.
+
+.PARAMETER State
+'track' will repeat the current track.
+'context' will repeat the current context.
+'off' will turn repeat off.
+
+.PARAMETER DeviceId
+The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+Example value: "0d1841b0976bae2a3a310dd74c0f3df354899bc8".
+
+.EXAMPLE
+Set-SpotifyPlaybackRepeat off
+
+.EXAMPLE
+Set-SpotifyPlaybackRepeat -State track -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/set-repeat-mode-on-users-playback
+#>
+function Set-SpotifyPlaybackRepeat {
+    param (
+        [Parameter(Mandatory, Position = 0)]
+        [ValidateSet("track", "context", "off")]
+        [string] $State,
+
+        [Parameter(Position = 1)]
+        [ValidateNotNullOrEmpty()]
+        [string] $DeviceId
+    )
+    $null = Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/repeat?state=$($State)$($DeviceId ? "&device_id=$($DeviceId)" : $null)" `
+        -Method Put `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json"
+}
+
+<#
+.SYNOPSIS
+Toggle playback shuffle.
+
+.DESCRIPTION
+Toggle shuffle on or off for user’s playback.
+
+.PARAMETER State
+'true': Shuffle user's playback.
+'false': Do not shuffle user's playback.
+
+.PARAMETER DeviceId
+The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+Example value: "0d1841b0976bae2a3a310dd74c0f3df354899bc8".
+
+.EXAMPLE
+Set-SpotifyPlaybackShuffle $false
+
+.EXAMPLE
+Set-SpotifyPlaybackShuffle -State $true -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/toggle-shuffle-for-users-playback
+#>
+function Set-SpotifyPlaybackShuffle {
+    param (
+        [Parameter(Mandatory, Position = 0)]
+        [bool] $State,
+
+        [Parameter(Position = 1)]
+        [ValidateNotNullOrEmpty()]
+        [string] $DeviceId
+    )
+    $null = Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/shuffle?state=$($State)$($DeviceId ? "&device_id=$($DeviceId)" : $null)" `
+        -Method Put `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json"
+}
+
+<#
+.SYNOPSIS
+Set playback volume.
+
+.DESCRIPTION
+Set the volume for the user’s current playback device.
+
+.PARAMETER VolumePercent
+The volume to set. Must be a value from 0 to 100 inclusive. Example value: 50.
+
+.PARAMETER DeviceId
+The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+Example value: "0d1841b0976bae2a3a310dd74c0f3df354899bc8".
+
+.EXAMPLE
+Set-SpotifyPlaybackVolume 50
+
+.EXAMPLE
+Set-SpotifyPlaybackVolume -VolumePercent 25 -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/set-volume-for-users-playback
+#>
+function Set-SpotifyPlaybackVolume {
+    param (
+        [Parameter(Mandatory, Position = 0)]
+        [ValidateRange(0, 100)]
+        [int] $VolumePercent,
+
+        [Parameter(Position = 1)]
+        [ValidateNotNullOrEmpty()]
+        [string] $DeviceId
+    )
+    $null = Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/volume?volume_percent=$($VolumePercent)$($DeviceId ? "&device_id=$($DeviceId)" : $null)" `
+        -Method Put `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json"
+}
+
+<#
+.SYNOPSIS
+Skip to next.
+
+.DESCRIPTION
+Skips to next track in the user’s queue.
+
+.PARAMETER DeviceId
+The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+Example value: "0d1841b0976bae2a3a310dd74c0f3df354899bc8".
+
+.EXAMPLE
+Skip-SpotifyNext
+
+.EXAMPLE
+Skip-SpotifyNext "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/skip-users-playback-to-next-track
+#>
+function Skip-SpotifyNext {
+    param (
+        [Parameter(Position = 0)]
+        [ValidateNotNullOrEmpty()]
+        [string] $DeviceId
+    )
+    $null = Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/next$($DeviceId ? "?device_id=$($DeviceId)" : $null)" `
+        -Method Post `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json"
+}
+
+<#
+.SYNOPSIS
+Skip to previous.
+
+.DESCRIPTION
+Skips to previous track in the user’s queue.
+
+.PARAMETER DeviceId
+The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+Example value: "0d1841b0976bae2a3a310dd74c0f3df354899bc8".
+
+.EXAMPLE
+Skip-SpotifyPrevious
+
+.EXAMPLE
+Skip-SpotifyPrevious "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/skip-users-playback-to-previous-track
+#>
+function Skip-SpotifyPrevious {
+    param (
+        [Parameter(Position = 0)]
+        [ValidateNotNullOrEmpty()]
+        [string] $DeviceId
+    )
+    $null = Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/previous$($DeviceId ? "?device_id=$($DeviceId)" : $null)" `
+        -Method Post `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json"
+}
+
+<#
+.SYNOPSIS
+Start playback.
+
+.DESCRIPTION
+Start a new context playback on the user's active device.
+
+.PARAMETER DeviceId
+The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+Example value: "0d1841b0976bae2a3a310dd74c0f3df354899bc8".
+
+.PARAMETER ContextUri
+Optional. Spotify URI of the context to play. Valid contexts are albums, artists & playlists. Example: "spotify:album:1Je1IMUlBXcx1Fz0WE7oPT".
+
+.PARAMETER TrackUri
+Optional. A JSON array of the Spotify track URIs to play. For example: "spotify:track:4iV5W9uYEdYUVa79Axb7Rh", "spotify:track:1301WleyT98MSxVHPZCA6M"
+
+.PARAMETER Offset
+Optional. Integer or string.
+Indicates from where in the context playback should start. 
+Only available when context_uri corresponds to an album or playlist. 
+Example "5" or "spotify:track:1301WleyT98MSxVHPZCA6M".
+
+.PARAMETER Position
+Optional. Track position in milliseconds.
+
+.EXAMPLE
+Start-SpotifyPlayback `
+    -ContextUri "spotify:album:1Je1IMUlBXcx1Fz0WE7oPT" `
+    -Offset 2
+
+.EXAMPLE
+Start-SpotifyPlayback `
+    -TrackUri "6dOuyNJIAQC7ws10eEk0G9", "2Eqv3lSPNQCbtHfHTIlyKK", "4Xz2mxHREzWiEr0AyCJuU6" `
+    -Offset "spotify:track:2Eqv3lSPNQCbtHfHTIlyKK" `
+    -Position 5000 `
+    -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/start-a-users-playback
+#>
+function Start-SpotifyPlayback {
+    [CmdletBinding(PositionalBinding = $false)]
+    param (
+        [Parameter()]
+        [ValidateNotNullOrEmpty()]
+        [string] $DeviceId,
+
+        [Parameter()]
+        [ValidateNotNullOrEmpty()]
+        [string] $ContextUri,
+
+        [Parameter()]
+        [ValidateNotNullOrEmpty()]
+        [string[]] $TrackUri,
+
+        [Parameter()]
+        [ValidateNotNullOrEmpty()]
+        [string] $Offset,
+
+        [Parameter()]
+        [int] $Position
+    )
+
+    $body = @{}
+    foreach ($p in $PSBoundParameters.Keys) {
+        switch ($p) {
+            "ContextUri" { $body.context_uri = $ContextUri }
+            "TrackUri" { $body.uris = $TrackUri }
+            "Offset" { $body.offset = $Offset.Contains("spotify:track:") ? [pscustomobject]@{ uri = $Offset } : [pscustomobject]@{ position = $Offset } }
+            "Position" { $body.position_ms = $Position }
+        }
+    }
+
+    $null = Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/play$($DeviceId ? "?device_id=$($DeviceId)" : $null)" `
+        -Method Put `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json" `
+        -Body ($body | ConvertTo-Json -Depth 99)
+}
+
+<#
+.SYNOPSIS
+Pause playback.
+
+.DESCRIPTION
+Pause playback on the user's account.
+
+.PARAMETER DeviceId
+The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
+Example value: "0d1841b0976bae2a3a310dd74c0f3df354899bc8".
+
+.EXAMPLE
+Suspend-SpotifyPlayback
+
+.EXAMPLE
+Suspend-SpotifyPlayback "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.LINK
+https://developer.spotify.com/documentation/web-api/reference/#/operations/pause-a-users-playback
+#>
+function Suspend-SpotifyPlayback {
+    param (
+        [Parameter(Position = 0)]
+        [ValidateNotNullOrEmpty()]
+        [string] $DeviceId
+    )
+    $null = Invoke-RestMethod `
+        -Uri "https://api.spotify.com/v1/me/player/pause$($DeviceId ? "?device_id=$($DeviceId)" : $null)" `
+        -Method Put `
+        -Authentication Bearer `
+        -Token $global:SpotifyToken `
+        -ContentType "application/json"
 }
 
 <#

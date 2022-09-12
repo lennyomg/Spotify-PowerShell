@@ -1,0 +1,125 @@
+{
+  "device": {
+    "id": "REDACTED",
+    "is_active": true,
+    "is_private_session": false,
+    "is_restricted": false,
+    "name": "REDACTED's iPhone",
+    "type": "Smartphone",
+    "volume_percent": 100
+  },
+  "shuffle_state": true,
+  "repeat_state": "off",
+  "timestamp": 1662876925824,
+  "context": {
+    "external_urls": {
+      "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX6VdMW310YC7"
+    },
+    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6VdMW310YC7",
+    "type": "playlist",
+    "uri": "spotify:playlist:37i9dQZF1DX6VdMW310YC7"
+  },
+  "progress_ms": 207302,
+  "item": {
+    "album": {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5tDjiBYUsTqzd0RkTZxK7u"
+          },
+          "href": "https://api.spotify.com/v1/artists/5tDjiBYUsTqzd0RkTZxK7u",
+          "id": "5tDjiBYUsTqzd0RkTZxK7u",
+          "name": "Ben Böhmer",
+          "type": "artist",
+          "uri": "spotify:artist:5tDjiBYUsTqzd0RkTZxK7u"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AL"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/1ZwkNGxlonmG4bjmLbV1Rr"
+      },
+      "href": "https://api.spotify.com/v1/albums/1ZwkNGxlonmG4bjmLbV1Rr",
+      "id": "1ZwkNGxlonmG4bjmLbV1Rr",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273f31ced0e5fd5ed524804f4a5",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02f31ced0e5fd5ed524804f4a5",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851f31ced0e5fd5ed524804f4a5",
+          "width": 64
+        }
+      ],
+      "name": "Begin Again",
+      "release_date": "2021-09-24",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:1ZwkNGxlonmG4bjmLbV1Rr"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/5tDjiBYUsTqzd0RkTZxK7u"
+        },
+        "href": "https://api.spotify.com/v1/artists/5tDjiBYUsTqzd0RkTZxK7u",
+        "id": "5tDjiBYUsTqzd0RkTZxK7u",
+        "name": "Ben Böhmer",
+        "type": "artist",
+        "uri": "spotify:artist:5tDjiBYUsTqzd0RkTZxK7u"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3uOdNUjwD6hhOh1z2dQEIn"
+        },
+        "href": "https://api.spotify.com/v1/artists/3uOdNUjwD6hhOh1z2dQEIn",
+        "id": "3uOdNUjwD6hhOh1z2dQEIn",
+        "name": "lau.ra",
+        "type": "artist",
+        "uri": "spotify:artist:3uOdNUjwD6hhOh1z2dQEIn"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "disc_number": 1,
+    "duration_ms": 253240,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "GBEWA2103553"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/22QG2saDLvgToHzeOZPm20"
+    },
+    "href": "https://api.spotify.com/v1/tracks/22QG2saDLvgToHzeOZPm20",
+    "id": "22QG2saDLvgToHzeOZPm20",
+    "is_local": false,
+    "name": "Erase",
+    "popularity": 51,
+    "preview_url": "https://p.scdn.co/mp3-preview/5ed8c66b8eb1a341f834e63e706f178c688b6508?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 4,
+    "type": "track",
+    "uri": "spotify:track:22QG2saDLvgToHzeOZPm20"
+  },
+  "currently_playing_type": "track",
+  "actions": {
+    "disallows": {
+      "resuming": true
+    }
+  },
+  "is_playing": true
+}

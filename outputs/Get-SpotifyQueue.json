@@ -1,0 +1,384 @@
+{
+  "currently_playing": {
+    "album": {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5tDjiBYUsTqzd0RkTZxK7u"
+          },
+          "href": "https://api.spotify.com/v1/artists/5tDjiBYUsTqzd0RkTZxK7u",
+          "id": "5tDjiBYUsTqzd0RkTZxK7u",
+          "name": "Ben Böhmer",
+          "type": "artist",
+          "uri": "spotify:artist:5tDjiBYUsTqzd0RkTZxK7u"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AL"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/1ZwkNGxlonmG4bjmLbV1Rr"
+      },
+      "href": "https://api.spotify.com/v1/albums/1ZwkNGxlonmG4bjmLbV1Rr",
+      "id": "1ZwkNGxlonmG4bjmLbV1Rr",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273f31ced0e5fd5ed524804f4a5",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02f31ced0e5fd5ed524804f4a5",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851f31ced0e5fd5ed524804f4a5",
+          "width": 64
+        }
+      ],
+      "name": "Begin Again",
+      "release_date": "2021-09-24",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:1ZwkNGxlonmG4bjmLbV1Rr"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/5tDjiBYUsTqzd0RkTZxK7u"
+        },
+        "href": "https://api.spotify.com/v1/artists/5tDjiBYUsTqzd0RkTZxK7u",
+        "id": "5tDjiBYUsTqzd0RkTZxK7u",
+        "name": "Ben Böhmer",
+        "type": "artist",
+        "uri": "spotify:artist:5tDjiBYUsTqzd0RkTZxK7u"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3uOdNUjwD6hhOh1z2dQEIn"
+        },
+        "href": "https://api.spotify.com/v1/artists/3uOdNUjwD6hhOh1z2dQEIn",
+        "id": "3uOdNUjwD6hhOh1z2dQEIn",
+        "name": "lau.ra",
+        "type": "artist",
+        "uri": "spotify:artist:3uOdNUjwD6hhOh1z2dQEIn"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "disc_number": 1,
+    "duration_ms": 253240,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "GBEWA2103553"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/22QG2saDLvgToHzeOZPm20"
+    },
+    "href": "https://api.spotify.com/v1/tracks/22QG2saDLvgToHzeOZPm20",
+    "id": "22QG2saDLvgToHzeOZPm20",
+    "is_local": false,
+    "name": "Erase",
+    "popularity": 51,
+    "preview_url": "https://p.scdn.co/mp3-preview/5ed8c66b8eb1a341f834e63e706f178c688b6508?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 4,
+    "type": "track",
+    "uri": "spotify:track:22QG2saDLvgToHzeOZPm20"
+  },
+  "queue": [
+    {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0cjvrTtv350Ls87eGY80iz"
+            },
+            "href": "https://api.spotify.com/v1/artists/0cjvrTtv350Ls87eGY80iz",
+            "id": "0cjvrTtv350Ls87eGY80iz",
+            "name": "Massane",
+            "type": "artist",
+            "uri": "spotify:artist:0cjvrTtv350Ls87eGY80iz"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/37CRiobfgfXdiuodKhWiOk"
+        },
+        "href": "https://api.spotify.com/v1/albums/37CRiobfgfXdiuodKhWiOk",
+        "id": "37CRiobfgfXdiuodKhWiOk",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2738c842a8a0093b977ee9d8506",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e028c842a8a0093b977ee9d8506",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048518c842a8a0093b977ee9d8506",
+            "width": 64
+          }
+        ],
+        "name": "Visage 4 (By My Side)",
+        "release_date": "2022-07-12",
+        "release_date_precision": "day",
+        "total_tracks": 3,
+        "type": "album",
+        "uri": "spotify:album:37CRiobfgfXdiuodKhWiOk"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0cjvrTtv350Ls87eGY80iz"
+          },
+          "href": "https://api.spotify.com/v1/artists/0cjvrTtv350Ls87eGY80iz",
+          "id": "0cjvrTtv350Ls87eGY80iz",
+          "name": "Massane",
+          "type": "artist",
+          "uri": "spotify:artist:0cjvrTtv350Ls87eGY80iz"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4pOglqMAavrWFo20ORRx5w"
+          },
+          "href": "https://api.spotify.com/v1/artists/4pOglqMAavrWFo20ORRx5w",
+          "id": "4pOglqMAavrWFo20ORRx5w",
+          "name": "MAGNUS",
+          "type": "artist",
+          "uri": "spotify:artist:4pOglqMAavrWFo20ORRx5w"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AL"
+      ],
+      "disc_number": 1,
+      "duration_ms": 213934,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "GBEWA2203830"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0oiXA5d3B3QAbHFwom7OJZ"
+      },
+      "href": "https://api.spotify.com/v1/tracks/0oiXA5d3B3QAbHFwom7OJZ",
+      "id": "0oiXA5d3B3QAbHFwom7OJZ",
+      "is_local": false,
+      "name": "By My Side",
+      "popularity": 48,
+      "preview_url": "https://p.scdn.co/mp3-preview/5ffd8b516357dee71fea69d05e0d86e5fb067c48?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:0oiXA5d3B3QAbHFwom7OJZ"
+    },
+    {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7KtVS0f2RQoEhjxDcSGBtJ"
+            },
+            "href": "https://api.spotify.com/v1/artists/7KtVS0f2RQoEhjxDcSGBtJ",
+            "id": "7KtVS0f2RQoEhjxDcSGBtJ",
+            "name": "santpoort",
+            "type": "artist",
+            "uri": "spotify:artist:7KtVS0f2RQoEhjxDcSGBtJ"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3Nb8N20WChM0swo5qWTvm8"
+            },
+            "href": "https://api.spotify.com/v1/artists/3Nb8N20WChM0swo5qWTvm8",
+            "id": "3Nb8N20WChM0swo5qWTvm8",
+            "name": "Tennyson",
+            "type": "artist",
+            "uri": "spotify:artist:3Nb8N20WChM0swo5qWTvm8"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6dVltlMV1WFe0BcU9m8ZnE"
+        },
+        "href": "https://api.spotify.com/v1/albums/6dVltlMV1WFe0BcU9m8ZnE",
+        "id": "6dVltlMV1WFe0BcU9m8ZnE",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2733a4e02b7254c4119b6016eb0",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e023a4e02b7254c4119b6016eb0",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048513a4e02b7254c4119b6016eb0",
+            "width": 64
+          }
+        ],
+        "name": "eons away",
+        "release_date": "2021-08-26",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": "spotify:album:6dVltlMV1WFe0BcU9m8ZnE"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/7KtVS0f2RQoEhjxDcSGBtJ"
+          },
+          "href": "https://api.spotify.com/v1/artists/7KtVS0f2RQoEhjxDcSGBtJ",
+          "id": "7KtVS0f2RQoEhjxDcSGBtJ",
+          "name": "santpoort",
+          "type": "artist",
+          "uri": "spotify:artist:7KtVS0f2RQoEhjxDcSGBtJ"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Nb8N20WChM0swo5qWTvm8"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Nb8N20WChM0swo5qWTvm8",
+          "id": "3Nb8N20WChM0swo5qWTvm8",
+          "name": "Tennyson",
+          "type": "artist",
+          "uri": "spotify:artist:3Nb8N20WChM0swo5qWTvm8"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AL"
+      ],
+      "disc_number": 1,
+      "duration_ms": 152901,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "QMR6U2100065"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1IGkkm35S2KRItswTm0eKP"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1IGkkm35S2KRItswTm0eKP",
+      "id": "1IGkkm35S2KRItswTm0eKP",
+      "is_local": false,
+      "name": "eons away",
+      "popularity": 44,
+      "preview_url": "https://p.scdn.co/mp3-preview/65d4ccbe37476ef83c299138226127c6ce3f9159?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:1IGkkm35S2KRItswTm0eKP"
+    },
+    {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0vTVU0KH0CVzijsoKGsTPl"
+            },
+            "href": "https://api.spotify.com/v1/artists/0vTVU0KH0CVzijsoKGsTPl",
+            "id": "0vTVU0KH0CVzijsoKGsTPl",
+            "name": "Barry Can't Swim",
+            "type": "artist",
+            "uri": "spotify:artist:0vTVU0KH0CVzijsoKGsTPl"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3Sl6q9q5oRkU5fD3V9SNyQ"
+        },
+        "href": "https://api.spotify.com/v1/albums/3Sl6q9q5oRkU5fD3V9SNyQ",
+        "id": "3Sl6q9q5oRkU5fD3V9SNyQ",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27391505df8575fc81a5b2359f5",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0291505df8575fc81a5b2359f5",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485191505df8575fc81a5b2359f5",
+            "width": 64
+          }
+        ],
+        "name": "More Content",
+        "release_date": "2022-06-24",
+        "release_date_precision": "day",
+        "total_tracks": 4,
+        "type": "album",
+        "uri": "spotify:album:3Sl6q9q5oRkU5fD3V9SNyQ"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0vTVU0KH0CVzijsoKGsTPl"
+          },
+          "href": "https://api.spotify.com/v1/artists/0vTVU0KH0CVzijsoKGsTPl",
+          "id": "0vTVU0KH0CVzijsoKGsTPl",
+          "name": "Barry Can't Swim",
+          "type": "artist",
+          "uri": "spotify:artist:0vTVU0KH0CVzijsoKGsTPl"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AL"
+      ],
+      "disc_number": 1,
+      "duration_ms": 181873,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "GBCFB2200130"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2wynpXzuXf6Cvf2MqHYA9Z"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2wynpXzuXf6Cvf2MqHYA9Z",
+      "id": "2wynpXzuXf6Cvf2MqHYA9Z",
+      "is_local": false,
+      "name": "Sonder",
+      "popularity": 58,
+      "preview_url": "https://p.scdn.co/mp3-preview/5ab3b2eb22367716fd4b4cd8cc854ca7b605561e?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:2wynpXzuXf6Cvf2MqHYA9Z"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "REDACTED",
+    "is_active": false,
+    "is_private_session": false,
+    "is_restricted": false,
+    "name": "REDACTED",
+    "type": "Computer",
+    "volume_percent": 100
+  },
+  {
+    "id": "REDACTED",
+    "is_active": true,
+    "is_private_session": false,
+    "is_restricted": false,
+    "name": "REDACTED's iPhone",
+    "type": "Smartphone",
+    "volume_percent": 100
+  }
+]

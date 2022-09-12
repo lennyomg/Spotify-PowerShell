@@ -184,7 +184,7 @@ function Invoke-SpotifyTests {
     . $PSScriptRoot/functions/Connect-SpotifyApi.ps1
     Connect-SpotifyApi
 
-    $p = Invoke-Pester $PSScriptRoot/*.Tests.ps1 -Output Normal -PassThru -ExcludeTagFilter Output
+    $p = Invoke-Pester $PSScriptRoot/*.Tests.ps1 -Output Normal -PassThru -ExcludeTagFilter Output, Playback
     if ($p.result -eq "Failed") {
         throw "Tests failed."
     }
