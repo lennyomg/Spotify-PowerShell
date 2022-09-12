@@ -8,6 +8,9 @@ Get a list of the songs saved in the current Spotify user's 'Your Music' library
 .EXAMPLE
 Get-SpotifySavedTracks
 
+.FUNCTIONALITY
+Track
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-saved-tracks
 #>

@@ -22,6 +22,9 @@ Get-SpotifySavedAlbums
 | Sort-Object { Get-Random }
 | Add-SpotifyPlaylistTracks "69kakrmDURRcDTMOnI9PXX"
 
+.FUNCTIONALITY
+Playlist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/add-tracks-to-playlist
 #>

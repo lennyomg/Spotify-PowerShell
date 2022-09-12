@@ -18,6 +18,9 @@ Set-SpotifyPlaybackVolume 50
 .EXAMPLE
 Set-SpotifyPlaybackVolume -VolumePercent 25 -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/set-volume-for-users-playback
 #>

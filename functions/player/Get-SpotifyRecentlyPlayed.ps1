@@ -8,6 +8,9 @@ Get tracks from the current user's recently played tracks. Note: Currently doesn
 .EXAMPLE
 Get-SpotifyRecentlyPlayed
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-recently-played
 #>

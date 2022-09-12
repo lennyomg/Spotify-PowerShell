@@ -17,6 +17,9 @@ Get-SpotifyArtistTopTracks
 .EXAMPLE
 Get-SpotifySavedArtists | Get-SpotifyArtistTopTracks
 
+.FUNCTIONALITY
+Artist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-top-tracks
 #>

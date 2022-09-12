@@ -14,6 +14,9 @@ Remove-SpotifyTrack -TrackId "4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"
 .EXAMPLE
 Get-SpotifyAlbumTracks -AlbumId "4aawyAB9vmqN3uQ7FjRGTy" | Remove-SpotifyTrack
 
+.FUNCTIONALITY
+Track
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/remove-tracks-user
 #>

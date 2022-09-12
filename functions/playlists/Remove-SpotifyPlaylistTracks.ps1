@@ -20,6 +20,9 @@ Remove-SpotifyPlaylistTracks -PlaylistId "3cEYpjA9oz9GiPac4AsH4n" -TrackUri "spo
 | ForEach { $_.track }
 | Remove-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n"
 
+.FUNCTIONALITY
+Playlist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/remove-tracks-playlist
 #>

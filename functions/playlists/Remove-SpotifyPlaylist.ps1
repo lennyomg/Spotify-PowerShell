@@ -14,6 +14,9 @@ Remove-SpotifyPlaylist -PlaylistId "3cEYpjA9oz9GiPac4AsH4n"
 .EXAMPLE
 "3cEYpjA9oz9GiPac4AsH4n", "37i9dQZF1DX91oIci4su1D" | Remove-SpotifyPlaylist
 
+.FUNCTIONALITY
+Playlist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/unfollow-playlist
 #>

@@ -14,6 +14,9 @@ Get-SpotifyAlbumTracks "4aawyAB9vmqN3uQ7FjRGTy"
 .EXAMPLE
 Get-SpotifySavedAlbums | ForEach-Object { $_.album } | Get-SpotifyAlbumTracks
 
+.FUNCTIONALITY
+Album
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-albums-tracks
 #>

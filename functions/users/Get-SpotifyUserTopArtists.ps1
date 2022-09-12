@@ -14,6 +14,9 @@ Get-SpotifyUserTopArtists
 .EXAMPLE
 Get-SpotifyUserTopArtists long_term
 
+.FUNCTIONALITY
+User
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
 #>

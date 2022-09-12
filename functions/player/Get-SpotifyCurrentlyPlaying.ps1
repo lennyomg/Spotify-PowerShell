@@ -5,6 +5,9 @@ Get currently playing tracks.
 .DESCRIPTION
 Get the object currently being played on the user's Spotify account.
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-the-users-currently-playing-track
 #>

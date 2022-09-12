@@ -8,6 +8,9 @@ Get a list of the playlists owned or followed by the current Spotify user.
 .EXAMPLE
 Get-SpotifySavedPlaylists
 
+.FUNCTIONALITY
+Playlist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-a-list-of-current-users-playlists
 #>

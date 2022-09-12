@@ -14,6 +14,9 @@ Get-SpotifySavedArtists
 | Sort-Object { Get-Random } 
 | Add-SpotifyPlaylistTracks "56twaZEs2xHEr1kL5AXpIL"
 
+.FUNCTIONALITY
+Artist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-followed
 #>

@@ -17,6 +17,9 @@ Remove-SpotifyAlbum "2CIMQHirSU0MQqyYHq0eOx", "1vCWHaC5f2uS3yhpwWbIA6"
 .EXAMPLE
 "2CIMQHirSU0MQqyYHq0eOx", 57dN52uHvrHOxijzpIgu3E", "1vCWHaC5f2uS3yhpwWbIA6" | Remove-SpotifyAlbum
 
+.FUNCTIONALITY
+Album
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/remove-albums-user
 #>

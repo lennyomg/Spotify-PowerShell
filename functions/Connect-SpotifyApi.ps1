@@ -28,12 +28,14 @@ Connect-SpotifyApi -Force
 .EXAMPLE
 Connect-SpotifyApi -Force -ClientId "1995f32ef1a843249ddd581b8371d58f" -Scope "playlist-modify-private", "user-follow-read"
 
+.FUNCTIONALITY
+Base
+
 .LINK
 https://developer.spotify.com/dashboard/applications
 
 .LINK
 https://developer.spotify.com/documentation/general/guides/authorization/scopes
-
 #>
 function Connect-SpotifyApi {
     [CmdletBinding(PositionalBinding = $false)]

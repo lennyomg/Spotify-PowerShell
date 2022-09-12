@@ -8,6 +8,9 @@ Get detailed profile information about the current user (including the current u
 .EXAMPLE
 Get-SpotifyUser
 
+.FUNCTIONALITY
+User
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-current-users-profile
 #>

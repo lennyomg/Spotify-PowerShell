@@ -5,6 +5,9 @@ Get the user's queue.
 .DESCRIPTION
 Get the list of objects that make up the user's queue.
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-queue
 #>

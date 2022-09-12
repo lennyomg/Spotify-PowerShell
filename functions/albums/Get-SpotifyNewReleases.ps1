@@ -11,6 +11,9 @@ Get-SpotifyNewReleases
 .EXAMPLE
 Get-SpotifyNewReleases | Get-SpotifyAlbumTracks
 
+.FUNCTIONALITY
+Album
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-new-releases
 #>

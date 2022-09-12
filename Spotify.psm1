@@ -24,6 +24,9 @@ Add-SpotifyAlbum "2CIMQHirSU0MQqyYHq0eOx", "1vCWHaC5f2uS3yhpwWbIA6"
 .EXAMPLE
 Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n" | ForEach-Object { $_.track.album } | Add-SpotifyAlbum
 
+.FUNCTIONALITY
+Album
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/save-albums-user
 #>
@@ -61,6 +64,9 @@ The Spotify ID of the album. Example value: "4aawyAB9vmqN3uQ7FjRGTy".
 .EXAMPLE
 Get-SpotifyAlbum -AlbumId "4aawyAB9vmqN3uQ7FjRGTy"
 
+.FUNCTIONALITY
+Album
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-album
 #>
@@ -97,6 +103,9 @@ Get-SpotifyAlbumTracks "4aawyAB9vmqN3uQ7FjRGTy"
 
 .EXAMPLE
 Get-SpotifySavedAlbums | ForEach-Object { $_.album } | Get-SpotifyAlbumTracks
+
+.FUNCTIONALITY
+Album
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-albums-tracks
@@ -137,6 +146,9 @@ Get-SpotifyNewReleases
 .EXAMPLE
 Get-SpotifyNewReleases | Get-SpotifyAlbumTracks
 
+.FUNCTIONALITY
+Album
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-new-releases
 #>
@@ -166,6 +178,9 @@ Get-SpotifySavedAlbums
 
 .EXAMPLE
 Get-SpotifySavedAlbums | ForEach-Object { $_.album } | Get-SpotifyAlbumTracks
+
+.FUNCTIONALITY
+Album
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-saved-albums
@@ -202,6 +217,9 @@ Remove-SpotifyAlbum "2CIMQHirSU0MQqyYHq0eOx", "1vCWHaC5f2uS3yhpwWbIA6"
 
 .EXAMPLE
 "2CIMQHirSU0MQqyYHq0eOx", 57dN52uHvrHOxijzpIgu3E", "1vCWHaC5f2uS3yhpwWbIA6" | Remove-SpotifyAlbum
+
+.FUNCTIONALITY
+Album
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/remove-albums-user
@@ -243,6 +261,9 @@ Add-SpotifyArtist -ArtistId "2CIMQHirSU0MQqyYHq0eOx"
 .EXAMPLE
 "2CIMQHirSU0MQqyYHq0eOx", "57dN52uHvrHOxijzpIgu3E", "1vCWHaC5f2uS3yhpwWbIA6" | Add-SpotifyArtist
 
+.FUNCTIONALITY
+Artist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/unfollow-artists-users
 #>
@@ -283,6 +304,9 @@ Get-SpotifyArtist "0TnOYISbd1XYRBk9myaseg"
 .EXAMPLE
 "2CIMQHirSU0MQqyYHq0eOx", "57dN52uHvrHOxijzpIgu3E", "1vCWHaC5f2uS3yhpwWbIA6" | Get-SpotifyArtist
 
+.FUNCTIONALITY
+Artist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artist
 #>
@@ -319,6 +343,9 @@ Get-SpotifyArtistAlbums "0TnOYISbd1XYRBk9myaseg"
 
 .EXAMPLE
 Get-SpotifySavedArtists | Get-SpotifyArtistAlbums
+
+.FUNCTIONALITY
+Artist
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-albums
@@ -359,6 +386,9 @@ The Spotify ID of the artist. Example value: "0TnOYISbd1XYRBk9myaseg".
 .EXAMPLE
 Get-SpotifyArtistRelatedArtists "0TnOYISbd1XYRBk9myaseg"
 
+.FUNCTIONALITY
+Artist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-related-artists
 #>
@@ -398,6 +428,9 @@ Get-SpotifyArtistTopTracks
 
 .EXAMPLE
 Get-SpotifySavedArtists | Get-SpotifyArtistTopTracks
+
+.FUNCTIONALITY
+Artist
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-top-tracks
@@ -440,6 +473,9 @@ Get-SpotifySavedArtists
 | Sort-Object { Get-Random } 
 | Add-SpotifyPlaylistTracks "56twaZEs2xHEr1kL5AXpIL"
 
+.FUNCTIONALITY
+Artist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-followed
 #>
@@ -472,6 +508,9 @@ Remove-SpotifyArtist -ArtistId "2CIMQHirSU0MQqyYHq0eOx"
 
 .EXAMPLE
 "2CIMQHirSU0MQqyYHq0eOx", "57dN52uHvrHOxijzpIgu3E", "1vCWHaC5f2uS3yhpwWbIA6" | Remove-SpotifyArtist
+
+.FUNCTIONALITY
+Artist
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/follow-artists-users
@@ -527,12 +566,14 @@ Connect-SpotifyApi -Force
 .EXAMPLE
 Connect-SpotifyApi -Force -ClientId "1995f32ef1a843249ddd581b8371d58f" -Scope "playlist-modify-private", "user-follow-read"
 
+.FUNCTIONALITY
+Base
+
 .LINK
 https://developer.spotify.com/dashboard/applications
 
 .LINK
 https://developer.spotify.com/documentation/general/guides/authorization/scopes
-
 #>
 function Connect-SpotifyApi {
     [CmdletBinding(PositionalBinding = $false)]
@@ -619,6 +660,9 @@ Retrieve a list of available genres seed parameter values for recommendations.
 .EXAMPLE
 Get-SpotifyGenres
 
+.FUNCTIONALITY
+Genre
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-recommendation-genres
 #>
@@ -640,6 +684,9 @@ Get the list of markets where Spotify is available.
 
 .EXAMPLE
 Get-SpotifyMarkets
+
+.FUNCTIONALITY
+Market
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-available-markets
@@ -667,6 +714,9 @@ Example value: "spotify:track:4iV5W9uYEdYUVa79Axb7Rh".
 .PARAMETER DeviceId
 The id of the device this command is targeting. If not supplied, the user's currently active device is the target.
 Example value: "0d1841b0976bae2a3a310dd74c0f3df354899bc8".
+
+.FUNCTIONALITY
+Player
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/add-to-queue
@@ -700,6 +750,9 @@ Get currently playing tracks.
 .DESCRIPTION
 Get the object currently being played on the user's Spotify account.
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-the-users-currently-playing-track
 #>
@@ -718,6 +771,9 @@ Get available devices.
 
 .DESCRIPTION
 Get information about a user’s available devices. Returns empty list if there is no active devices.
+
+.FUNCTIONALITY
+Player
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-a-users-available-devices
@@ -739,6 +795,9 @@ Get playback state.
 Get information about the user’s current playback state, including track or episode, progress, and active device.
 Returns emtpy object if there is not active playback.
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-information-about-the-users-current-playback
 #>
@@ -757,6 +816,9 @@ Get the user's queue.
 
 .DESCRIPTION
 Get the list of objects that make up the user's queue.
+
+.FUNCTIONALITY
+Player
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-queue
@@ -779,6 +841,9 @@ Get tracks from the current user's recently played tracks. Note: Currently doesn
 
 .EXAMPLE
 Get-SpotifyRecentlyPlayed
+
+.FUNCTIONALITY
+Player
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-recently-played
@@ -809,6 +874,9 @@ ID of the device on which playback should be started/transferred.
 
 .EXAMPLE
 Move-SpotifyPlayback "74ASZWbe4lXaubB36ztrGX"
+
+.FUNCTIONALITY
+Player
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/transfer-a-users-playback
@@ -844,6 +912,9 @@ Resume-SpotifyPlayback
 
 .EXAMPLE
 Resume-SpotifyPlayback "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.FUNCTIONALITY
+Player
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/start-a-users-playback
@@ -882,6 +953,9 @@ Set-SpotifyPlaybackPosition 25000
 
 .EXAMPLE
 Set-SpotifyPlaybackPosition -Position 25000 -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.FUNCTIONALITY
+Player
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/seek-to-position-in-currently-playing-track
@@ -926,6 +1000,9 @@ Set-SpotifyPlaybackRepeat off
 .EXAMPLE
 Set-SpotifyPlaybackRepeat -State track -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/set-repeat-mode-on-users-playback
 #>
@@ -968,6 +1045,9 @@ Set-SpotifyPlaybackShuffle $false
 .EXAMPLE
 Set-SpotifyPlaybackShuffle -State $true -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/toggle-shuffle-for-users-playback
 #>
@@ -1008,6 +1088,9 @@ Set-SpotifyPlaybackVolume 50
 .EXAMPLE
 Set-SpotifyPlaybackVolume -VolumePercent 25 -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/set-volume-for-users-playback
 #>
@@ -1046,6 +1129,9 @@ Skip-SpotifyNext
 .EXAMPLE
 Skip-SpotifyNext "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/skip-users-playback-to-next-track
 #>
@@ -1079,6 +1165,9 @@ Skip-SpotifyPrevious
 
 .EXAMPLE
 Skip-SpotifyPrevious "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.FUNCTIONALITY
+Player
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/skip-users-playback-to-previous-track
@@ -1134,6 +1223,9 @@ Start-SpotifyPlayback `
     -Offset "spotify:track:2Eqv3lSPNQCbtHfHTIlyKK" `
     -Position 5000 `
     -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
+
+.FUNCTIONALITY
+Player
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/start-a-users-playback
@@ -1197,6 +1289,9 @@ Suspend-SpotifyPlayback
 .EXAMPLE
 Suspend-SpotifyPlayback "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/pause-a-users-playback
 #>
@@ -1229,6 +1324,9 @@ Add-SpotifyPlaylist -PlaylistId "3cEYpjA9oz9GiPac4AsH4n"
 
 .EXAMPLE
 "3cEYpjA9oz9GiPac4AsH4n", "37i9dQZF1DX91oIci4su1D" | Add-SpotifyPlaylist
+
+.FUNCTIONALITY
+Playlist
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/follow-playlist
@@ -1274,6 +1372,9 @@ Get-SpotifySavedAlbums
 | Select-Object -ExpandProperty uri -Unique
 | Sort-Object { Get-Random }
 | Add-SpotifyPlaylistTracks "69kakrmDURRcDTMOnI9PXX"
+
+.FUNCTIONALITY
+Playlist
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/add-tracks-to-playlist
@@ -1330,6 +1431,9 @@ Get-SpotifyPlaylist -PlaylistId "3cEYpjA9oz9GiPac4AsH4n"
 .EXAMPLE
 "3cEYpjA9oz9GiPac4AsH4n" | Get-SpotifyPlaylist
 
+.FUNCTIONALITY
+Playlist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-playlist
 #>
@@ -1367,6 +1471,9 @@ Get-SpotifyPlaylistCover -PlaylistId "3cEYpjA9oz9GiPac4AsH4n"
 .EXAMPLE
 "3cEYpjA9oz9GiPac4AsH4n" | Get-SpotifyPlaylistCover
 
+.FUNCTIONALITY
+Playlist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-playlist-cover
 #>
@@ -1400,6 +1507,9 @@ The Spotify ID of the playlist. Example value: "3cEYpjA9oz9GiPac4AsH4n".
 
 .EXAMPLE
 Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n" | Select-Object -ExpandProperty track
+
+.FUNCTIONALITY
+Playlist
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-playlists-tracks
@@ -1435,6 +1545,9 @@ Get a list of the playlists owned or followed by the current Spotify user.
 
 .EXAMPLE
 Get-SpotifySavedPlaylists
+
+.FUNCTIONALITY
+Playlist
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-a-list-of-current-users-playlists
@@ -1478,6 +1591,9 @@ Defaults to false. If true the playlist will be collaborative. Note: to create a
 .EXAMPLE
 $user = Get-SpotifyUser
 New-SpotifyPlaylist -UserId $user.id -Name "New playlist" -Description "Awesome songs" -Public
+
+.FUNCTIONALITY
+Playlist
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/create-playlist
@@ -1538,6 +1654,9 @@ Remove-SpotifyPlaylist -PlaylistId "3cEYpjA9oz9GiPac4AsH4n"
 .EXAMPLE
 "3cEYpjA9oz9GiPac4AsH4n", "37i9dQZF1DX91oIci4su1D" | Remove-SpotifyPlaylist
 
+.FUNCTIONALITY
+Playlist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/unfollow-playlist
 #>
@@ -1580,6 +1699,9 @@ Remove-SpotifyPlaylistTracks -PlaylistId "3cEYpjA9oz9GiPac4AsH4n" -TrackUri "spo
 | Get-SpotifyPlaylistTracks
 | ForEach { $_.track }
 | Remove-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n"
+
+.FUNCTIONALITY
+Playlist
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/remove-tracks-playlist
@@ -1644,6 +1766,9 @@ If true, the playlist will become collaborative and other users will be able to 
 
 .EXAMPLE
 Update-Playlist -PlaylistId "3cEYpjA9oz9GiPac4AsH4n" -Name "New name" -Public $false
+
+.FUNCTIONALITY
+Playlist
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/change-playlist-details
@@ -1728,6 +1853,9 @@ Find-SpotifyItem "remaster track:Doxy artist:Miles Davis"
 .EXAMPLE
 Find-SpotifyItem -Query "rock" -Type playlist, track
 
+.FUNCTIONALITY
+Searh
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/search
 #>
@@ -1792,6 +1920,9 @@ Add-SpotifyTrack -TrackId "4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"
 .EXAMPLE
 Get-SpotifyAlbumTracks -AlbumId "4aawyAB9vmqN3uQ7FjRGTy" | Add-SpotifyTrack
 
+.FUNCTIONALITY
+Track
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/save-tracks-user
 #>
@@ -1826,6 +1957,9 @@ For artists and tracks that are very new or obscure there might not be enough da
 
 .EXAMPLE
 Get-SpotifyRecommendations -SeedArtists "2CIMQHirSU0MQqyYHq0eOx", "57dN52uHvrHOxijzpIgu3E" -MinEnergy 0.8 -MaxEnergy 1 -TargetDanceability 1
+
+.FUNCTIONALITY
+Track
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-recommendations
@@ -2088,6 +2222,9 @@ Get a list of the songs saved in the current Spotify user's 'Your Music' library
 .EXAMPLE
 Get-SpotifySavedTracks
 
+.FUNCTIONALITY
+Track
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-saved-tracks
 #>
@@ -2117,6 +2254,9 @@ The Spotify ID for the track. Example value: "11dFghVXANMlKmJXsNCbNl".
 
 .EXAMPLE
 Get-SpotifyTrack -TrackId "11dFghVXANMlKmJXsNCbNl"
+
+.FUNCTIONALITY
+Track
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-track
@@ -2152,6 +2292,9 @@ The Spotify ID for the track. Example value: "11dFghVXANMlKmJXsNCbNl".
 .EXAMPLE
 Get-SpotifyTrackAnalysis -TrackId "11dFghVXANMlKmJXsNCbNl"
 
+.FUNCTIONALITY
+Track
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-analysis
 #>
@@ -2185,6 +2328,9 @@ The Spotify ID for the track. Example value: "11dFghVXANMlKmJXsNCbNl".
 
 .EXAMPLE
 Get-SpotifyTrackFeatures -TrackId "11dFghVXANMlKmJXsNCbNl"
+
+.FUNCTIONALITY
+Track
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-features
@@ -2223,6 +2369,9 @@ Remove-SpotifyTrack -TrackId "4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"
 .EXAMPLE
 Get-SpotifyAlbumTracks -AlbumId "4aawyAB9vmqN3uQ7FjRGTy" | Remove-SpotifyTrack
 
+.FUNCTIONALITY
+Track
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/remove-tracks-user
 #>
@@ -2256,6 +2405,9 @@ Get detailed profile information about the current user (including the current u
 .EXAMPLE
 Get-SpotifyUser
 
+.FUNCTIONALITY
+User
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-current-users-profile
 #>
@@ -2283,6 +2435,9 @@ Get-SpotifyUserTopArtists
 
 .EXAMPLE
 Get-SpotifyUserTopArtists long_term
+
+.FUNCTIONALITY
+User
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks
@@ -2322,6 +2477,9 @@ Get-SpotifyUserTopTracks
 
 .EXAMPLE
 Get-SpotifyUserTopTracks long_term
+
+.FUNCTIONALITY
+User
 
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-top-artists-and-tracks

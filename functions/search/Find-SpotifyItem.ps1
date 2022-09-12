@@ -28,6 +28,9 @@ Find-SpotifyItem "remaster track:Doxy artist:Miles Davis"
 .EXAMPLE
 Find-SpotifyItem -Query "rock" -Type playlist, track
 
+.FUNCTIONALITY
+Searh
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/search
 #>

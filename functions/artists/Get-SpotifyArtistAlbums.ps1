@@ -14,6 +14,9 @@ Get-SpotifyArtistAlbums "0TnOYISbd1XYRBk9myaseg"
 .EXAMPLE
 Get-SpotifySavedArtists | Get-SpotifyArtistAlbums
 
+.FUNCTIONALITY
+Artist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-albums
 #>

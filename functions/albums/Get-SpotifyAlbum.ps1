@@ -11,6 +11,9 @@ The Spotify ID of the album. Example value: "4aawyAB9vmqN3uQ7FjRGTy".
 .EXAMPLE
 Get-SpotifyAlbum -AlbumId "4aawyAB9vmqN3uQ7FjRGTy"
 
+.FUNCTIONALITY
+Album
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-album
 #>

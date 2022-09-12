@@ -10,6 +10,9 @@ For artists and tracks that are very new or obscure there might not be enough da
 .EXAMPLE
 Get-SpotifyRecommendations -SeedArtists "2CIMQHirSU0MQqyYHq0eOx", "57dN52uHvrHOxijzpIgu3E" -MinEnergy 0.8 -MaxEnergy 1 -TargetDanceability 1
 
+.FUNCTIONALITY
+Track
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-recommendations
 #>

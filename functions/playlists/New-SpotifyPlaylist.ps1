@@ -24,6 +24,9 @@ Defaults to false. If true the playlist will be collaborative. Note: to create a
 $user = Get-SpotifyUser
 New-SpotifyPlaylist -UserId $user.id -Name "New playlist" -Description "Awesome songs" -Public
 
+.FUNCTIONALITY
+Playlist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/create-playlist
 #>

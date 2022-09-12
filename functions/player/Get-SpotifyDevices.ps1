@@ -5,6 +5,9 @@ Get available devices.
 .DESCRIPTION
 Get information about a user’s available devices. Returns empty list if there is no active devices.
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-a-users-available-devices
 #>

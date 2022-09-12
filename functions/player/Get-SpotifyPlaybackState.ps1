@@ -6,6 +6,9 @@ Get playback state.
 Get information about the user’s current playback state, including track or episode, progress, and active device.
 Returns emtpy object if there is not active playback.
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-information-about-the-users-current-playback
 #>

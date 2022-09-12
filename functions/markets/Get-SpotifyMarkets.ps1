@@ -8,6 +8,9 @@ Get the list of markets where Spotify is available.
 .EXAMPLE
 Get-SpotifyMarkets
 
+.FUNCTIONALITY
+Market
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-available-markets
 #>

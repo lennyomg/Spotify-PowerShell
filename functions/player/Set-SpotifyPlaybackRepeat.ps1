@@ -20,6 +20,9 @@ Set-SpotifyPlaybackRepeat off
 .EXAMPLE
 Set-SpotifyPlaybackRepeat -State track -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/set-repeat-mode-on-users-playback
 #>

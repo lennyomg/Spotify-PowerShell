@@ -20,6 +20,9 @@ Add-SpotifyAlbum "2CIMQHirSU0MQqyYHq0eOx", "1vCWHaC5f2uS3yhpwWbIA6"
 .EXAMPLE
 Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n" | ForEach-Object { $_.track.album } | Add-SpotifyAlbum
 
+.FUNCTIONALITY
+Album
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/save-albums-user
 #>

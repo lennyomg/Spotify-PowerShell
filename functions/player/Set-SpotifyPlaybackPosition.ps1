@@ -19,6 +19,9 @@ Set-SpotifyPlaybackPosition 25000
 .EXAMPLE
 Set-SpotifyPlaybackPosition -Position 25000 -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/seek-to-position-in-currently-playing-track
 #>

@@ -23,6 +23,9 @@ If true, the playlist will become collaborative and other users will be able to 
 .EXAMPLE
 Update-Playlist -PlaylistId "3cEYpjA9oz9GiPac4AsH4n" -Name "New name" -Public $false
 
+.FUNCTIONALITY
+Playlist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/change-playlist-details
 #>

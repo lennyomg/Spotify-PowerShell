@@ -8,6 +8,9 @@ Retrieve a list of available genres seed parameter values for recommendations.
 .EXAMPLE
 Get-SpotifyGenres
 
+.FUNCTIONALITY
+Genre
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-recommendation-genres
 #>

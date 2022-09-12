@@ -11,6 +11,9 @@ ID of the device on which playback should be started/transferred.
 .EXAMPLE
 Move-SpotifyPlayback "74ASZWbe4lXaubB36ztrGX"
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/transfer-a-users-playback
 #>

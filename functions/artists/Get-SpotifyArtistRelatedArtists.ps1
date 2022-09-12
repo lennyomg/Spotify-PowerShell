@@ -11,6 +11,9 @@ The Spotify ID of the artist. Example value: "0TnOYISbd1XYRBk9myaseg".
 .EXAMPLE
 Get-SpotifyArtistRelatedArtists "0TnOYISbd1XYRBk9myaseg"
 
+.FUNCTIONALITY
+Artist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artists-related-artists
 #>

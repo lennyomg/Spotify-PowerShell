@@ -11,6 +11,9 @@ The Spotify ID for the track. Example value: "11dFghVXANMlKmJXsNCbNl".
 .EXAMPLE
 Get-SpotifyTrackAnalysis -TrackId "11dFghVXANMlKmJXsNCbNl"
 
+.FUNCTIONALITY
+Track
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-analysis
 #>

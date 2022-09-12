@@ -15,6 +15,9 @@ Suspend-SpotifyPlayback
 .EXAMPLE
 Suspend-SpotifyPlayback "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/pause-a-users-playback
 #>

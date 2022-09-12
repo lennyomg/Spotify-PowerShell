@@ -11,6 +11,9 @@ The Spotify ID of the playlist. Example value: "3cEYpjA9oz9GiPac4AsH4n".
 .EXAMPLE
 Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n" | Select-Object -ExpandProperty track
 
+.FUNCTIONALITY
+Playlist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-playlists-tracks
 #>

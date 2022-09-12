@@ -19,6 +19,9 @@ Set-SpotifyPlaybackShuffle $false
 .EXAMPLE
 Set-SpotifyPlaybackShuffle -State $true -DeviceId "0d1841b0976bae2a3a310dd74c0f3df354899bc8"
 
+.FUNCTIONALITY
+Player
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/toggle-shuffle-for-users-playback
 #>

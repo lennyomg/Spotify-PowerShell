@@ -11,6 +11,9 @@ Get-SpotifySavedAlbums
 .EXAMPLE
 Get-SpotifySavedAlbums | ForEach-Object { $_.album } | Get-SpotifyAlbumTracks
 
+.FUNCTIONALITY
+Album
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-users-saved-albums
 #>

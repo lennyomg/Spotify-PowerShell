@@ -14,6 +14,9 @@ Get-SpotifyPlaylistCover -PlaylistId "3cEYpjA9oz9GiPac4AsH4n"
 .EXAMPLE
 "3cEYpjA9oz9GiPac4AsH4n" | Get-SpotifyPlaylistCover
 
+.FUNCTIONALITY
+Playlist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-playlist-cover
 #>

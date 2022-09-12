@@ -14,6 +14,9 @@ Get-SpotifyArtist "0TnOYISbd1XYRBk9myaseg"
 .EXAMPLE
 "2CIMQHirSU0MQqyYHq0eOx", "57dN52uHvrHOxijzpIgu3E", "1vCWHaC5f2uS3yhpwWbIA6" | Get-SpotifyArtist
 
+.FUNCTIONALITY
+Artist
+
 .LINK
 https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artist
 #>
