@@ -16,7 +16,6 @@ Add-SpotifyPlaylistTracks -PlaylistId "3cEYpjA9oz9GiPac4AsH4n" -TrackUri "spotif
 
 .EXAMPLE
 Get-SpotifySavedAlbums
-| ForEach { $_.album }
 | Get-SpotifyAlbumTracks
 | Select-Object -ExpandProperty uri -Unique
 | Sort-Object { Get-Random }

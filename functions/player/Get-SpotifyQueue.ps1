@@ -18,4 +18,5 @@ function Get-SpotifyQueue {
         -Authentication Bearer `
         -Token $global:SpotifyToken `
         -ContentType "application/json"
+        | Select-Object -ExpandProperty queue
 }

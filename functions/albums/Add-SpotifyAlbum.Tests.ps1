@@ -11,7 +11,7 @@ Describe "Add-SpotifyAlbum / Remove-SpotifyAlbum" {
         @{ value = "5BWl0bB1q0TqyFmkBEupZy" }
         @{ value = "5r36AJ6VOJtp00oxSkBZ5h", "5BWl0bB1q0TqyFmkBEupZy" }
     ) {
-        $albums = { Get-SpotifySavedAlbums | ForEach-Object { $_.album.id } }
+        $albums = { Get-SpotifySavedAlbums | ForEach-Object { $_.id } }
         $value | Should -Not -BeIn (& $albums)
 
         Add-SpotifyAlbum -AlbumId $value

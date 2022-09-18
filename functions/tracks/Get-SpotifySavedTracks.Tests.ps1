@@ -8,9 +8,9 @@ Describe "Get-SpotifySavedTracks" {
         $p.Count | Should -BeGreaterThan 0
         $p | ForEach-Object { 
             $_.added_at | Should -Not -BeNullOrEmpty
-            $_.track.type | Should -Be "track"
-            $_.track.id | Should -Not -BeNullOrEmpty
-            $_.track.uri | Should -Not -BeNullOrEmpty
+            $_.type | Should -Be "track"
+            $_.id | Should -Not -BeNullOrEmpty
+            $_.uri | Should -Not -BeNullOrEmpty
         }
     }
 }

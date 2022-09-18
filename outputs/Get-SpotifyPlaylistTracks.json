@@ -1,220 +1,27 @@
 [
   {
-    "added_at": "2022-09-02T04:00:00Z",
-    "added_by": {
-      "external_urls": {
-        "spotify": "https://open.spotify.com/user/"
-      },
-      "href": "https://api.spotify.com/v1/users/",
-      "id": "",
-      "type": "user",
-      "uri": "spotify:user:"
-    },
-    "is_local": false,
-    "primary_color": null,
-    "track": {
-      "album": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/4D3lmUAeXE2SMsOKd2B8XQ"
-            },
-            "href": "https://api.spotify.com/v1/artists/4D3lmUAeXE2SMsOKd2B8XQ",
-            "id": "4D3lmUAeXE2SMsOKd2B8XQ",
-            "name": "Luke Bell",
-            "type": "artist",
-            "uri": "spotify:artist:4D3lmUAeXE2SMsOKd2B8XQ"
-          }
-        ],
-        "available_markets": [
-          "AD",
-          "AL",
-          "AT"
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/5gtzbumKYEG1Uz4BvB8hbj"
-        },
-        "href": "https://api.spotify.com/v1/albums/5gtzbumKYEG1Uz4BvB8hbj",
-        "id": "5gtzbumKYEG1Uz4BvB8hbj",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273a72593c71ba19a472cd2e281",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02a72593c71ba19a472cd2e281",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851a72593c71ba19a472cd2e281",
-            "width": 64
-          }
-        ],
-        "name": "Luke Bell",
-        "release_date": "2016-06-17",
-        "release_date_precision": "day",
-        "total_tracks": 10,
-        "type": "album",
-        "uri": "spotify:album:5gtzbumKYEG1Uz4BvB8hbj"
-      },
+    "album": {
+      "album_type": "single",
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/4D3lmUAeXE2SMsOKd2B8XQ"
+            "spotify": "https://open.spotify.com/artist/6mKqFxGMS5TGDZI3XkT5Rt"
           },
-          "href": "https://api.spotify.com/v1/artists/4D3lmUAeXE2SMsOKd2B8XQ",
-          "id": "4D3lmUAeXE2SMsOKd2B8XQ",
-          "name": "Luke Bell",
+          "href": "https://api.spotify.com/v1/artists/6mKqFxGMS5TGDZI3XkT5Rt",
+          "id": "6mKqFxGMS5TGDZI3XkT5Rt",
+          "name": "Angel Olsen",
           "type": "artist",
-          "uri": "spotify:artist:4D3lmUAeXE2SMsOKd2B8XQ"
-        }
-      ],
-      "available_markets": [
-        "AD",
-        "AL",
-        "AT"
-      ],
-      "disc_number": 1,
-      "duration_ms": 209826,
-      "episode": false,
-      "explicit": false,
-      "external_ids": {
-        "isrc": "QZ3Q61600003"
-      },
-      "external_urls": {
-        "spotify": "https://open.spotify.com/track/5FBjLI91XAAfkJIObf6lvV"
-      },
-      "href": "https://api.spotify.com/v1/tracks/5FBjLI91XAAfkJIObf6lvV",
-      "id": "5FBjLI91XAAfkJIObf6lvV",
-      "is_local": false,
-      "name": "Where Ya Been?",
-      "popularity": 49,
-      "preview_url": "https://p.scdn.co/mp3-preview/d325cf26997db283021669e273cab22b581f1af5?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-      "track": true,
-      "track_number": 3,
-      "type": "track",
-      "uri": "spotify:track:5FBjLI91XAAfkJIObf6lvV"
-    },
-    "video_thumbnail": {
-      "url": null
-    }
-  },
-  {
-    "added_at": "2022-09-02T04:00:00Z",
-    "added_by": {
-      "external_urls": {
-        "spotify": "https://open.spotify.com/user/"
-      },
-      "href": "https://api.spotify.com/v1/users/",
-      "id": "",
-      "type": "user",
-      "uri": "spotify:user:"
-    },
-    "is_local": false,
-    "primary_color": null,
-    "track": {
-      "album": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/1vxqrtPBBQWCuoAcJqVCph"
-            },
-            "href": "https://api.spotify.com/v1/artists/1vxqrtPBBQWCuoAcJqVCph",
-            "id": "1vxqrtPBBQWCuoAcJqVCph",
-            "name": "Plains",
-            "type": "artist",
-            "uri": "spotify:artist:1vxqrtPBBQWCuoAcJqVCph"
-          },
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/5IWCU0V9evBlW4gIeGY4zF"
-            },
-            "href": "https://api.spotify.com/v1/artists/5IWCU0V9evBlW4gIeGY4zF",
-            "id": "5IWCU0V9evBlW4gIeGY4zF",
-            "name": "Waxahatchee",
-            "type": "artist",
-            "uri": "spotify:artist:5IWCU0V9evBlW4gIeGY4zF"
-          },
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/784kOgkd1H6jU4KgPMYHi9"
-            },
-            "href": "https://api.spotify.com/v1/artists/784kOgkd1H6jU4KgPMYHi9",
-            "id": "784kOgkd1H6jU4KgPMYHi9",
-            "name": "Jess Williamson",
-            "type": "artist",
-            "uri": "spotify:artist:784kOgkd1H6jU4KgPMYHi9"
-          }
-        ],
-        "available_markets": [
-          "AD",
-          "AE",
-          "AL"
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/5IQl0bM8GiALIa6BtxMHRf"
-        },
-        "href": "https://api.spotify.com/v1/albums/5IQl0bM8GiALIa6BtxMHRf",
-        "id": "5IQl0bM8GiALIa6BtxMHRf",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273cf5e6f83134577251a695cae",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02cf5e6f83134577251a695cae",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851cf5e6f83134577251a695cae",
-            "width": 64
-          }
-        ],
-        "name": "Abilene",
-        "release_date": "2022-08-30",
-        "release_date_precision": "day",
-        "total_tracks": 2,
-        "type": "album",
-        "uri": "spotify:album:5IQl0bM8GiALIa6BtxMHRf"
-      },
-      "artists": [
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/1vxqrtPBBQWCuoAcJqVCph"
-          },
-          "href": "https://api.spotify.com/v1/artists/1vxqrtPBBQWCuoAcJqVCph",
-          "id": "1vxqrtPBBQWCuoAcJqVCph",
-          "name": "Plains",
-          "type": "artist",
-          "uri": "spotify:artist:1vxqrtPBBQWCuoAcJqVCph"
+          "uri": "spotify:artist:6mKqFxGMS5TGDZI3XkT5Rt"
         },
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/5IWCU0V9evBlW4gIeGY4zF"
+            "spotify": "https://open.spotify.com/artist/3vDpQbGnzRbRVirXlfQagB"
           },
-          "href": "https://api.spotify.com/v1/artists/5IWCU0V9evBlW4gIeGY4zF",
-          "id": "5IWCU0V9evBlW4gIeGY4zF",
-          "name": "Waxahatchee",
+          "href": "https://api.spotify.com/v1/artists/3vDpQbGnzRbRVirXlfQagB",
+          "id": "3vDpQbGnzRbRVirXlfQagB",
+          "name": "Sturgill Simpson",
           "type": "artist",
-          "uri": "spotify:artist:5IWCU0V9evBlW4gIeGY4zF"
-        },
-        {
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/784kOgkd1H6jU4KgPMYHi9"
-          },
-          "href": "https://api.spotify.com/v1/artists/784kOgkd1H6jU4KgPMYHi9",
-          "id": "784kOgkd1H6jU4KgPMYHi9",
-          "name": "Jess Williamson",
-          "type": "artist",
-          "uri": "spotify:artist:784kOgkd1H6jU4KgPMYHi9"
+          "uri": "spotify:artist:3vDpQbGnzRbRVirXlfQagB"
         }
       ],
       "available_markets": [
@@ -222,33 +29,83 @@
         "AE",
         "AL"
       ],
-      "disc_number": 1,
-      "duration_ms": 183560,
-      "episode": false,
-      "explicit": false,
-      "external_ids": {
-        "isrc": "USEP42216004"
-      },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/2xi9KMyT6acK7kDkdpptfN"
+        "spotify": "https://open.spotify.com/album/5UsuKQY3qOMAYyuwaxH4Lx"
       },
-      "href": "https://api.spotify.com/v1/tracks/2xi9KMyT6acK7kDkdpptfN",
-      "id": "2xi9KMyT6acK7kDkdpptfN",
-      "is_local": false,
-      "name": "Abilene",
-      "popularity": 47,
-      "preview_url": "https://p.scdn.co/mp3-preview/3fabdb213a6aee623507b615d78c58fed6ec9395?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-      "track": true,
-      "track_number": 1,
-      "type": "track",
-      "uri": "spotify:track:2xi9KMyT6acK7kDkdpptfN"
+      "href": "https://api.spotify.com/v1/albums/5UsuKQY3qOMAYyuwaxH4Lx",
+      "id": "5UsuKQY3qOMAYyuwaxH4Lx",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2735882ae8af11b342f0a394d1f",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e025882ae8af11b342f0a394d1f",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048515882ae8af11b342f0a394d1f",
+          "width": 64
+        }
+      ],
+      "name": "Big Time",
+      "release_date": "2022-09-13",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "type": "album",
+      "uri": "spotify:album:5UsuKQY3qOMAYyuwaxH4Lx"
     },
-    "video_thumbnail": {
-      "url": null
-    }
-  },
-  {
-    "added_at": "2022-08-26T04:00:00Z",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/6mKqFxGMS5TGDZI3XkT5Rt"
+        },
+        "href": "https://api.spotify.com/v1/artists/6mKqFxGMS5TGDZI3XkT5Rt",
+        "id": "6mKqFxGMS5TGDZI3XkT5Rt",
+        "name": "Angel Olsen",
+        "type": "artist",
+        "uri": "spotify:artist:6mKqFxGMS5TGDZI3XkT5Rt"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3vDpQbGnzRbRVirXlfQagB"
+        },
+        "href": "https://api.spotify.com/v1/artists/3vDpQbGnzRbRVirXlfQagB",
+        "id": "3vDpQbGnzRbRVirXlfQagB",
+        "name": "Sturgill Simpson",
+        "type": "artist",
+        "uri": "spotify:artist:3vDpQbGnzRbRVirXlfQagB"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "disc_number": 1,
+    "duration_ms": 247666,
+    "episode": false,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "US38Y2142416"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/3RZ5VvBcCQgrRl8XaKZLa4"
+    },
+    "href": "https://api.spotify.com/v1/tracks/3RZ5VvBcCQgrRl8XaKZLa4",
+    "id": "3RZ5VvBcCQgrRl8XaKZLa4",
+    "is_local": false,
+    "name": "Big Time",
+    "popularity": 48,
+    "preview_url": "https://p.scdn.co/mp3-preview/a3e1279f218cc8ea40bc956252345f317ca39016?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track": true,
+    "track_number": 1,
+    "type": "track",
+    "uri": "spotify:track:3RZ5VvBcCQgrRl8XaKZLa4",
+    "added_at": "2022-09-16T04:00:00Z",
     "added_by": {
       "external_urls": {
         "spotify": "https://open.spotify.com/user/"
@@ -258,67 +115,24 @@
       "type": "user",
       "uri": "spotify:user:"
     },
-    "is_local": false,
     "primary_color": null,
-    "track": {
-      "album": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/7kplJl06UmldxLKseURAYi"
-            },
-            "href": "https://api.spotify.com/v1/artists/7kplJl06UmldxLKseURAYi",
-            "id": "7kplJl06UmldxLKseURAYi",
-            "name": "Warren Zeiders",
-            "type": "artist",
-            "uri": "spotify:artist:7kplJl06UmldxLKseURAYi"
-          }
-        ],
-        "available_markets": [
-          "AD",
-          "AE",
-          "AL"
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/4qngZnFUHmu4I3cGpENpWF"
-        },
-        "href": "https://api.spotify.com/v1/albums/4qngZnFUHmu4I3cGpENpWF",
-        "id": "4qngZnFUHmu4I3cGpENpWF",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273793486a5c535f1695f06b4f9",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02793486a5c535f1695f06b4f9",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851793486a5c535f1695f06b4f9",
-            "width": 64
-          }
-        ],
-        "name": "One Hell of an Angel",
-        "release_date": "2022-08-26",
-        "release_date_precision": "day",
-        "total_tracks": 1,
-        "type": "album",
-        "uri": "spotify:album:4qngZnFUHmu4I3cGpENpWF"
-      },
+    "video_thumbnail": {
+      "url": null
+    }
+  },
+  {
+    "album": {
+      "album_type": "single",
       "artists": [
         {
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/7kplJl06UmldxLKseURAYi"
+            "spotify": "https://open.spotify.com/artist/3BJX1nYizKvWpZTY5HOAr4"
           },
-          "href": "https://api.spotify.com/v1/artists/7kplJl06UmldxLKseURAYi",
-          "id": "7kplJl06UmldxLKseURAYi",
-          "name": "Warren Zeiders",
+          "href": "https://api.spotify.com/v1/artists/3BJX1nYizKvWpZTY5HOAr4",
+          "id": "3BJX1nYizKvWpZTY5HOAr4",
+          "name": "Charley Crockett",
           "type": "artist",
-          "uri": "spotify:artist:7kplJl06UmldxLKseURAYi"
+          "uri": "spotify:artist:3BJX1nYizKvWpZTY5HOAr4"
         }
       ],
       "available_markets": [
@@ -326,27 +140,204 @@
         "AE",
         "AL"
       ],
-      "disc_number": 1,
-      "duration_ms": 211517,
-      "episode": false,
-      "explicit": false,
-      "external_ids": {
-        "isrc": "USWB12202361"
-      },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/1SniaPt656Q2RJFOh5QBPK"
+        "spotify": "https://open.spotify.com/album/2oDPcHYdkOy9pP7advhkVS"
       },
-      "href": "https://api.spotify.com/v1/tracks/1SniaPt656Q2RJFOh5QBPK",
-      "id": "1SniaPt656Q2RJFOh5QBPK",
-      "is_local": false,
-      "name": "One Hell of an Angel",
-      "popularity": 59,
-      "preview_url": "https://p.scdn.co/mp3-preview/43d9ea472bb4199d002710bfc8044b9a4109fc72?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-      "track": true,
-      "track_number": 1,
-      "type": "track",
-      "uri": "spotify:track:1SniaPt656Q2RJFOh5QBPK"
+      "href": "https://api.spotify.com/v1/albums/2oDPcHYdkOy9pP7advhkVS",
+      "id": "2oDPcHYdkOy9pP7advhkVS",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2735feeed3210939e81b8245d9e",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e025feeed3210939e81b8245d9e",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048515feeed3210939e81b8245d9e",
+          "width": 64
+        }
+      ],
+      "name": "I'm Just a Clown",
+      "release_date": "2022-07-13",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "type": "album",
+      "uri": "spotify:album:2oDPcHYdkOy9pP7advhkVS"
     },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3BJX1nYizKvWpZTY5HOAr4"
+        },
+        "href": "https://api.spotify.com/v1/artists/3BJX1nYizKvWpZTY5HOAr4",
+        "id": "3BJX1nYizKvWpZTY5HOAr4",
+        "name": "Charley Crockett",
+        "type": "artist",
+        "uri": "spotify:artist:3BJX1nYizKvWpZTY5HOAr4"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "disc_number": 1,
+    "duration_ms": 253920,
+    "episode": false,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "QM4TX2281094"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/4PHCjTOpWuaYDacBBNd7Ut"
+    },
+    "href": "https://api.spotify.com/v1/tracks/4PHCjTOpWuaYDacBBNd7Ut",
+    "id": "4PHCjTOpWuaYDacBBNd7Ut",
+    "is_local": false,
+    "name": "I'm Just a Clown",
+    "popularity": 55,
+    "preview_url": "https://p.scdn.co/mp3-preview/334cb9a55aa979b1ee8463f68bf23de397abf2f6?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track": true,
+    "track_number": 1,
+    "type": "track",
+    "uri": "spotify:track:4PHCjTOpWuaYDacBBNd7Ut",
+    "added_at": "2022-09-16T04:00:00Z",
+    "added_by": {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/"
+      },
+      "href": "https://api.spotify.com/v1/users/",
+      "id": "",
+      "type": "user",
+      "uri": "spotify:user:"
+    },
+    "primary_color": null,
+    "video_thumbnail": {
+      "url": null
+    }
+  },
+  {
+    "album": {
+      "album_type": "single",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5W5bDNCqJ1jbCgTxDD0Cb3"
+          },
+          "href": "https://api.spotify.com/v1/artists/5W5bDNCqJ1jbCgTxDD0Cb3",
+          "id": "5W5bDNCqJ1jbCgTxDD0Cb3",
+          "name": "Willie Nelson",
+          "type": "artist",
+          "uri": "spotify:artist:5W5bDNCqJ1jbCgTxDD0Cb3"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/60ht0hWRy1yjUDfNsLuHuP"
+          },
+          "href": "https://api.spotify.com/v1/artists/60ht0hWRy1yjUDfNsLuHuP",
+          "id": "60ht0hWRy1yjUDfNsLuHuP",
+          "name": "Lucinda Williams",
+          "type": "artist",
+          "uri": "spotify:artist:60ht0hWRy1yjUDfNsLuHuP"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AL"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/61IyMbppx5SvsZO0i3FJnf"
+      },
+      "href": "https://api.spotify.com/v1/albums/61IyMbppx5SvsZO0i3FJnf",
+      "id": "61IyMbppx5SvsZO0i3FJnf",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2736ed470cb33aa45b38994b26e",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e026ed470cb33aa45b38994b26e",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048516ed470cb33aa45b38994b26e",
+          "width": 64
+        }
+      ],
+      "name": "Live Forever",
+      "release_date": "2022-08-16",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "type": "album",
+      "uri": "spotify:album:61IyMbppx5SvsZO0i3FJnf"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/5W5bDNCqJ1jbCgTxDD0Cb3"
+        },
+        "href": "https://api.spotify.com/v1/artists/5W5bDNCqJ1jbCgTxDD0Cb3",
+        "id": "5W5bDNCqJ1jbCgTxDD0Cb3",
+        "name": "Willie Nelson",
+        "type": "artist",
+        "uri": "spotify:artist:5W5bDNCqJ1jbCgTxDD0Cb3"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/60ht0hWRy1yjUDfNsLuHuP"
+        },
+        "href": "https://api.spotify.com/v1/artists/60ht0hWRy1yjUDfNsLuHuP",
+        "id": "60ht0hWRy1yjUDfNsLuHuP",
+        "name": "Lucinda Williams",
+        "type": "artist",
+        "uri": "spotify:artist:60ht0hWRy1yjUDfNsLuHuP"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "disc_number": 1,
+    "duration_ms": 180135,
+    "episode": false,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "US27Q2254001"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/4ofZpP3iFaQ1GRtxOPbySO"
+    },
+    "href": "https://api.spotify.com/v1/tracks/4ofZpP3iFaQ1GRtxOPbySO",
+    "id": "4ofZpP3iFaQ1GRtxOPbySO",
+    "is_local": false,
+    "name": "Live Forever",
+    "popularity": 53,
+    "preview_url": "https://p.scdn.co/mp3-preview/c60eb010da53784d099db1c9c5c0d3ee43d997ca?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track": true,
+    "track_number": 1,
+    "type": "track",
+    "uri": "spotify:track:4ofZpP3iFaQ1GRtxOPbySO",
+    "added_at": "2022-09-16T04:00:00Z",
+    "added_by": {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/user/"
+      },
+      "href": "https://api.spotify.com/v1/users/",
+      "id": "",
+      "type": "user",
+      "uri": "spotify:user:"
+    },
+    "primary_color": null,
     "video_thumbnail": {
       "url": null
     }

@@ -262,4 +262,5 @@ function Get-SpotifyRecommendations {
         -Authentication Bearer `
         -Token $global:SpotifyToken `
         -ContentType "application/json"
+        | Select-Object -ExpandProperty tracks
 }

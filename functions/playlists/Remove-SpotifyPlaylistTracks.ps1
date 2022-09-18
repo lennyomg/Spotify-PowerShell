@@ -17,7 +17,6 @@ Remove-SpotifyPlaylistTracks -PlaylistId "3cEYpjA9oz9GiPac4AsH4n" -TrackUri "spo
 .EXAMPLE
 "3cEYpjA9oz9GiPac4AsH4n"
 | Get-SpotifyPlaylistTracks
-| ForEach { $_.track }
 | Remove-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n"
 
 .FUNCTIONALITY

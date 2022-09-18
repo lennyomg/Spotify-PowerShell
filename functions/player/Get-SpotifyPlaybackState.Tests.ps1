@@ -1,5 +1,17 @@
 BeforeAll {
-    Get-ChildItem *.ps1 -Exclude *.Tests.* | ForEach-Object { . $_.FullName }
+    . $PSScriptRoot/Start-SpotifyPlayback.ps1
+    . $PSScriptRoot/Get-SpotifyPlaybackState.ps1
+    . $PSScriptRoot/Suspend-SpotifyPlayback.ps1
+    . $PSScriptRoot/Set-SpotifyPlaybackRepeat.ps1
+    . $PSScriptRoot/Set-SpotifyPlaybackShuffle.ps1
+    . $PSScriptRoot/Resume-SpotifyPlayback.ps1
+    . $PSScriptRoot/Skip-SpotifyNext.ps1
+    . $PSScriptRoot/Set-SpotifyPlaybackPosition.ps1
+    . $PSScriptRoot/Skip-SpotifyPrevious.ps1
+    . $PSScriptRoot/Get-SpotifyCurrentlyPlaying.ps1
+    . $PSScriptRoot/Set-SpotifyPlaybackVolume.ps1
+    . $PSScriptRoot/Add-SpotifyQueueItem.ps1
+    . $PSScriptRoot/Get-SpotifyQueue.ps1
 }
 
 Describe "Get-SpotifyPlaybackState" -Tag "Playback" {
@@ -110,7 +122,7 @@ Describe "Get-SpotifyPlaybackState" -Tag "Playback" {
 
         Add-SpotifyQueueItem -ItemUri "spotify:track:1Wn0A9wVEQXj2JVbdsclpi"
         $q = Get-SpotifyQueue
-        $q.queue.id | Should -Contain "1Wn0A9wVEQXj2JVbdsclpi"
+        $q.id | Should -Contain "1Wn0A9wVEQXj2JVbdsclpi"
 
         # pause
 

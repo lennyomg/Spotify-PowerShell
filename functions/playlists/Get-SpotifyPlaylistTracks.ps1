@@ -9,7 +9,7 @@ Get full details of the items of a playlist owned by a Spotify user.
 The Spotify ID of the playlist. Example value: "3cEYpjA9oz9GiPac4AsH4n".
 
 .EXAMPLE
-Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n" | Select-Object -ExpandProperty track
+Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n"
 
 .FUNCTIONALITY
 Playlist
@@ -35,6 +35,8 @@ function Get-SpotifyPlaylistTracks {
                     -Token $global:SpotifyToken `
                     -ContentType "application/json"; $r 
             } 
-        } | Select-Object -ExpandProperty items
+        } 
+        | Select-Object -ExpandProperty items
+        | Select-Object -ExpandProperty track -Property * -ExcludeProperty is_local, track
     }
 }

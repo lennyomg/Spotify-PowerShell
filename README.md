@@ -25,7 +25,6 @@ Import-Module "./Spotify.psm1"
 Connect-SpotifyApi
 
 Get-SpotifySavedAlbums
-| Select-Object -ExpandProperty album
 | Get-SpotifyAlbumTracks
 | Select-Object -ExpandProperty uri -Unique
 | Sort-Object { Get-Random }
@@ -46,13 +45,10 @@ function Merge-SpotifyPlaylist {
     
     $Target
     | Get-SpotifyPlaylistTracks
-    | Select-Object -ExpandProperty track
-    | Select-Object -ExpandProperty uri
     | Remove-SpotifyPlaylistTracks $Target
 
     $Source
     | Get-SpotifyPlaylistTracks
-    | Select-Object -ExpandProperty track
     | Where-Object -Property is_local -EQ $false
     | Where-Object -Property explicit -EQ $false
     | Sort-Object { Get-Random }

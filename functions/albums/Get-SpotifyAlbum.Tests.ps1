@@ -1,6 +1,5 @@
 BeforeAll {
     . $PSScriptRoot/Get-SpotifyAlbum.ps1
-    . $PSScriptRoot/Get-SpotifySavedAlbums.ps1
 }
 
 Describe "Get-SpotifyAlbum" {

@@ -22,7 +22,7 @@ Add-SpotifyAlbum "2CIMQHirSU0MQqyYHq0eOx", "1vCWHaC5f2uS3yhpwWbIA6"
 "2CIMQHirSU0MQqyYHq0eOx", 57dN52uHvrHOxijzpIgu3E", "1vCWHaC5f2uS3yhpwWbIA6" | Add-SpotifyArtist
 
 .EXAMPLE
-Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n" | ForEach-Object { $_.track.album } | Add-SpotifyAlbum
+Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n" | ForEach-Object { $_.album } | Add-SpotifyAlbum
 
 .FUNCTIONALITY
 Album
@@ -177,7 +177,7 @@ Get a list of the albums saved in the current Spotify user's 'Your Music' librar
 Get-SpotifySavedAlbums
 
 .EXAMPLE
-Get-SpotifySavedAlbums | ForEach-Object { $_.album } | Get-SpotifyAlbumTracks
+Get-SpotifySavedAlbums | Get-SpotifyAlbumTracks
 
 .FUNCTIONALITY
 Album
@@ -196,7 +196,9 @@ function Get-SpotifySavedAlbums {
                 -Token $global:SpotifyToken `
                 -ContentType "application/json"; $r 
         } 
-    } | Select-Object -ExpandProperty items
+    } 
+    | Select-Object -ExpandProperty items
+    | Select-Object -ExpandProperty album -Property * -ExcludeProperty album
 }
 
 <#
@@ -830,6 +832,7 @@ function Get-SpotifyQueue {
         -Authentication Bearer `
         -Token $global:SpotifyToken `
         -ContentType "application/json"
+        | Select-Object -ExpandProperty queue
 }
 
 <#
@@ -859,7 +862,9 @@ function Get-SpotifyRecentlyPlayed {
                 -Token $global:SpotifyToken `
                 -ContentType "application/json"; $r 
         } 
-    } | Select-Object -ExpandProperty items
+    } 
+    | Select-Object -ExpandProperty items
+    | Select-Object -ExpandProperty track -Property * -ExcludeProperty track
 }
 
 <#
@@ -1367,7 +1372,6 @@ Add-SpotifyPlaylistTracks -PlaylistId "3cEYpjA9oz9GiPac4AsH4n" -TrackUri "spotif
 
 .EXAMPLE
 Get-SpotifySavedAlbums
-| ForEach { $_.album }
 | Get-SpotifyAlbumTracks
 | Select-Object -ExpandProperty uri -Unique
 | Sort-Object { Get-Random }
@@ -1506,7 +1510,7 @@ Get full details of the items of a playlist owned by a Spotify user.
 The Spotify ID of the playlist. Example value: "3cEYpjA9oz9GiPac4AsH4n".
 
 .EXAMPLE
-Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n" | Select-Object -ExpandProperty track
+Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n"
 
 .FUNCTIONALITY
 Playlist
@@ -1532,7 +1536,9 @@ function Get-SpotifyPlaylistTracks {
                     -Token $global:SpotifyToken `
                     -ContentType "application/json"; $r 
             } 
-        } | Select-Object -ExpandProperty items
+        } 
+        | Select-Object -ExpandProperty items
+        | Select-Object -ExpandProperty track -Property * -ExcludeProperty is_local, track
     }
 }
 
@@ -1697,7 +1703,6 @@ Remove-SpotifyPlaylistTracks -PlaylistId "3cEYpjA9oz9GiPac4AsH4n" -TrackUri "spo
 .EXAMPLE
 "3cEYpjA9oz9GiPac4AsH4n"
 | Get-SpotifyPlaylistTracks
-| ForEach { $_.track }
 | Remove-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n"
 
 .FUNCTIONALITY
@@ -2210,6 +2215,7 @@ function Get-SpotifyRecommendations {
         -Authentication Bearer `
         -Token $global:SpotifyToken `
         -ContentType "application/json"
+        | Select-Object -ExpandProperty tracks
 }
 
 <#
@@ -2239,7 +2245,9 @@ function Get-SpotifySavedTracks {
                 -Token $global:SpotifyToken `
                 -ContentType "application/json"; $r 
         } 
-    } | Select-Object -ExpandProperty items
+    } 
+    | Select-Object -ExpandProperty items
+    | Select-Object -ExpandProperty track -Property * -ExcludeProperty track
 }
 
 <#

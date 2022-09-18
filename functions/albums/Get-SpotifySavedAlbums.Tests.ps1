@@ -7,8 +7,8 @@ Describe "Get-SpotifySavedAlbums" {
         $p = Get-SpotifySavedAlbums
         $p | ForEach-Object { 
             $_.added_at | Should -Not -BeNullOrEmpty
-            $_.album.type | Should -Be "album" 
-            $_.album.id | Should -Not -BeNullOrEmpty
+            $_.type | Should -Be "album" 
+            $_.id | Should -Not -BeNullOrEmpty
         }
     }
 }

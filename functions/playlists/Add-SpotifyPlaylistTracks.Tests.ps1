@@ -13,11 +13,11 @@ Describe "Add-SpotifyPlaylistTracks / Remove-SpotifyPlaylistTracks" {
         $sourceTracks = Get-SpotifyPlaylistTracks -PlaylistId $sourcePlaylist
         $sourceTracks.Count | Should -Be 0
 
-        $targetTracks = Get-SpotifyPlaylistTracks -PlaylistId "37i9dQZF1DX6VdMW310YC7" | ForEach-Object { $_.track.uri }
+        $targetTracks = Get-SpotifyPlaylistTracks -PlaylistId "37i9dQZF1DX6VdMW310YC7" | ForEach-Object { $_.uri }
         $targetTracks.Count | Should -BeGreaterThan 100
 
         Add-SpotifyPlaylistTracks -PlaylistId $sourcePlaylist -TrackUri $targetTracks
-        $sourceTracks = Get-SpotifyPlaylistTracks -PlaylistId $sourcePlaylist | ForEach-Object { $_.track.uri }
+        $sourceTracks = Get-SpotifyPlaylistTracks -PlaylistId $sourcePlaylist | ForEach-Object { $_.uri }
         $sourceTracks | Should -BeExactly $targetTracks
 
         Remove-SpotifyPlaylistTracks -PlaylistId $sourcePlaylist -TrackUri $sourceTracks

@@ -1,5 +1,8 @@
 BeforeAll {
-    Get-ChildItem *.ps1 -Exclude *.Tests.* | ForEach-Object { . $_.FullName }
+    . $PSScriptRoot/Move-SpotifyPlayback.ps1
+    . $PSScriptRoot/Get-SpotifyDevices.ps1
+    . $PSScriptRoot/Start-SpotifyPlayback.ps1
+    . $PSScriptRoot/Get-SpotifyPlaybackState.ps1
 }
 
 Describe "Move-SpotifyPlayback" -Tag "Playback" {

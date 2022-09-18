@@ -18,7 +18,7 @@ Add-SpotifyAlbum "2CIMQHirSU0MQqyYHq0eOx", "1vCWHaC5f2uS3yhpwWbIA6"
 "2CIMQHirSU0MQqyYHq0eOx", 57dN52uHvrHOxijzpIgu3E", "1vCWHaC5f2uS3yhpwWbIA6" | Add-SpotifyArtist
 
 .EXAMPLE
-Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n" | ForEach-Object { $_.track.album } | Add-SpotifyAlbum
+Get-SpotifyPlaylistTracks "3cEYpjA9oz9GiPac4AsH4n" | ForEach-Object { $_.album } | Add-SpotifyAlbum
 
 .FUNCTIONALITY
 Album

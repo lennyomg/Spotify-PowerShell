@@ -1,460 +1,454 @@
 [
   {
-    "added_at": "2022-08-26T21:21:48Z",
-    "album": {
-      "album_type": "album",
-      "artists": [
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2TwOrUcYnAlIiKmVQkkoSZ"
+        },
+        "href": "https://api.spotify.com/v1/artists/2TwOrUcYnAlIiKmVQkkoSZ",
+        "id": "2TwOrUcYnAlIiKmVQkkoSZ",
+        "name": "Wet Leg",
+        "type": "artist",
+        "uri": "spotify:artist:2TwOrUcYnAlIiKmVQkkoSZ"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "copyrights": [
+      {
+        "text": "2022 Domino Recording Co Ltd",
+        "type": "C"
+      },
+      {
+        "text": "2022 Domino Recording Co Ltd",
+        "type": "P"
+      }
+    ],
+    "external_ids": {
+      "upc": "887828049660"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/0r9awI5WRCZpwk0aVQ4bKO"
+    },
+    "genres": [],
+    "href": "https://api.spotify.com/v1/albums/0r9awI5WRCZpwk0aVQ4bKO",
+    "id": "0r9awI5WRCZpwk0aVQ4bKO",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273ea1126a33b0fb88e79915262",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02ea1126a33b0fb88e79915262",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851ea1126a33b0fb88e79915262",
+        "width": 64
+      }
+    ],
+    "label": "Domino Recording Co",
+    "name": "Wet Leg",
+    "popularity": 65,
+    "release_date": "2022-04-08",
+    "release_date_precision": "day",
+    "total_tracks": 12,
+    "tracks": {
+      "href": "https://api.spotify.com/v1/albums/0r9awI5WRCZpwk0aVQ4bKO/tracks?offset=0&limit=50",
+      "items": [
         {
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2TwOrUcYnAlIiKmVQkkoSZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/2TwOrUcYnAlIiKmVQkkoSZ",
+              "id": "2TwOrUcYnAlIiKmVQkkoSZ",
+              "name": "Wet Leg",
+              "type": "artist",
+              "uri": "spotify:artist:2TwOrUcYnAlIiKmVQkkoSZ"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL"
+          ],
+          "disc_number": 1,
+          "duration_ms": 122466,
+          "explicit": true,
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/2TwOrUcYnAlIiKmVQkkoSZ"
+            "spotify": "https://open.spotify.com/track/4VBE0mwU8Nmm8hiqfCe4Ve"
           },
-          "href": "https://api.spotify.com/v1/artists/2TwOrUcYnAlIiKmVQkkoSZ",
-          "id": "2TwOrUcYnAlIiKmVQkkoSZ",
-          "name": "Wet Leg",
-          "type": "artist",
-          "uri": "spotify:artist:2TwOrUcYnAlIiKmVQkkoSZ"
-        }
-      ],
-      "available_markets": [
-        "AD",
-        "AE",
-        "AL"
-      ],
-      "copyrights": [
-        {
-          "text": "2022 Domino Recording Co Ltd",
-          "type": "C"
+          "href": "https://api.spotify.com/v1/tracks/4VBE0mwU8Nmm8hiqfCe4Ve",
+          "id": "4VBE0mwU8Nmm8hiqfCe4Ve",
+          "is_local": false,
+          "name": "Being In Love",
+          "preview_url": "https://p.scdn.co/mp3-preview/bea6c79eeabbc0e8d8b486f16fc31e8a4850dc85?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:4VBE0mwU8Nmm8hiqfCe4Ve"
         },
         {
-          "text": "2022 Domino Recording Co Ltd",
-          "type": "P"
-        }
-      ],
-      "external_ids": {
-        "upc": "887828049660"
-      },
-      "external_urls": {
-        "spotify": "https://open.spotify.com/album/0r9awI5WRCZpwk0aVQ4bKO"
-      },
-      "genres": [],
-      "href": "https://api.spotify.com/v1/albums/0r9awI5WRCZpwk0aVQ4bKO",
-      "id": "0r9awI5WRCZpwk0aVQ4bKO",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273ea1126a33b0fb88e79915262",
-          "width": 640
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2TwOrUcYnAlIiKmVQkkoSZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/2TwOrUcYnAlIiKmVQkkoSZ",
+              "id": "2TwOrUcYnAlIiKmVQkkoSZ",
+              "name": "Wet Leg",
+              "type": "artist",
+              "uri": "spotify:artist:2TwOrUcYnAlIiKmVQkkoSZ"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL"
+          ],
+          "disc_number": 1,
+          "duration_ms": 196905,
+          "explicit": false,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0nys6GusuHnjSYLW0PYYb7"
+          },
+          "href": "https://api.spotify.com/v1/tracks/0nys6GusuHnjSYLW0PYYb7",
+          "id": "0nys6GusuHnjSYLW0PYYb7",
+          "is_local": false,
+          "name": "Chaise Longue",
+          "preview_url": "https://p.scdn.co/mp3-preview/f9337a9e06aa18fde48eef40539775d9b068da50?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+          "track_number": 2,
+          "type": "track",
+          "uri": "spotify:track:0nys6GusuHnjSYLW0PYYb7"
         },
         {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02ea1126a33b0fb88e79915262",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851ea1126a33b0fb88e79915262",
-          "width": 64
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2TwOrUcYnAlIiKmVQkkoSZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/2TwOrUcYnAlIiKmVQkkoSZ",
+              "id": "2TwOrUcYnAlIiKmVQkkoSZ",
+              "name": "Wet Leg",
+              "type": "artist",
+              "uri": "spotify:artist:2TwOrUcYnAlIiKmVQkkoSZ"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL"
+          ],
+          "disc_number": 1,
+          "duration_ms": 221866,
+          "explicit": true,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/59AasfokhGnvuaDVUiJqb7"
+          },
+          "href": "https://api.spotify.com/v1/tracks/59AasfokhGnvuaDVUiJqb7",
+          "id": "59AasfokhGnvuaDVUiJqb7",
+          "is_local": false,
+          "name": "I Don't Wanna Go Out",
+          "preview_url": "https://p.scdn.co/mp3-preview/ae86a28b79ae1c9274e5246b2516285743cea145?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+          "track_number": 4,
+          "type": "track",
+          "uri": "spotify:track:59AasfokhGnvuaDVUiJqb7"
         }
       ],
-      "label": "Domino Recording Co",
-      "name": "Wet Leg",
-      "popularity": 65,
-      "release_date": "2022-04-08",
-      "release_date_precision": "day",
-      "total_tracks": 12,
-      "tracks": {
-        "href": "https://api.spotify.com/v1/albums/0r9awI5WRCZpwk0aVQ4bKO/tracks?offset=0&limit=50",
-        "items": [
-          {
-            "artists": [
-              {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/2TwOrUcYnAlIiKmVQkkoSZ"
-                },
-                "href": "https://api.spotify.com/v1/artists/2TwOrUcYnAlIiKmVQkkoSZ",
-                "id": "2TwOrUcYnAlIiKmVQkkoSZ",
-                "name": "Wet Leg",
-                "type": "artist",
-                "uri": "spotify:artist:2TwOrUcYnAlIiKmVQkkoSZ"
-              }
-            ],
-            "available_markets": [
-              "AD",
-              "AE",
-              "AL"
-            ],
-            "disc_number": 1,
-            "duration_ms": 122466,
-            "explicit": true,
-            "external_urls": {
-              "spotify": "https://open.spotify.com/track/4VBE0mwU8Nmm8hiqfCe4Ve"
-            },
-            "href": "https://api.spotify.com/v1/tracks/4VBE0mwU8Nmm8hiqfCe4Ve",
-            "id": "4VBE0mwU8Nmm8hiqfCe4Ve",
-            "is_local": false,
-            "name": "Being In Love",
-            "preview_url": "https://p.scdn.co/mp3-preview/bea6c79eeabbc0e8d8b486f16fc31e8a4850dc85?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-            "track_number": 1,
-            "type": "track",
-            "uri": "spotify:track:4VBE0mwU8Nmm8hiqfCe4Ve"
-          },
-          {
-            "artists": [
-              {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/2TwOrUcYnAlIiKmVQkkoSZ"
-                },
-                "href": "https://api.spotify.com/v1/artists/2TwOrUcYnAlIiKmVQkkoSZ",
-                "id": "2TwOrUcYnAlIiKmVQkkoSZ",
-                "name": "Wet Leg",
-                "type": "artist",
-                "uri": "spotify:artist:2TwOrUcYnAlIiKmVQkkoSZ"
-              }
-            ],
-            "available_markets": [
-              "AD",
-              "AE",
-              "AL"
-            ],
-            "disc_number": 1,
-            "duration_ms": 196905,
-            "explicit": false,
-            "external_urls": {
-              "spotify": "https://open.spotify.com/track/0nys6GusuHnjSYLW0PYYb7"
-            },
-            "href": "https://api.spotify.com/v1/tracks/0nys6GusuHnjSYLW0PYYb7",
-            "id": "0nys6GusuHnjSYLW0PYYb7",
-            "is_local": false,
-            "name": "Chaise Longue",
-            "preview_url": "https://p.scdn.co/mp3-preview/f9337a9e06aa18fde48eef40539775d9b068da50?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-            "track_number": 2,
-            "type": "track",
-            "uri": "spotify:track:0nys6GusuHnjSYLW0PYYb7"
-          },
-          {
-            "artists": [
-              {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/2TwOrUcYnAlIiKmVQkkoSZ"
-                },
-                "href": "https://api.spotify.com/v1/artists/2TwOrUcYnAlIiKmVQkkoSZ",
-                "id": "2TwOrUcYnAlIiKmVQkkoSZ",
-                "name": "Wet Leg",
-                "type": "artist",
-                "uri": "spotify:artist:2TwOrUcYnAlIiKmVQkkoSZ"
-              }
-            ],
-            "available_markets": [
-              "AD",
-              "AE",
-              "AL"
-            ],
-            "disc_number": 1,
-            "duration_ms": 221866,
-            "explicit": true,
-            "external_urls": {
-              "spotify": "https://open.spotify.com/track/59AasfokhGnvuaDVUiJqb7"
-            },
-            "href": "https://api.spotify.com/v1/tracks/59AasfokhGnvuaDVUiJqb7",
-            "id": "59AasfokhGnvuaDVUiJqb7",
-            "is_local": false,
-            "name": "I Don't Wanna Go Out",
-            "preview_url": "https://p.scdn.co/mp3-preview/ae86a28b79ae1c9274e5246b2516285743cea145?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-            "track_number": 4,
-            "type": "track",
-            "uri": "spotify:track:59AasfokhGnvuaDVUiJqb7"
-          }
-        ],
-        "limit": 50,
-        "next": null,
-        "offset": 0,
-        "previous": null,
-        "total": 12
-      },
-      "type": "album",
-      "uri": "spotify:album:0r9awI5WRCZpwk0aVQ4bKO"
-    }
+      "limit": 50,
+      "next": null,
+      "offset": 0,
+      "previous": null,
+      "total": 12
+    },
+    "type": "album",
+    "uri": "spotify:album:0r9awI5WRCZpwk0aVQ4bKO",
+    "added_at": "2022-08-26T21:21:48Z"
   },
   {
-    "added_at": "2022-07-25T23:01:38Z",
-    "album": {
-      "album_type": "single",
-      "artists": [
+    "album_type": "single",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4DX0ctdZRMWec9KCiigIXy"
+        },
+        "href": "https://api.spotify.com/v1/artists/4DX0ctdZRMWec9KCiigIXy",
+        "id": "4DX0ctdZRMWec9KCiigIXy",
+        "name": "Enemy Inside",
+        "type": "artist",
+        "uri": "spotify:artist:4DX0ctdZRMWec9KCiigIXy"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "copyrights": [
+      {
+        "text": "2021 Rock Of Angels Records",
+        "type": "C"
+      },
+      {
+        "text": "2021 Rock Of Angels Records",
+        "type": "P"
+      }
+    ],
+    "external_ids": {
+      "upc": "3616555240968"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/1eP2iuWo9HM2iKArIZWH7L"
+    },
+    "genres": [],
+    "href": "https://api.spotify.com/v1/albums/1eP2iuWo9HM2iKArIZWH7L",
+    "id": "1eP2iuWo9HM2iKArIZWH7L",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273c38ef4cfeeea3a182450dcf3",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02c38ef4cfeeea3a182450dcf3",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851c38ef4cfeeea3a182450dcf3",
+        "width": 64
+      }
+    ],
+    "label": "Rock Of Angels Records",
+    "name": "Release Me",
+    "popularity": 18,
+    "release_date": "2021-05-21",
+    "release_date_precision": "day",
+    "total_tracks": 1,
+    "tracks": {
+      "href": "https://api.spotify.com/v1/albums/1eP2iuWo9HM2iKArIZWH7L/tracks?offset=0&limit=50",
+      "items": [
         {
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4DX0ctdZRMWec9KCiigIXy"
+              },
+              "href": "https://api.spotify.com/v1/artists/4DX0ctdZRMWec9KCiigIXy",
+              "id": "4DX0ctdZRMWec9KCiigIXy",
+              "name": "Enemy Inside",
+              "type": "artist",
+              "uri": "spotify:artist:4DX0ctdZRMWec9KCiigIXy"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL"
+          ],
+          "disc_number": 1,
+          "duration_ms": 211770,
+          "explicit": false,
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/4DX0ctdZRMWec9KCiigIXy"
+            "spotify": "https://open.spotify.com/track/7KMtylcMG2rFl5b7p9SlkK"
           },
-          "href": "https://api.spotify.com/v1/artists/4DX0ctdZRMWec9KCiigIXy",
-          "id": "4DX0ctdZRMWec9KCiigIXy",
-          "name": "Enemy Inside",
-          "type": "artist",
-          "uri": "spotify:artist:4DX0ctdZRMWec9KCiigIXy"
+          "href": "https://api.spotify.com/v1/tracks/7KMtylcMG2rFl5b7p9SlkK",
+          "id": "7KMtylcMG2rFl5b7p9SlkK",
+          "is_local": false,
+          "name": "Release Me",
+          "preview_url": "https://p.scdn.co/mp3-preview/1debcf0a01cd166d999eeed92a21f1e4f5961e96?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:7KMtylcMG2rFl5b7p9SlkK"
         }
       ],
-      "available_markets": [
-        "AD",
-        "AE",
-        "AL"
-      ],
-      "copyrights": [
-        {
-          "text": "2021 Rock Of Angels Records",
-          "type": "C"
-        },
-        {
-          "text": "2021 Rock Of Angels Records",
-          "type": "P"
-        }
-      ],
-      "external_ids": {
-        "upc": "3616555240968"
-      },
-      "external_urls": {
-        "spotify": "https://open.spotify.com/album/1eP2iuWo9HM2iKArIZWH7L"
-      },
-      "genres": [],
-      "href": "https://api.spotify.com/v1/albums/1eP2iuWo9HM2iKArIZWH7L",
-      "id": "1eP2iuWo9HM2iKArIZWH7L",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273c38ef4cfeeea3a182450dcf3",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02c38ef4cfeeea3a182450dcf3",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851c38ef4cfeeea3a182450dcf3",
-          "width": 64
-        }
-      ],
-      "label": "Rock Of Angels Records",
-      "name": "Release Me",
-      "popularity": 19,
-      "release_date": "2021-05-21",
-      "release_date_precision": "day",
-      "total_tracks": 1,
-      "tracks": {
-        "href": "https://api.spotify.com/v1/albums/1eP2iuWo9HM2iKArIZWH7L/tracks?offset=0&limit=50",
-        "items": [
-          {
-            "artists": [
-              {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/4DX0ctdZRMWec9KCiigIXy"
-                },
-                "href": "https://api.spotify.com/v1/artists/4DX0ctdZRMWec9KCiigIXy",
-                "id": "4DX0ctdZRMWec9KCiigIXy",
-                "name": "Enemy Inside",
-                "type": "artist",
-                "uri": "spotify:artist:4DX0ctdZRMWec9KCiigIXy"
-              }
-            ],
-            "available_markets": [
-              "AD",
-              "AE",
-              "AL"
-            ],
-            "disc_number": 1,
-            "duration_ms": 211770,
-            "explicit": false,
-            "external_urls": {
-              "spotify": "https://open.spotify.com/track/7KMtylcMG2rFl5b7p9SlkK"
-            },
-            "href": "https://api.spotify.com/v1/tracks/7KMtylcMG2rFl5b7p9SlkK",
-            "id": "7KMtylcMG2rFl5b7p9SlkK",
-            "is_local": false,
-            "name": "Release Me",
-            "preview_url": "https://p.scdn.co/mp3-preview/1debcf0a01cd166d999eeed92a21f1e4f5961e96?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-            "track_number": 1,
-            "type": "track",
-            "uri": "spotify:track:7KMtylcMG2rFl5b7p9SlkK"
-          }
-        ],
-        "limit": 50,
-        "next": null,
-        "offset": 0,
-        "previous": null,
-        "total": 1
-      },
-      "type": "album",
-      "uri": "spotify:album:1eP2iuWo9HM2iKArIZWH7L"
-    }
+      "limit": 50,
+      "next": null,
+      "offset": 0,
+      "previous": null,
+      "total": 1
+    },
+    "type": "album",
+    "uri": "spotify:album:1eP2iuWo9HM2iKArIZWH7L",
+    "added_at": "2022-07-25T23:01:38Z"
   },
   {
-    "added_at": "2022-06-28T16:06:28Z",
-    "album": {
-      "album_type": "album",
-      "artists": [
+    "album_type": "album",
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/1Ffb6ejR6Fe5IamqA5oRUF"
+        },
+        "href": "https://api.spotify.com/v1/artists/1Ffb6ejR6Fe5IamqA5oRUF",
+        "id": "1Ffb6ejR6Fe5IamqA5oRUF",
+        "name": "Bring Me The Horizon",
+        "type": "artist",
+        "uri": "spotify:artist:1Ffb6ejR6Fe5IamqA5oRUF"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "copyrights": [
+      {
+        "text": "(P) 2015 Sony Music Entertainment UK Limited",
+        "type": "P"
+      }
+    ],
+    "external_ids": {
+      "upc": "886445386097"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/album/7FqHuAvmREiIwVXVpZ9ooP"
+    },
+    "genres": [],
+    "href": "https://api.spotify.com/v1/albums/7FqHuAvmREiIwVXVpZ9ooP",
+    "id": "7FqHuAvmREiIwVXVpZ9ooP",
+    "images": [
+      {
+        "height": 640,
+        "url": "https://i.scdn.co/image/ab67616d0000b273736145b97bab8fa92cb6113f",
+        "width": 640
+      },
+      {
+        "height": 300,
+        "url": "https://i.scdn.co/image/ab67616d00001e02736145b97bab8fa92cb6113f",
+        "width": 300
+      },
+      {
+        "height": 64,
+        "url": "https://i.scdn.co/image/ab67616d00004851736145b97bab8fa92cb6113f",
+        "width": 64
+      }
+    ],
+    "label": "RCA Records Label",
+    "name": "That's The Spirit",
+    "popularity": 69,
+    "release_date": "2015-09-11",
+    "release_date_precision": "day",
+    "total_tracks": 11,
+    "tracks": {
+      "href": "https://api.spotify.com/v1/albums/7FqHuAvmREiIwVXVpZ9ooP/tracks?offset=0&limit=50",
+      "items": [
         {
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1Ffb6ejR6Fe5IamqA5oRUF"
+              },
+              "href": "https://api.spotify.com/v1/artists/1Ffb6ejR6Fe5IamqA5oRUF",
+              "id": "1Ffb6ejR6Fe5IamqA5oRUF",
+              "name": "Bring Me The Horizon",
+              "type": "artist",
+              "uri": "spotify:artist:1Ffb6ejR6Fe5IamqA5oRUF"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL"
+          ],
+          "disc_number": 1,
+          "duration_ms": 274133,
+          "explicit": true,
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/1Ffb6ejR6Fe5IamqA5oRUF"
+            "spotify": "https://open.spotify.com/track/3lPn81PFyKvXiyHhlkwkQ4"
           },
-          "href": "https://api.spotify.com/v1/artists/1Ffb6ejR6Fe5IamqA5oRUF",
-          "id": "1Ffb6ejR6Fe5IamqA5oRUF",
-          "name": "Bring Me The Horizon",
-          "type": "artist",
-          "uri": "spotify:artist:1Ffb6ejR6Fe5IamqA5oRUF"
-        }
-      ],
-      "available_markets": [
-        "AD",
-        "AE",
-        "AL"
-      ],
-      "copyrights": [
-        {
-          "text": "(P) 2015 Sony Music Entertainment UK Limited",
-          "type": "P"
-        }
-      ],
-      "external_ids": {
-        "upc": "886445386097"
-      },
-      "external_urls": {
-        "spotify": "https://open.spotify.com/album/7FqHuAvmREiIwVXVpZ9ooP"
-      },
-      "genres": [],
-      "href": "https://api.spotify.com/v1/albums/7FqHuAvmREiIwVXVpZ9ooP",
-      "id": "7FqHuAvmREiIwVXVpZ9ooP",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273736145b97bab8fa92cb6113f",
-          "width": 640
+          "href": "https://api.spotify.com/v1/tracks/3lPn81PFyKvXiyHhlkwkQ4",
+          "id": "3lPn81PFyKvXiyHhlkwkQ4",
+          "is_local": false,
+          "name": "Doomed",
+          "preview_url": "https://p.scdn.co/mp3-preview/ec7397da2fa9f4963bb90808485d748ef1344b06?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+          "track_number": 1,
+          "type": "track",
+          "uri": "spotify:track:3lPn81PFyKvXiyHhlkwkQ4"
         },
         {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02736145b97bab8fa92cb6113f",
-          "width": 300
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1Ffb6ejR6Fe5IamqA5oRUF"
+              },
+              "href": "https://api.spotify.com/v1/artists/1Ffb6ejR6Fe5IamqA5oRUF",
+              "id": "1Ffb6ejR6Fe5IamqA5oRUF",
+              "name": "Bring Me The Horizon",
+              "type": "artist",
+              "uri": "spotify:artist:1Ffb6ejR6Fe5IamqA5oRUF"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL"
+          ],
+          "disc_number": 1,
+          "duration_ms": 239386,
+          "explicit": true,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1yYE8EyuIV0rrvQ1bA2Fyf"
+          },
+          "href": "https://api.spotify.com/v1/tracks/1yYE8EyuIV0rrvQ1bA2Fyf",
+          "id": "1yYE8EyuIV0rrvQ1bA2Fyf",
+          "is_local": false,
+          "name": "Happy Song",
+          "preview_url": "https://p.scdn.co/mp3-preview/e76ee8323bc11d09445bda45e02b5c69da2cd235?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+          "track_number": 2,
+          "type": "track",
+          "uri": "spotify:track:1yYE8EyuIV0rrvQ1bA2Fyf"
         },
         {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851736145b97bab8fa92cb6113f",
-          "width": 64
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1Ffb6ejR6Fe5IamqA5oRUF"
+              },
+              "href": "https://api.spotify.com/v1/artists/1Ffb6ejR6Fe5IamqA5oRUF",
+              "id": "1Ffb6ejR6Fe5IamqA5oRUF",
+              "name": "Bring Me The Horizon",
+              "type": "artist",
+              "uri": "spotify:artist:1Ffb6ejR6Fe5IamqA5oRUF"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL"
+          ],
+          "disc_number": 1,
+          "duration_ms": 232320,
+          "explicit": false,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1KTJmfwrk5pYqsi9mkY3nT"
+          },
+          "href": "https://api.spotify.com/v1/tracks/1KTJmfwrk5pYqsi9mkY3nT",
+          "id": "1KTJmfwrk5pYqsi9mkY3nT",
+          "is_local": false,
+          "name": "True Friends",
+          "preview_url": "https://p.scdn.co/mp3-preview/fa7e21704e3090f9b9b3a094f956dc92cc96f37e?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+          "track_number": 4,
+          "type": "track",
+          "uri": "spotify:track:1KTJmfwrk5pYqsi9mkY3nT"
         }
       ],
-      "label": "RCA Records Label",
-      "name": "That's The Spirit",
-      "popularity": 69,
-      "release_date": "2015-09-11",
-      "release_date_precision": "day",
-      "total_tracks": 11,
-      "tracks": {
-        "href": "https://api.spotify.com/v1/albums/7FqHuAvmREiIwVXVpZ9ooP/tracks?offset=0&limit=50",
-        "items": [
-          {
-            "artists": [
-              {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/1Ffb6ejR6Fe5IamqA5oRUF"
-                },
-                "href": "https://api.spotify.com/v1/artists/1Ffb6ejR6Fe5IamqA5oRUF",
-                "id": "1Ffb6ejR6Fe5IamqA5oRUF",
-                "name": "Bring Me The Horizon",
-                "type": "artist",
-                "uri": "spotify:artist:1Ffb6ejR6Fe5IamqA5oRUF"
-              }
-            ],
-            "available_markets": [
-              "AD",
-              "AE",
-              "AL"
-            ],
-            "disc_number": 1,
-            "duration_ms": 274133,
-            "explicit": true,
-            "external_urls": {
-              "spotify": "https://open.spotify.com/track/3lPn81PFyKvXiyHhlkwkQ4"
-            },
-            "href": "https://api.spotify.com/v1/tracks/3lPn81PFyKvXiyHhlkwkQ4",
-            "id": "3lPn81PFyKvXiyHhlkwkQ4",
-            "is_local": false,
-            "name": "Doomed",
-            "preview_url": "https://p.scdn.co/mp3-preview/ec7397da2fa9f4963bb90808485d748ef1344b06?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-            "track_number": 1,
-            "type": "track",
-            "uri": "spotify:track:3lPn81PFyKvXiyHhlkwkQ4"
-          },
-          {
-            "artists": [
-              {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/1Ffb6ejR6Fe5IamqA5oRUF"
-                },
-                "href": "https://api.spotify.com/v1/artists/1Ffb6ejR6Fe5IamqA5oRUF",
-                "id": "1Ffb6ejR6Fe5IamqA5oRUF",
-                "name": "Bring Me The Horizon",
-                "type": "artist",
-                "uri": "spotify:artist:1Ffb6ejR6Fe5IamqA5oRUF"
-              }
-            ],
-            "available_markets": [
-              "AD",
-              "AE",
-              "AL"
-            ],
-            "disc_number": 1,
-            "duration_ms": 239386,
-            "explicit": true,
-            "external_urls": {
-              "spotify": "https://open.spotify.com/track/1yYE8EyuIV0rrvQ1bA2Fyf"
-            },
-            "href": "https://api.spotify.com/v1/tracks/1yYE8EyuIV0rrvQ1bA2Fyf",
-            "id": "1yYE8EyuIV0rrvQ1bA2Fyf",
-            "is_local": false,
-            "name": "Happy Song",
-            "preview_url": "https://p.scdn.co/mp3-preview/e76ee8323bc11d09445bda45e02b5c69da2cd235?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-            "track_number": 2,
-            "type": "track",
-            "uri": "spotify:track:1yYE8EyuIV0rrvQ1bA2Fyf"
-          },
-          {
-            "artists": [
-              {
-                "external_urls": {
-                  "spotify": "https://open.spotify.com/artist/1Ffb6ejR6Fe5IamqA5oRUF"
-                },
-                "href": "https://api.spotify.com/v1/artists/1Ffb6ejR6Fe5IamqA5oRUF",
-                "id": "1Ffb6ejR6Fe5IamqA5oRUF",
-                "name": "Bring Me The Horizon",
-                "type": "artist",
-                "uri": "spotify:artist:1Ffb6ejR6Fe5IamqA5oRUF"
-              }
-            ],
-            "available_markets": [
-              "AD",
-              "AE",
-              "AL"
-            ],
-            "disc_number": 1,
-            "duration_ms": 232320,
-            "explicit": false,
-            "external_urls": {
-              "spotify": "https://open.spotify.com/track/1KTJmfwrk5pYqsi9mkY3nT"
-            },
-            "href": "https://api.spotify.com/v1/tracks/1KTJmfwrk5pYqsi9mkY3nT",
-            "id": "1KTJmfwrk5pYqsi9mkY3nT",
-            "is_local": false,
-            "name": "True Friends",
-            "preview_url": "https://p.scdn.co/mp3-preview/fa7e21704e3090f9b9b3a094f956dc92cc96f37e?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-            "track_number": 4,
-            "type": "track",
-            "uri": "spotify:track:1KTJmfwrk5pYqsi9mkY3nT"
-          }
-        ],
-        "limit": 50,
-        "next": null,
-        "offset": 0,
-        "previous": null,
-        "total": 11
-      },
-      "type": "album",
-      "uri": "spotify:album:7FqHuAvmREiIwVXVpZ9ooP"
-    }
+      "limit": 50,
+      "next": null,
+      "offset": 0,
+      "previous": null,
+      "total": 11
+    },
+    "type": "album",
+    "uri": "spotify:album:7FqHuAvmREiIwVXVpZ9ooP",
+    "added_at": "2022-06-28T16:06:28Z"
   }
 ]

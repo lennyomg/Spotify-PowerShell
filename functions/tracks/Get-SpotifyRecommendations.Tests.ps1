@@ -5,8 +5,11 @@ BeforeAll {
 Describe "Get-SpotifyRecommendations" {
     It "Default" {
         $p = Get-SpotifyRecommendations -SeedArtists "2CIMQHirSU0MQqyYHq0eOx", "57dN52uHvrHOxijzpIgu3E" -MinEnergy 0.8 -MaxEnergy 1 -TargetDanceability 1
-        $p.seeds | Should -Not -BeNullOrEmpty
-        $p.tracks.Count | Should -BeGreaterThan 0
+        $p.Count | Should -BeGreaterThan 0
+        $p | ForEach-Object {
+            $_.type | Should -Be "track"
+            $_.id | Should -Not -BeNullOrEmpty
+        }
     }
 }
 

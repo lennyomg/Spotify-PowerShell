@@ -25,5 +25,7 @@ function Get-SpotifyRecentlyPlayed {
                 -Token $global:SpotifyToken `
                 -ContentType "application/json"; $r 
         } 
-    } | Select-Object -ExpandProperty items
+    } 
+    | Select-Object -ExpandProperty items
+    | Select-Object -ExpandProperty track -Property * -ExcludeProperty track
 }

@@ -1,55 +1,7 @@
 [
   {
-    "added_at": "2022-05-30T06:37:08Z",
-    "track": {
-      "album": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/2NCEtX40i9lLNpTg2X5583"
-            },
-            "href": "https://api.spotify.com/v1/artists/2NCEtX40i9lLNpTg2X5583",
-            "id": "2NCEtX40i9lLNpTg2X5583",
-            "name": "Metrik",
-            "type": "artist",
-            "uri": "spotify:artist:2NCEtX40i9lLNpTg2X5583"
-          }
-        ],
-        "available_markets": [
-          "AD",
-          "AE",
-          "AL"
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/2NlFJGJSG5pzSLMZWPi8td"
-        },
-        "href": "https://api.spotify.com/v1/albums/2NlFJGJSG5pzSLMZWPi8td",
-        "id": "2NlFJGJSG5pzSLMZWPi8td",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2739a0d1c5f859a5dd673903f41",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e029a0d1c5f859a5dd673903f41",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048519a0d1c5f859a5dd673903f41",
-            "width": 64
-          }
-        ],
-        "name": "Dawnbreaker",
-        "release_date": "2018-09-28",
-        "release_date_precision": "day",
-        "total_tracks": 1,
-        "type": "album",
-        "uri": "spotify:album:2NlFJGJSG5pzSLMZWPi8td"
-      },
+    "album": {
+      "album_type": "single",
       "artists": [
         {
           "external_urls": {
@@ -67,75 +19,75 @@
         "AE",
         "AL"
       ],
-      "disc_number": 1,
-      "duration_ms": 301070,
-      "explicit": false,
-      "external_ids": {
-        "isrc": "GBCJY1800202"
-      },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/3ychV6Y7TGNXNQlQFzQWVk"
+        "spotify": "https://open.spotify.com/album/2NlFJGJSG5pzSLMZWPi8td"
       },
-      "href": "https://api.spotify.com/v1/tracks/3ychV6Y7TGNXNQlQFzQWVk",
-      "id": "3ychV6Y7TGNXNQlQFzQWVk",
-      "is_local": false,
+      "href": "https://api.spotify.com/v1/albums/2NlFJGJSG5pzSLMZWPi8td",
+      "id": "2NlFJGJSG5pzSLMZWPi8td",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2739a0d1c5f859a5dd673903f41",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e029a0d1c5f859a5dd673903f41",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048519a0d1c5f859a5dd673903f41",
+          "width": 64
+        }
+      ],
       "name": "Dawnbreaker",
-      "popularity": 41,
-      "preview_url": "https://p.scdn.co/mp3-preview/a4d792eabd4f1d69326ffb2732b2b118862f5cd1?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-      "track_number": 1,
-      "type": "track",
-      "uri": "spotify:track:3ychV6Y7TGNXNQlQFzQWVk"
-    }
+      "release_date": "2018-09-28",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "type": "album",
+      "uri": "spotify:album:2NlFJGJSG5pzSLMZWPi8td"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2NCEtX40i9lLNpTg2X5583"
+        },
+        "href": "https://api.spotify.com/v1/artists/2NCEtX40i9lLNpTg2X5583",
+        "id": "2NCEtX40i9lLNpTg2X5583",
+        "name": "Metrik",
+        "type": "artist",
+        "uri": "spotify:artist:2NCEtX40i9lLNpTg2X5583"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "disc_number": 1,
+    "duration_ms": 301070,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "GBCJY1800202"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/3ychV6Y7TGNXNQlQFzQWVk"
+    },
+    "href": "https://api.spotify.com/v1/tracks/3ychV6Y7TGNXNQlQFzQWVk",
+    "id": "3ychV6Y7TGNXNQlQFzQWVk",
+    "is_local": false,
+    "name": "Dawnbreaker",
+    "popularity": 41,
+    "preview_url": "https://p.scdn.co/mp3-preview/a4d792eabd4f1d69326ffb2732b2b118862f5cd1?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 1,
+    "type": "track",
+    "uri": "spotify:track:3ychV6Y7TGNXNQlQFzQWVk",
+    "added_at": "2022-05-30T06:37:08Z"
   },
   {
-    "added_at": "2022-01-13T03:04:45Z",
-    "track": {
-      "album": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/5MjcGshMggPgIHinIUDaX0"
-            },
-            "href": "https://api.spotify.com/v1/artists/5MjcGshMggPgIHinIUDaX0",
-            "id": "5MjcGshMggPgIHinIUDaX0",
-            "name": "LØLØ",
-            "type": "artist",
-            "uri": "spotify:artist:5MjcGshMggPgIHinIUDaX0"
-          }
-        ],
-        "available_markets": [
-          "CA"
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/37RfLZM8Lk0k1kpuIOOGqq"
-        },
-        "href": "https://api.spotify.com/v1/albums/37RfLZM8Lk0k1kpuIOOGqq",
-        "id": "37RfLZM8Lk0k1kpuIOOGqq",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2730a2f868d2868d3aa167540c0",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e020a2f868d2868d3aa167540c0",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048510a2f868d2868d3aa167540c0",
-            "width": 64
-          }
-        ],
-        "name": "die without u",
-        "release_date": "2021-06-04",
-        "release_date_precision": "day",
-        "total_tracks": 1,
-        "type": "album",
-        "uri": "spotify:album:37RfLZM8Lk0k1kpuIOOGqq"
-      },
+    "album": {
+      "album_type": "single",
       "artists": [
         {
           "external_urls": {
@@ -151,77 +103,73 @@
       "available_markets": [
         "CA"
       ],
-      "disc_number": 1,
-      "duration_ms": 169814,
-      "explicit": true,
-      "external_ids": {
-        "isrc": "FR59R2147333"
-      },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/0vco9GaTEbNP8fC2lafd4s"
+        "spotify": "https://open.spotify.com/album/37RfLZM8Lk0k1kpuIOOGqq"
       },
-      "href": "https://api.spotify.com/v1/tracks/0vco9GaTEbNP8fC2lafd4s",
-      "id": "0vco9GaTEbNP8fC2lafd4s",
-      "is_local": false,
+      "href": "https://api.spotify.com/v1/albums/37RfLZM8Lk0k1kpuIOOGqq",
+      "id": "37RfLZM8Lk0k1kpuIOOGqq",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2730a2f868d2868d3aa167540c0",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020a2f868d2868d3aa167540c0",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510a2f868d2868d3aa167540c0",
+          "width": 64
+        }
+      ],
       "name": "die without u",
-      "popularity": 22,
-      "preview_url": null,
-      "track_number": 1,
-      "type": "track",
-      "uri": "spotify:track:0vco9GaTEbNP8fC2lafd4s"
-    }
+      "release_date": "2021-06-04",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "type": "album",
+      "uri": "spotify:album:37RfLZM8Lk0k1kpuIOOGqq"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/5MjcGshMggPgIHinIUDaX0"
+        },
+        "href": "https://api.spotify.com/v1/artists/5MjcGshMggPgIHinIUDaX0",
+        "id": "5MjcGshMggPgIHinIUDaX0",
+        "name": "LØLØ",
+        "type": "artist",
+        "uri": "spotify:artist:5MjcGshMggPgIHinIUDaX0"
+      }
+    ],
+    "available_markets": [
+      "CA"
+    ],
+    "disc_number": 1,
+    "duration_ms": 169814,
+    "explicit": true,
+    "external_ids": {
+      "isrc": "FR59R2147333"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/0vco9GaTEbNP8fC2lafd4s"
+    },
+    "href": "https://api.spotify.com/v1/tracks/0vco9GaTEbNP8fC2lafd4s",
+    "id": "0vco9GaTEbNP8fC2lafd4s",
+    "is_local": false,
+    "name": "die without u",
+    "popularity": 22,
+    "preview_url": null,
+    "track_number": 1,
+    "type": "track",
+    "uri": "spotify:track:0vco9GaTEbNP8fC2lafd4s",
+    "added_at": "2022-01-13T03:04:45Z"
   },
   {
-    "added_at": "2021-03-22T18:14:43Z",
-    "track": {
-      "album": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/4BMtxSIHPpG1WM2TbvNjiR"
-            },
-            "href": "https://api.spotify.com/v1/artists/4BMtxSIHPpG1WM2TbvNjiR",
-            "id": "4BMtxSIHPpG1WM2TbvNjiR",
-            "name": "Old Gods of Asgard",
-            "type": "artist",
-            "uri": "spotify:artist:4BMtxSIHPpG1WM2TbvNjiR"
-          }
-        ],
-        "available_markets": [
-          "AD",
-          "AE",
-          "AL"
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/3Xcl0pytPYqJUSTi2S8jtI"
-        },
-        "href": "https://api.spotify.com/v1/albums/3Xcl0pytPYqJUSTi2S8jtI",
-        "id": "3Xcl0pytPYqJUSTi2S8jtI",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273048651764cd67529e29d93fd",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02048651764cd67529e29d93fd",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851048651764cd67529e29d93fd",
-            "width": 64
-          }
-        ],
-        "name": "Take Control",
-        "release_date": "2019-08-27",
-        "release_date_precision": "day",
-        "total_tracks": 1,
-        "type": "album",
-        "uri": "spotify:album:3Xcl0pytPYqJUSTi2S8jtI"
-      },
+    "album": {
+      "album_type": "single",
       "artists": [
         {
           "external_urls": {
@@ -239,24 +187,70 @@
         "AE",
         "AL"
       ],
-      "disc_number": 1,
-      "duration_ms": 473499,
-      "explicit": false,
-      "external_ids": {
-        "isrc": "FIP9F1900007"
-      },
       "external_urls": {
-        "spotify": "https://open.spotify.com/track/0uYPsl955ngOyNBzfp0EYg"
+        "spotify": "https://open.spotify.com/album/3Xcl0pytPYqJUSTi2S8jtI"
       },
-      "href": "https://api.spotify.com/v1/tracks/0uYPsl955ngOyNBzfp0EYg",
-      "id": "0uYPsl955ngOyNBzfp0EYg",
-      "is_local": false,
+      "href": "https://api.spotify.com/v1/albums/3Xcl0pytPYqJUSTi2S8jtI",
+      "id": "3Xcl0pytPYqJUSTi2S8jtI",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273048651764cd67529e29d93fd",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02048651764cd67529e29d93fd",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851048651764cd67529e29d93fd",
+          "width": 64
+        }
+      ],
       "name": "Take Control",
-      "popularity": 46,
-      "preview_url": "https://p.scdn.co/mp3-preview/d3f6fec5d71ce1f889605adf55c50589dca7f13c?cid=ee8a5eeaddd44049b1f12be9f976cc79",
-      "track_number": 1,
-      "type": "track",
-      "uri": "spotify:track:0uYPsl955ngOyNBzfp0EYg"
-    }
+      "release_date": "2019-08-27",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "type": "album",
+      "uri": "spotify:album:3Xcl0pytPYqJUSTi2S8jtI"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4BMtxSIHPpG1WM2TbvNjiR"
+        },
+        "href": "https://api.spotify.com/v1/artists/4BMtxSIHPpG1WM2TbvNjiR",
+        "id": "4BMtxSIHPpG1WM2TbvNjiR",
+        "name": "Old Gods of Asgard",
+        "type": "artist",
+        "uri": "spotify:artist:4BMtxSIHPpG1WM2TbvNjiR"
+      }
+    ],
+    "available_markets": [
+      "AD",
+      "AE",
+      "AL"
+    ],
+    "disc_number": 1,
+    "duration_ms": 473499,
+    "explicit": false,
+    "external_ids": {
+      "isrc": "FIP9F1900007"
+    },
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/0uYPsl955ngOyNBzfp0EYg"
+    },
+    "href": "https://api.spotify.com/v1/tracks/0uYPsl955ngOyNBzfp0EYg",
+    "id": "0uYPsl955ngOyNBzfp0EYg",
+    "is_local": false,
+    "name": "Take Control",
+    "popularity": 47,
+    "preview_url": "https://p.scdn.co/mp3-preview/d3f6fec5d71ce1f889605adf55c50589dca7f13c?cid=ee8a5eeaddd44049b1f12be9f976cc79",
+    "track_number": 1,
+    "type": "track",
+    "uri": "spotify:track:0uYPsl955ngOyNBzfp0EYg",
+    "added_at": "2021-03-22T18:14:43Z"
   }
 ]

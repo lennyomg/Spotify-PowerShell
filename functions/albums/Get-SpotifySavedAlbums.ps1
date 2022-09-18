@@ -9,7 +9,7 @@ Get a list of the albums saved in the current Spotify user's 'Your Music' librar
 Get-SpotifySavedAlbums
 
 .EXAMPLE
-Get-SpotifySavedAlbums | ForEach-Object { $_.album } | Get-SpotifyAlbumTracks
+Get-SpotifySavedAlbums | Get-SpotifyAlbumTracks
 
 .FUNCTIONALITY
 Album
@@ -28,5 +28,7 @@ function Get-SpotifySavedAlbums {
                 -Token $global:SpotifyToken `
                 -ContentType "application/json"; $r 
         } 
-    } | Select-Object -ExpandProperty items
+    } 
+    | Select-Object -ExpandProperty items
+    | Select-Object -ExpandProperty album -Property * -ExcludeProperty album
 }

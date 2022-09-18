@@ -11,7 +11,7 @@ Describe "Add-SpotifyTrack / Remove-SpotifyTrack" {
         @{ value = "1301WleyT98MSxVHPZCA6M" }
         @{ value = "1301WleyT98MSxVHPZCA6M", "4iV5W9uYEdYUVa79Axb7Rh" }
     ) {
-        $tracks = { Get-SpotifySavedTracks | ForEach-Object { $_.track.id } }
+        $tracks = { Get-SpotifySavedTracks | ForEach-Object { $_.id } }
         $value | Should -Not -BeIn (& $tracks)
 
         Add-SpotifyTrack -TrackId $value
