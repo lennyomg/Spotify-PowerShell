@@ -31,13 +31,14 @@ function Get-SpotifyAlbumTracks {
 
     process {
         $r = [pscustomobject]@{ next = "https://api.spotify.com/v1/albums/$($AlbumId)/tracks?limit=50" }
-        & { while ($r.next) {
+        & { while ($r.next -and !$e) {
                 $r = Invoke-RestMethod `
                     -Uri $r.next `
                     -Method Get `
                     -Authentication Bearer `
                     -Token $global:SpotifyToken `
-                    -ContentType "application/json"; $r 
+                    -ContentType "application/json" `
+                    -ErrorVariable "e"; $r 
             } 
         } | Select-Object -ExpandProperty items
     }
