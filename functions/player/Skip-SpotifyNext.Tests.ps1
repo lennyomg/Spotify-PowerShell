@@ -1,3 +1,5 @@
+. $PSScriptRoot/../../Tests.ps1
+
 BeforeAll {
     . $PSScriptRoot/Skip-SpotifyNext.ps1
 }

@@ -1,3 +1,5 @@
+. $PSScriptRoot/../../Tests.ps1
+
 BeforeAll {
     . $PSScriptRoot/Remove-SpotifyPlaylist.ps1
 }

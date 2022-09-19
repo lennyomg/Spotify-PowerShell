@@ -1,3 +1,5 @@
+. $PSScriptRoot/../../Tests.ps1
+
 BeforeAll { 
     . $PSScriptRoot/Add-SpotifyAlbum.ps1
     . $PSScriptRoot/Remove-SpotifyAlbum.ps1

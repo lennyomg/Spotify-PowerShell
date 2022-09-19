@@ -1,3 +1,5 @@
+. $PSScriptRoot/../../Tests.ps1
+
 BeforeAll {
     . $PSScriptRoot/Get-SpotifyPlaylist.ps1
     . $PSScriptRoot/Get-SpotifySavedPlaylists.ps1

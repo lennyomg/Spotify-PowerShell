@@ -1,3 +1,5 @@
+. $PSScriptRoot/../../Tests.ps1
+
 BeforeAll {
     . $PSScriptRoot/Get-SpotifyArtist.ps1
     . $PSScriptRoot/Get-SpotifySavedArtists.ps1

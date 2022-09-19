@@ -1,3 +1,5 @@
+. $PSScriptRoot/../../Tests.ps1
+
 BeforeAll {
     . $PSScriptRoot/Move-SpotifyPlayback.ps1
     . $PSScriptRoot/Get-SpotifyDevices.ps1
