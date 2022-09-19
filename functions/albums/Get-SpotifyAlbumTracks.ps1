@@ -12,7 +12,7 @@ The Spotify ID of the album. Example value: "4aawyAB9vmqN3uQ7FjRGTy".
 Get-SpotifyAlbumTracks "4aawyAB9vmqN3uQ7FjRGTy"
 
 .EXAMPLE
-Get-SpotifySavedAlbums | ForEach-Object { $_.album } | Get-SpotifyAlbumTracks
+Get-SpotifySavedAlbums | Get-SpotifyAlbumTracks
 
 .FUNCTIONALITY
 Album
