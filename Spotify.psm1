@@ -102,7 +102,7 @@ The Spotify ID of the album. Example value: "4aawyAB9vmqN3uQ7FjRGTy".
 Get-SpotifyAlbumTracks "4aawyAB9vmqN3uQ7FjRGTy"
 
 .EXAMPLE
-Get-SpotifySavedAlbums | ForEach-Object { $_.album } | Get-SpotifyAlbumTracks
+Get-SpotifySavedAlbums | Get-SpotifyAlbumTracks
 
 .FUNCTIONALITY
 Album
@@ -121,13 +121,14 @@ function Get-SpotifyAlbumTracks {
 
     process {
         $r = [pscustomobject]@{ next = "https://api.spotify.com/v1/albums/$($AlbumId)/tracks?limit=50" }
-        & { while ($r.next) {
+        & { while ($r.next -and !$e) {
                 $r = Invoke-RestMethod `
                     -Uri $r.next `
                     -Method Get `
                     -Authentication Bearer `
                     -Token $global:SpotifyToken `
-                    -ContentType "application/json"; $r 
+                    -ContentType "application/json" `
+                    -ErrorVariable "e"; $r 
             } 
         } | Select-Object -ExpandProperty items
     }
@@ -155,13 +156,14 @@ https://developer.spotify.com/documentation/web-api/reference/#/operations/get-n
 function Get-SpotifyNewReleases {
    
     $r = [pscustomobject]@{ next = "https://api.spotify.com/v1/browse/new-releases?limit=50" }
-    & { while ($r.next) {
+    & { while ($r.next -and !$e) {
             $r = Invoke-RestMethod `
                 -Uri $r.next `
                 -Method Get `
                 -Authentication Bearer `
                 -Token $global:SpotifyToken `
-                -ContentType "application/json" | Select-Object -ExpandProperty albums; $r 
+                -ContentType "application/json" `
+                -ErrorVariable "e" | Select-Object -ExpandProperty albums; $r 
         } 
     } | Select-Object -ExpandProperty items
 }
@@ -188,13 +190,14 @@ https://developer.spotify.com/documentation/web-api/reference/#/operations/get-u
 function Get-SpotifySavedAlbums {
     
     $r = [pscustomobject]@{ next = "https://api.spotify.com/v1/me/albums?limit=50" }
-    & { while ($r.next) {
+    & { while ($r.next -and !$e) {
             $r = Invoke-RestMethod `
                 -Uri $r.next `
                 -Method Get `
                 -Authentication Bearer `
                 -Token $global:SpotifyToken `
-                -ContentType "application/json"; $r 
+                -ContentType "application/json" `
+                -ErrorVariable "e"; $r 
         } 
     } 
     | Select-Object -ExpandProperty items
@@ -363,13 +366,14 @@ function Get-SpotifyArtistAlbums {
 
     process {
         $r = [pscustomobject]@{ next = "https://api.spotify.com/v1/artists/$($ArtistId)/albums?limit=50" }
-        & { while ($r.next) {
+        & { while ($r.next -and !$e) {
                 $r = Invoke-RestMethod `
                     -Uri $r.next `
                     -Method Get `
                     -Authentication Bearer `
                     -Token $global:SpotifyToken `
-                    -ContentType "application/json"; $r 
+                    -ContentType "application/json" `
+                    -ErrorVariable "e"; $r 
             } 
         } | Select-Object -ExpandProperty items
     }
@@ -484,13 +488,14 @@ https://developer.spotify.com/documentation/web-api/reference/#/operations/get-f
 function Get-SpotifySavedArtists {
     
     $r = [pscustomobject]@{ next = "https://api.spotify.com/v1/me/following?type=artist&limit=50" }
-    & { while ($r.next) {
+    & { while ($r.next -and !$e) {
             $r = Invoke-RestMethod `
                 -Uri $r.next `
                 -Method Get `
                 -Authentication Bearer `
                 -Token $global:SpotifyToken `
-                -ContentType "application/json" | Select-Object -ExpandProperty artists; $r 
+                -ContentType "application/json" `
+                -ErrorVariable "e" | Select-Object -ExpandProperty artists; $r 
         } 
     } | Select-Object -ExpandProperty items
 }
@@ -854,13 +859,14 @@ https://developer.spotify.com/documentation/web-api/reference/#/operations/get-r
 function Get-SpotifyRecentlyPlayed {
     
     $r = [pscustomobject]@{ next = "https://api.spotify.com/v1/me/player/recently-played?limit=50" }
-    & { while ($r.next) {
+    & { while ($r.next -and !$e) {
             $r = Invoke-RestMethod `
                 -Uri $r.next `
                 -Method Get `
                 -Authentication Bearer `
                 -Token $global:SpotifyToken `
-                -ContentType "application/json"; $r 
+                -ContentType "application/json" `
+                -ErrorVariable "e"; $r 
         } 
     } 
     | Select-Object -ExpandProperty items
@@ -1528,13 +1534,14 @@ function Get-SpotifyPlaylistTracks {
 
     process {
         $r = [pscustomobject]@{ next = "https://api.spotify.com/v1/playlists/$($PlaylistId)/tracks?limit=100" }
-        & { while ($r.next) {
+        & { while ($r.next -and !$e) {
                 $r = Invoke-RestMethod `
                     -Uri $r.next `
                     -Method Get `
                     -Authentication Bearer `
                     -Token $global:SpotifyToken `
-                    -ContentType "application/json"; $r 
+                    -ContentType "application/json" `
+                    -ErrorVariable "e"; $r 
             } 
         } 
         | Select-Object -ExpandProperty items
@@ -1561,13 +1568,14 @@ https://developer.spotify.com/documentation/web-api/reference/#/operations/get-a
 function Get-SpotifySavedPlaylists {
     
     $r = [pscustomobject]@{ next = "https://api.spotify.com/v1/me/playlists?limit=50" }
-    & { while ($r.next) {
+    & { while ($r.next -and !$e) {
             $r = Invoke-RestMethod `
                 -Uri $r.next `
                 -Method Get `
                 -Authentication Bearer `
                 -Token $global:SpotifyToken `
-                -ContentType "application/json"; $r 
+                -ContentType "application/json" `
+                -ErrorVariable "e"; $r 
         } 
     } | Select-Object -ExpandProperty items
 }
@@ -2237,13 +2245,14 @@ https://developer.spotify.com/documentation/web-api/reference/#/operations/get-u
 function Get-SpotifySavedTracks {
     
     $r = [pscustomobject]@{ next = "https://api.spotify.com/v1/me/tracks?limit=50" }
-    & { while ($r.next) {
+    & { while ($r.next -and !$e) {
             $r = Invoke-RestMethod `
                 -Uri $r.next `
                 -Method Get `
                 -Authentication Bearer `
                 -Token $global:SpotifyToken `
-                -ContentType "application/json"; $r 
+                -ContentType "application/json" `
+                -ErrorVariable "e"; $r 
         } 
     } 
     | Select-Object -ExpandProperty items
