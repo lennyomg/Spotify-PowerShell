@@ -84,16 +84,13 @@ Invoke-RestMethod `
 
 Install [Pester](https://pester.dev) and run:
 ```
-. $PSScriptRoot/functions/Connect-SpotifyApi.ps1
-. $PSScriptRoot/Tests.ps1
-
-Connect-SpotifyApi
-Invoke-Pester $PSScriptRoot/*.Tests.ps1 -ExcludeTagFilter Output
+. ./Tests.ps1
+Invoke-SpotifyTests
 ```
 
 ### Build
 
-`Build.ps1` runs tests, compiles all commands into one PSM1 file, and updates module metadata.
+`Build.ps1` compiles all commands into one PSM1 file, and updates module metadata.
 
 ### Docs
 
