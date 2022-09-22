@@ -6,7 +6,7 @@ BeforeAll {
 
 Describe "New-SpotifyPlaylist" {
 
-    It "Default" {
+    It "Default" -Skip {
         $p = New-SpotifyPlaylist -UserId $env:SpotifyUserId -Name "test101" -Description "text"
         $p.type | Should -Be "playlist"
         $p.id | Should -Not -BeNullOrEmpty
