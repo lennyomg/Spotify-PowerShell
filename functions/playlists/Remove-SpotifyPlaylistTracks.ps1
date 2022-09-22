@@ -8,11 +8,11 @@ Remove one or more items from a user's playlist.
 .PARAMETER PlaylistId
 The Spotify ID of the playlist. Example value: "3cEYpjA9oz9GiPac4AsH4n".
 
-.PARAMETER TrackUri
-An array of Spotify URIs of the tracks or episodes to remove. For example: "spotify:track:4iV5W9uYEdYUVa79Axb7Rh", "spotify:track:1301WleyT98MSxVHPZCA6M". Can be more than 100.
+.PARAMETER TrackId
+An array of Spotify URIs of the tracks or episodes to remove. For example: "4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M". Can be more than 100.
 
 .EXAMPLE
-Remove-SpotifyPlaylistTracks -PlaylistId "3cEYpjA9oz9GiPac4AsH4n" -TrackUri "spotify:track:4iV5W9uYEdYUVa79Axb7Rh", "spotify:track:1301WleyT98MSxVHPZCA6M"
+Remove-SpotifyPlaylistTracks -PlaylistId "3cEYpjA9oz9GiPac4AsH4n" -TrackId "4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"
 
 .EXAMPLE
 "3cEYpjA9oz9GiPac4AsH4n"
@@ -33,21 +33,21 @@ function Remove-SpotifyPlaylistTracks {
         [string] $PlaylistId,
 
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 1)]
-        [Alias("uri")]
+        [Alias("id")]
         [ValidateNotNullOrEmpty()]
-        [string[]] $TrackUri
+        [string[]] $TrackId
     )
     begin {
         $pipe = @()
     }
     process {
-        $pipe += $TrackUri
+        $pipe += $TrackId
     }
     end {
         $c = [pscustomobject]@{ i = 0 }
         $pipe   
         | Group-Object -Property { [System.Math]::Floor($c.i++ / 100) }
-        | ForEach-Object { [pscustomobject]@{ tracks = $_.Group | ForEach-Object { [pscustomobject]@{ uri = $_ } } } }
+        | ForEach-Object { [pscustomobject]@{ tracks = $_.Group | ForEach-Object { [pscustomobject]@{ uri = "spotify:track:$($_)" } } } }
         | ForEach-Object {
             Invoke-RestMethod `
                 -Uri "https://api.spotify.com/v1/playlists/$($PlaylistId)/tracks" `

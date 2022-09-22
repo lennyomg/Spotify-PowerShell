@@ -26,7 +26,7 @@ Connect-SpotifyApi
 
 Get-SpotifySavedAlbums
 | Get-SpotifyAlbumTracks
-| Select-Object -ExpandProperty uri -Unique
+| Select-Object -ExpandProperty id -Unique
 | Sort-Object { Get-Random }
 | Add-SpotifyPlaylistTracks "69kakdvmDUNRcDTMOnI91BF"
 ```
@@ -53,7 +53,7 @@ function Merge-SpotifyPlaylist {
     | Where-Object -Property explicit -EQ $false
     | Sort-Object { Get-Random }
     | Where-Object { $_.artists[0].name -NotIn @("The 1975", "The Offspring", ) }
-    | Select-Object -ExpandProperty uri -Unique
+    | Select-Object -ExpandProperty id -Unique
     | Add-SpotifyPlaylistTracks -PlaylistId $Target
 
     Update-SpotifyPlaylist `
