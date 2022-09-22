@@ -18,5 +18,9 @@ function Get-SpotifyQueue {
         -Authentication Bearer `
         -Token $global:SpotifyToken `
         -ContentType "application/json"
-        | Select-Object -ExpandProperty queue
+    | Select-Object -ExpandProperty queue
+    | ForEach-Object { 
+        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+    }
 }

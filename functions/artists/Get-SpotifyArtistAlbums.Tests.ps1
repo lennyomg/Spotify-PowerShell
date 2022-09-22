@@ -14,6 +14,7 @@ Describe "Get-SpotifyArtistAlbums" {
         $p | ForEach-Object {
             $_.type | Should -Be "album" 
             $_.id | Should -Not -BeNullOrEmpty
+            $_.PSObject.TypeNames | Should -Contain "spfy.album"
         }
     }
 }

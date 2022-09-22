@@ -12,7 +12,7 @@ The Spotify ID of the artist. Example value: "0TnOYISbd1XYRBk9myaseg".
 An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned. Example value: "ES".
 
 .EXAMPLE
-Get-SpotifyArtistTopTracks
+Get-SpotifyArtistTopTracks "0TnOYISbd1XYRBk9myaseg"
 
 .EXAMPLE
 Get-SpotifySavedArtists | Get-SpotifyArtistTopTracks
@@ -41,6 +41,11 @@ function Get-SpotifyArtistTopTracks {
             -Method Get `
             -Authentication Bearer `
             -Token $global:SpotifyToken `
-            -ContentType "application/json" | Select-Object -ExpandProperty tracks
+            -ContentType "application/json" 
+        | Select-Object -ExpandProperty tracks
+        | ForEach-Object { 
+            @() + $_ + $_.artists + $_.album + $_.album.artists 
+            | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 }

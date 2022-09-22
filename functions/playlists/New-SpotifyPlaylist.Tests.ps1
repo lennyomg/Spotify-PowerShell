@@ -6,7 +6,7 @@ BeforeAll {
 
 Describe "New-SpotifyPlaylist" {
 
-    It "Default" -Skip {
+    It "Default" {
         $p = New-SpotifyPlaylist -UserId $env:SpotifyUserId -Name "test101" -Description "text"
         $p.type | Should -Be "playlist"
         $p.id | Should -Not -BeNullOrEmpty
@@ -14,6 +14,7 @@ Describe "New-SpotifyPlaylist" {
         $p.collaborative | Should -Be $false
         $p.name | Should -Be "test101"
         $p.description | Should -Be "text"
+        $p.PSObject.TypeNames | Should -Contain "spfy.playlist"
     }
 
     It "Public" -Skip {

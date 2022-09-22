@@ -41,11 +41,11 @@ function Find-SpotifyItem {
         [ValidateNotNullOrEmpty()]
         [string] $Query,
 
-        [Parameter()]
+        [Parameter(Mandatory, Position = 1)]
         [ValidateSet("album", "artist", "playlist", "track", "show", "episode")]
         [ValidateNotNullOrEmpty()]
         [ValidateCount(1, 6)]
-        [string[]] $Type = @("album", "artist", "playlist", "track")
+        [string[]] $Type
     )
     $r = Invoke-RestMethod `
         -Uri "https://api.spotify.com/v1/search?q=$([System.Web.HTTPUtility]::UrlEncode($Query))&type=$($Type -join ',')&limit=50" `
@@ -56,18 +56,27 @@ function Find-SpotifyItem {
 
     if ($r.playlists.items) {
         $r.playlists.items
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 
     if ($r.albums.items) {
         $r.albums.items
+        | ForEach-Object { 
+            @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 
     if ($r.tracks.items) {
         $r.tracks.items
+        | ForEach-Object { 
+            @() + $_ + $_.artists + $_.album + $_.album.artists 
+            | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 
     if ($r.artists.items) {
         $r.artists.items
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 
     if ($r.shows.items) {

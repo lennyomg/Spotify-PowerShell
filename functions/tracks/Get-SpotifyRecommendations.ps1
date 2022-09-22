@@ -262,5 +262,9 @@ function Get-SpotifyRecommendations {
         -Authentication Bearer `
         -Token $global:SpotifyToken `
         -ContentType "application/json"
-        | Select-Object -ExpandProperty tracks
+    | Select-Object -ExpandProperty tracks
+    | ForEach-Object { 
+        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+    }
 }

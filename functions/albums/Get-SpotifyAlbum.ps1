@@ -32,5 +32,8 @@ function Get-SpotifyAlbum {
             -Authentication Bearer `
             -Token $global:SpotifyToken `
             -ContentType "application/json"
+        | ForEach-Object { 
+            @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 }

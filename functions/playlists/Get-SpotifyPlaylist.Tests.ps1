@@ -13,6 +13,7 @@ Describe "Get-SpotifyPlaylist" {
         $p = Get-SpotifyPlaylist -PlaylistId $value
         $p.id | Should -Be $value
         $p.type | Should -Be "playlist"
+        $p.PSObject.TypeNames | Should -Contain "spfy.playlist"
     }
 }
 

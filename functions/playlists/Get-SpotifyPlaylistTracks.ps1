@@ -39,5 +39,9 @@ function Get-SpotifyPlaylistTracks {
         } 
         | Select-Object -ExpandProperty items
         | Select-Object -ExpandProperty track -Property * -ExcludeProperty is_local, track
+        | ForEach-Object { 
+            @() + $_ + $_.artists + $_.album + $_.album.artists 
+            | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 }

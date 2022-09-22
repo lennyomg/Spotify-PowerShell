@@ -11,6 +11,7 @@ Describe "Get-SpotifySavedAlbums" {
             $_.added_at | Should -Not -BeNullOrEmpty
             $_.type | Should -Be "album" 
             $_.id | Should -Not -BeNullOrEmpty
+            $_.PSObject.TypeNames | Should -Contain "spfy.album"
         }
     }
 }

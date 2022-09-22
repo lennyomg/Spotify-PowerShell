@@ -85,6 +85,9 @@ function Get-SpotifyAlbum {
             -Authentication Bearer `
             -Token $global:SpotifyToken `
             -ContentType "application/json"
+        | ForEach-Object { 
+            @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 }
 
@@ -130,7 +133,12 @@ function Get-SpotifyAlbumTracks {
                     -ContentType "application/json" `
                     -ErrorVariable "e"; $r 
             } 
-        } | Select-Object -ExpandProperty items
+        } 
+        | Select-Object -ExpandProperty items
+        | ForEach-Object { 
+            @() + $_ + $_.artists 
+            | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 }
 
@@ -165,7 +173,11 @@ function Get-SpotifyNewReleases {
                 -ContentType "application/json" `
                 -ErrorVariable "e" | Select-Object -ExpandProperty albums; $r 
         } 
-    } | Select-Object -ExpandProperty items
+    } 
+    | Select-Object -ExpandProperty items
+    | ForEach-Object { 
+        @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+    }
 }
 
 <#
@@ -202,6 +214,9 @@ function Get-SpotifySavedAlbums {
     } 
     | Select-Object -ExpandProperty items
     | Select-Object -ExpandProperty album -Property * -ExcludeProperty album
+    | ForEach-Object { 
+        @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+    }
 }
 
 <#
@@ -330,6 +345,7 @@ function Get-SpotifyArtist {
             -Authentication Bearer `
             -Token $global:SpotifyToken `
             -ContentType "application/json"
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 }
 
@@ -375,7 +391,11 @@ function Get-SpotifyArtistAlbums {
                     -ContentType "application/json" `
                     -ErrorVariable "e"; $r 
             } 
-        } | Select-Object -ExpandProperty items
+        } 
+        | Select-Object -ExpandProperty items
+        | ForEach-Object { 
+            @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 }
 
@@ -412,7 +432,9 @@ function Get-SpotifyArtistRelatedArtists {
             -Method Get `
             -Authentication Bearer `
             -Token $global:SpotifyToken `
-            -ContentType "application/json" | Select-Object -ExpandProperty artists
+            -ContentType "application/json" 
+        | Select-Object -ExpandProperty artists
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 }
 
@@ -430,7 +452,7 @@ The Spotify ID of the artist. Example value: "0TnOYISbd1XYRBk9myaseg".
 An ISO 3166-1 alpha-2 country code. If a country code is specified, only content that is available in that market will be returned. Example value: "ES".
 
 .EXAMPLE
-Get-SpotifyArtistTopTracks
+Get-SpotifyArtistTopTracks "0TnOYISbd1XYRBk9myaseg"
 
 .EXAMPLE
 Get-SpotifySavedArtists | Get-SpotifyArtistTopTracks
@@ -459,7 +481,12 @@ function Get-SpotifyArtistTopTracks {
             -Method Get `
             -Authentication Bearer `
             -Token $global:SpotifyToken `
-            -ContentType "application/json" | Select-Object -ExpandProperty tracks
+            -ContentType "application/json" 
+        | Select-Object -ExpandProperty tracks
+        | ForEach-Object { 
+            @() + $_ + $_.artists + $_.album + $_.album.artists 
+            | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 }
 
@@ -497,7 +524,9 @@ function Get-SpotifySavedArtists {
                 -ContentType "application/json" `
                 -ErrorVariable "e" | Select-Object -ExpandProperty artists; $r 
         } 
-    } | Select-Object -ExpandProperty items
+    } 
+    | Select-Object -ExpandProperty items
+    | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
 }
 
 <#
@@ -837,7 +866,11 @@ function Get-SpotifyQueue {
         -Authentication Bearer `
         -Token $global:SpotifyToken `
         -ContentType "application/json"
-        | Select-Object -ExpandProperty queue
+    | Select-Object -ExpandProperty queue
+    | ForEach-Object { 
+        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+    }
 }
 
 <#
@@ -871,6 +904,10 @@ function Get-SpotifyRecentlyPlayed {
     } 
     | Select-Object -ExpandProperty items
     | Select-Object -ExpandProperty track -Property * -ExcludeProperty track
+    | ForEach-Object { 
+        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+    }
 }
 
 <#
@@ -1462,6 +1499,7 @@ function Get-SpotifyPlaylist {
             -Authentication Bearer `
             -Token $global:SpotifyToken `
             -ContentType "application/json"
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 }
 
@@ -1546,6 +1584,10 @@ function Get-SpotifyPlaylistTracks {
         } 
         | Select-Object -ExpandProperty items
         | Select-Object -ExpandProperty track -Property * -ExcludeProperty is_local, track
+        | ForEach-Object { 
+            @() + $_ + $_.artists + $_.album + $_.album.artists 
+            | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 }
 
@@ -1577,7 +1619,9 @@ function Get-SpotifySavedPlaylists {
                 -ContentType "application/json" `
                 -ErrorVariable "e"; $r 
         } 
-    } | Select-Object -ExpandProperty items
+    } 
+    | Select-Object -ExpandProperty items
+    | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
 }
 
 <#
@@ -1650,6 +1694,7 @@ function New-SpotifyPlaylist {
         -Token $global:SpotifyToken `
         -ContentType "application/json" `
         -Body ($body | ConvertTo-Json -Depth 99)
+    | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
 }
 
 <#
@@ -1879,11 +1924,11 @@ function Find-SpotifyItem {
         [ValidateNotNullOrEmpty()]
         [string] $Query,
 
-        [Parameter()]
+        [Parameter(Mandatory, Position = 1)]
         [ValidateSet("album", "artist", "playlist", "track", "show", "episode")]
         [ValidateNotNullOrEmpty()]
         [ValidateCount(1, 6)]
-        [string[]] $Type = @("album", "artist", "playlist", "track")
+        [string[]] $Type
     )
     $r = Invoke-RestMethod `
         -Uri "https://api.spotify.com/v1/search?q=$([System.Web.HTTPUtility]::UrlEncode($Query))&type=$($Type -join ',')&limit=50" `
@@ -1894,18 +1939,27 @@ function Find-SpotifyItem {
 
     if ($r.playlists.items) {
         $r.playlists.items
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 
     if ($r.albums.items) {
         $r.albums.items
+        | ForEach-Object { 
+            @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 
     if ($r.tracks.items) {
         $r.tracks.items
+        | ForEach-Object { 
+            @() + $_ + $_.artists + $_.album + $_.album.artists 
+            | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 
     if ($r.artists.items) {
         $r.artists.items
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 
     if ($r.shows.items) {
@@ -2223,7 +2277,11 @@ function Get-SpotifyRecommendations {
         -Authentication Bearer `
         -Token $global:SpotifyToken `
         -ContentType "application/json"
-        | Select-Object -ExpandProperty tracks
+    | Select-Object -ExpandProperty tracks
+    | ForEach-Object { 
+        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+    }
 }
 
 <#
@@ -2257,6 +2315,10 @@ function Get-SpotifySavedTracks {
     } 
     | Select-Object -ExpandProperty items
     | Select-Object -ExpandProperty track -Property * -ExcludeProperty track
+    | ForEach-Object { 
+        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+    }
 }
 
 <#
@@ -2293,6 +2355,10 @@ function Get-SpotifyTrack {
             -Authentication Bearer `
             -Token $global:SpotifyToken `
             -ContentType "application/json"
+        | ForEach-Object { 
+            @() + $_ + $_.artists + $_.album + $_.album.artists 
+            | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 }
 
@@ -2476,7 +2542,9 @@ function Get-SpotifyUserTopArtists {
                 -ContentType "application/json"; $r 
             break
         }
-    } | Select-Object -ExpandProperty items
+    } 
+    | Select-Object -ExpandProperty items
+    | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
 }
 
 <#
@@ -2518,5 +2586,10 @@ function Get-SpotifyUserTopTracks {
                 -ContentType "application/json"; $r 
             break
         }
-    } | Select-Object -ExpandProperty items
+    } 
+    | Select-Object -ExpandProperty items
+    | ForEach-Object { 
+        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+    }
 }

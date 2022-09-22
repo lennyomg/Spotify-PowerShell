@@ -31,6 +31,8 @@ function Get-SpotifyArtistRelatedArtists {
             -Method Get `
             -Authentication Bearer `
             -Token $global:SpotifyToken `
-            -ContentType "application/json" | Select-Object -ExpandProperty artists
+            -ContentType "application/json" 
+        | Select-Object -ExpandProperty artists
+        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 }

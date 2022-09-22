@@ -6,7 +6,7 @@ BeforeAll {
 
 Describe "Find-SpotifyItem" {
     It "Default 1" {
-        $p = Find-SpotifyItem "mark hoppus"
+        $p = Find-SpotifyItem "mark hoppus" -Type artist, album, track, playlist
         $p.Count | Should -BeGreaterThan 0
 
         ($p | Where-Object { $_.type -eq "track" }).Count | Should -BeGreaterThan 0
@@ -29,8 +29,8 @@ Describe "Find-SpotifyItem" {
 }
 
 Describe "Find-SpotifyItem Syntax" {
-    Test-Syntax { Find-SpotifyItem "q" }
-    Test-Syntax { Find-SpotifyItem -Query "q" }
+    Test-Syntax { Find-SpotifyItem "q" album }
+    Test-Syntax { Find-SpotifyItem "q" artist, album, playlist, show, episode }
     Test-Syntax { Find-SpotifyItem -Query "q" -Type album }
     Test-Syntax { Find-SpotifyItem -Query "q" -Type album, artist, album, playlist, show, episode }
     Test-Validation { Find-SpotifyItem -Query "" }

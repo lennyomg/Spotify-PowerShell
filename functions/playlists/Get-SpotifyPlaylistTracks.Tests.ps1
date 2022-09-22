@@ -17,6 +17,7 @@ Describe "Get-SpotifyPlaylistTracks" {
             $_.type | Should -Be "track"
             $_.id | Should -Not -BeNullOrEmpty
             $_.uri | Should -Not -BeNullOrEmpty
+            $_.PSObject.TypeNames | Should -Contain "spfy.track"
         }
     }
 }

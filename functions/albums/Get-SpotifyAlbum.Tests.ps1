@@ -12,6 +12,7 @@ Describe "Get-SpotifyAlbum" {
         $p = Get-SpotifyAlbum -AlbumId $value
         $p.id | Should -Be $value
         $p.type | Should -Be "album"
+        $p.PSObject.TypeNames | Should -Contain "spfy.album"
     }
 }
 

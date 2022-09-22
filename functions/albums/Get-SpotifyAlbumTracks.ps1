@@ -40,6 +40,11 @@ function Get-SpotifyAlbumTracks {
                     -ContentType "application/json" `
                     -ErrorVariable "e"; $r 
             } 
-        } | Select-Object -ExpandProperty items
+        } 
+        | Select-Object -ExpandProperty items
+        | ForEach-Object { 
+            @() + $_ + $_.artists 
+            | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        }
     }
 }

@@ -13,6 +13,7 @@ Describe "Get-SpotifyTrack" {
         $p.type | Should -Be "track"
         $p.id | Should -Be $value
         $p.uri | Should -Not -BeNullOrEmpty
+        $p.PSObject.TypeNames | Should -Contain "spfy.track"
     }
 }
 

@@ -32,4 +32,7 @@ function Get-SpotifySavedAlbums {
     } 
     | Select-Object -ExpandProperty items
     | Select-Object -ExpandProperty album -Property * -ExcludeProperty album
+    | ForEach-Object { 
+        @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+    }
 }

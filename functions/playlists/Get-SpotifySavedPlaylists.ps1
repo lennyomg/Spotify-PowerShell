@@ -26,5 +26,7 @@ function Get-SpotifySavedPlaylists {
                 -ContentType "application/json" `
                 -ErrorVariable "e"; $r 
         } 
-    } | Select-Object -ExpandProperty items
+    } 
+    | Select-Object -ExpandProperty items
+    | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
 }

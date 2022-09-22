@@ -13,6 +13,7 @@ Describe "Get-SpotifyArtist" {
         $p = Get-SpotifyArtist -ArtistId $value
         $p.id | Should -Be $value
         $p.type | Should -Be "artist"
+        $p.PSObject.TypeNames | Should -Contain "spfy.artist"
     }
 }
 

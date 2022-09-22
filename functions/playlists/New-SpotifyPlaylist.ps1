@@ -68,4 +68,5 @@ function New-SpotifyPlaylist {
         -Token $global:SpotifyToken `
         -ContentType "application/json" `
         -Body ($body | ConvertTo-Json -Depth 99)
+    | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
 }

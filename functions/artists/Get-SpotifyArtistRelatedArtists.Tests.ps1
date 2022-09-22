@@ -14,6 +14,7 @@ Describe "Get-SpotifyArtistRelatedArtists" {
         $p | ForEach-Object {
             $_.type | Should -Be "artist"
             $_.id | Should -Not -BeNullOrEmpty
+            $_.PSObject.TypeNames | Should -Contain "spfy.artist"
         }
     }
 }
