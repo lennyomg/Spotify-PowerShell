@@ -8,9 +8,9 @@ PowerShell commands for Spotify Web API. Automatically unfolds paginated results
 1. Register a [Spotify developer account](https://developer.spotify.com).
 2. [Add](https://developer.spotify.com/documentation/general/guides/authorization/app-settings/) a new application.
 3. Open application settings and add `https://lennyomg.github.io/Spotify-PowerShell/index.html` to the Redirect URIs list.
-4. Download `Spotify.psm1` and `Spotify.psd1`.
+4. Download all files from `module` directory.
 5. Run `Import-Module "<path>/Spotify.psm1"`.
-6. Run `Connect-SpotifyApi -Force` and follow instructions.
+6. Run `Connect-SpotifyApi` and follow instructions.
 
 ### Connect-SpotifyApi
 
