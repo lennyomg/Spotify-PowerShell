@@ -84,7 +84,7 @@ function Get-SpotifyAlbum {
             -Method Get `
             -Authentication Bearer `
             -Token $global:SpotifyToken `
-            -ContentType "application/json"
+            -ContentType "application/json" `
         | ForEach-Object { 
             @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
         }
@@ -133,10 +133,10 @@ function Get-SpotifyAlbumTracks {
                     -ContentType "application/json" `
                     -ErrorVariable "e"; $r 
             } 
-        } 
-        | Select-Object -ExpandProperty items
+        } `
+        | Select-Object -ExpandProperty items `
         | ForEach-Object { 
-            @() + $_ + $_.artists 
+            @() + $_ + $_.artists `
             | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
         }
     }
@@ -173,8 +173,8 @@ function Get-SpotifyNewReleases {
                 -ContentType "application/json" `
                 -ErrorVariable "e" | Select-Object -ExpandProperty albums; $r 
         } 
-    } 
-    | Select-Object -ExpandProperty items
+    } `
+    | Select-Object -ExpandProperty items `
     | ForEach-Object { 
         @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
     }
@@ -211,9 +211,9 @@ function Get-SpotifySavedAlbums {
                 -ContentType "application/json" `
                 -ErrorVariable "e"; $r 
         } 
-    } 
-    | Select-Object -ExpandProperty items
-    | Select-Object -ExpandProperty album -Property * -ExcludeProperty album
+    } `
+    | Select-Object -ExpandProperty items `
+    | Select-Object -ExpandProperty album -Property * -ExcludeProperty album `
     | ForEach-Object { 
         @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
     }
@@ -344,7 +344,7 @@ function Get-SpotifyArtist {
             -Method Get `
             -Authentication Bearer `
             -Token $global:SpotifyToken `
-            -ContentType "application/json"
+            -ContentType "application/json" `
         | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 }
@@ -391,8 +391,8 @@ function Get-SpotifyArtistAlbums {
                     -ContentType "application/json" `
                     -ErrorVariable "e"; $r 
             } 
-        } 
-        | Select-Object -ExpandProperty items
+        } `
+        | Select-Object -ExpandProperty items `
         | ForEach-Object { 
             @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
         }
@@ -432,8 +432,8 @@ function Get-SpotifyArtistRelatedArtists {
             -Method Get `
             -Authentication Bearer `
             -Token $global:SpotifyToken `
-            -ContentType "application/json" 
-        | Select-Object -ExpandProperty artists
+            -ContentType "application/json" `
+        | Select-Object -ExpandProperty artists `
         | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 }
@@ -481,10 +481,10 @@ function Get-SpotifyArtistTopTracks {
             -Method Get `
             -Authentication Bearer `
             -Token $global:SpotifyToken `
-            -ContentType "application/json" 
-        | Select-Object -ExpandProperty tracks
+            -ContentType "application/json" `
+        | Select-Object -ExpandProperty tracks `
         | ForEach-Object { 
-            @() + $_ + $_.artists + $_.album + $_.album.artists 
+            @() + $_ + $_.artists + $_.album + $_.album.artists `
             | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
         }
     }
@@ -524,8 +524,8 @@ function Get-SpotifySavedArtists {
                 -ContentType "application/json" `
                 -ErrorVariable "e" | Select-Object -ExpandProperty artists; $r 
         } 
-    } 
-    | Select-Object -ExpandProperty items
+    } `
+    | Select-Object -ExpandProperty items `
     | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
 }
 
@@ -771,7 +771,7 @@ function Add-SpotifyQueueItem {
     )
     process {
         $null = Invoke-RestMethod `
-            -Uri "https://api.spotify.com/v1/me/player/queue?uri=$($ItemUri)$($DeviceId ? "&device_id=$($DeviceId)" : $null)" `
+            -Uri "https://api.spotify.com/v1/me/player/queue?uri=$($ItemUri)$($DeviceId | Where-Object "&device_id=$($DeviceId)" : $null)" `
             -Method Post `
             -Authentication Bearer `
             -Token $global:SpotifyToken `
@@ -865,10 +865,10 @@ function Get-SpotifyQueue {
         -Method Get `
         -Authentication Bearer `
         -Token $global:SpotifyToken `
-        -ContentType "application/json"
-    | Select-Object -ExpandProperty queue
+        -ContentType "application/json" `
+    | Select-Object -ExpandProperty queue `
     | ForEach-Object { 
-        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        @() + $_ + $_.artists + $_.album + $_.album.artists `
         | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
     }
 }
@@ -901,11 +901,11 @@ function Get-SpotifyRecentlyPlayed {
                 -ContentType "application/json" `
                 -ErrorVariable "e"; $r 
         } 
-    } 
-    | Select-Object -ExpandProperty items
-    | Select-Object -ExpandProperty track -Property * -ExcludeProperty track
+    } `
+    | Select-Object -ExpandProperty items `
+    | Select-Object -ExpandProperty track -Property * -ExcludeProperty track `
     | ForEach-Object { 
-        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        @() + $_ + $_.artists + $_.album + $_.album.artists `
         | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
     }
 }
@@ -974,7 +974,7 @@ function Resume-SpotifyPlayback {
         [string] $DeviceId
     )
     $null = Invoke-RestMethod `
-        -Uri "https://api.spotify.com/v1/me/player/play$($DeviceId ? "?device_id=$($DeviceId)" : $null)" `
+        -Uri "https://api.spotify.com/v1/me/player/play$($DeviceId | Where-Object "?device_id=$($DeviceId)" : $null)" `
         -Method Put `
         -Authentication Bearer `
         -Token $global:SpotifyToken `
@@ -1019,7 +1019,7 @@ function Set-SpotifyPlaybackPosition {
         [string] $DeviceId
     )
     $null = Invoke-RestMethod `
-        -Uri "https://api.spotify.com/v1/me/player/seek?position_ms=$($Position)$($DeviceId ? "&device_id=$($DeviceId)" : $null)" `
+        -Uri "https://api.spotify.com/v1/me/player/seek?position_ms=$($Position)$($DeviceId  | Where-Object  "&device_id=$($DeviceId)" : $null)" `
         -Method Put `
         -Authentication Bearer `
         -Token $global:SpotifyToken `
@@ -1065,7 +1065,7 @@ function Set-SpotifyPlaybackRepeat {
         [string] $DeviceId
     )
     $null = Invoke-RestMethod `
-        -Uri "https://api.spotify.com/v1/me/player/repeat?state=$($State)$($DeviceId ? "&device_id=$($DeviceId)" : $null)" `
+        -Uri "https://api.spotify.com/v1/me/player/repeat?state=$($State)$($DeviceId  | Where-Object  "&device_id=$($DeviceId)" : $null)" `
         -Method Put `
         -Authentication Bearer `
         -Token $global:SpotifyToken `
@@ -1109,7 +1109,7 @@ function Set-SpotifyPlaybackShuffle {
         [string] $DeviceId
     )
     $null = Invoke-RestMethod `
-        -Uri "https://api.spotify.com/v1/me/player/shuffle?state=$($State)$($DeviceId ? "&device_id=$($DeviceId)" : $null)" `
+        -Uri "https://api.spotify.com/v1/me/player/shuffle?state=$($State)$($DeviceId  | Where-Object  "&device_id=$($DeviceId)" : $null)" `
         -Method Put `
         -Authentication Bearer `
         -Token $global:SpotifyToken `
@@ -1153,7 +1153,7 @@ function Set-SpotifyPlaybackVolume {
         [string] $DeviceId
     )
     $null = Invoke-RestMethod `
-        -Uri "https://api.spotify.com/v1/me/player/volume?volume_percent=$($VolumePercent)$($DeviceId ? "&device_id=$($DeviceId)" : $null)" `
+        -Uri "https://api.spotify.com/v1/me/player/volume?volume_percent=$($VolumePercent)$($DeviceId | Where-Object "&device_id=$($DeviceId)" : $null)" `
         -Method Put `
         -Authentication Bearer `
         -Token $global:SpotifyToken `
@@ -1190,7 +1190,7 @@ function Skip-SpotifyNext {
         [string] $DeviceId
     )
     $null = Invoke-RestMethod `
-        -Uri "https://api.spotify.com/v1/me/player/next$($DeviceId ? "?device_id=$($DeviceId)" : $null)" `
+        -Uri "https://api.spotify.com/v1/me/player/next$($DeviceId | Where-Object "?device_id=$($DeviceId)" : $null)" `
         -Method Post `
         -Authentication Bearer `
         -Token $global:SpotifyToken `
@@ -1227,7 +1227,7 @@ function Skip-SpotifyPrevious {
         [string] $DeviceId
     )
     $null = Invoke-RestMethod `
-        -Uri "https://api.spotify.com/v1/me/player/previous$($DeviceId ? "?device_id=$($DeviceId)" : $null)" `
+        -Uri "https://api.spotify.com/v1/me/player/previous$($DeviceId | Where-Object "?device_id=$($DeviceId)" : $null)" `
         -Method Post `
         -Authentication Bearer `
         -Token $global:SpotifyToken `
@@ -1306,13 +1306,13 @@ function Start-SpotifyPlayback {
         switch ($p) {
             "ContextUri" { $body.context_uri = $ContextUri }
             "TrackUri" { $body.uris = $TrackUri }
-            "Offset" { $body.offset = $Offset.Contains("spotify:track:") ? [pscustomobject]@{ uri = $Offset } : [pscustomobject]@{ position = $Offset } }
+            "Offset" { $body.offset = $Offset.Contains("spotify:track:") | Where-Object [pscustomobject]@{ uri = $Offset } : [pscustomobject]@{ position = $Offset } }
             "Position" { $body.position_ms = $Position }
         }
     }
 
     $null = Invoke-RestMethod `
-        -Uri "https://api.spotify.com/v1/me/player/play$($DeviceId ? "?device_id=$($DeviceId)" : $null)" `
+        -Uri "https://api.spotify.com/v1/me/player/play$($DeviceId | Where-Object "?device_id=$($DeviceId)" : $null)" `
         -Method Put `
         -Authentication Bearer `
         -Token $global:SpotifyToken `
@@ -1350,7 +1350,7 @@ function Suspend-SpotifyPlayback {
         [string] $DeviceId
     )
     $null = Invoke-RestMethod `
-        -Uri "https://api.spotify.com/v1/me/player/pause$($DeviceId ? "?device_id=$($DeviceId)" : $null)" `
+        -Uri "https://api.spotify.com/v1/me/player/pause$($DeviceId | Where-Object "?device_id=$($DeviceId)" : $null)" `
         -Method Put `
         -Authentication Bearer `
         -Token $global:SpotifyToken `
@@ -1449,9 +1449,9 @@ function Add-SpotifyPlaylistTracks {
     }
     end {
         $c = [pscustomobject]@{ i = 0 }
-        $pipe   
-        | Group-Object -Property { [System.Math]::Floor($c.i++ / 100) }
-        | ForEach-Object { [pscustomobject]@{ uris = $_.Group | ForEach-Object { "spotify:track:$($_)" } } }
+        $pipe `
+        | Group-Object -Property { [System.Math]::Floor($c.i++ / 100) } `
+        | ForEach-Object { [pscustomobject]@{ uris = $_.Group | ForEach-Object { "spotify:track:$($_)" } } } `
         | ForEach-Object {
             Invoke-RestMethod `
                 -Uri "https://api.spotify.com/v1/playlists/$($PlaylistId)/tracks" `
@@ -1460,7 +1460,7 @@ function Add-SpotifyPlaylistTracks {
                 -Token $global:SpotifyToken `
                 -ContentType "application/json" `
                 -Body ($_ | ConvertTo-Json -Depth 99)
-        } 
+        } `
         | Out-Null
     }
 }
@@ -1501,7 +1501,7 @@ function Get-SpotifyPlaylist {
             -Method Get `
             -Authentication Bearer `
             -Token $global:SpotifyToken `
-            -ContentType "application/json"
+            -ContentType "application/json" `
         | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 }
@@ -1584,11 +1584,11 @@ function Get-SpotifyPlaylistTracks {
                     -ContentType "application/json" `
                     -ErrorVariable "e"; $r 
             } 
-        } 
-        | Select-Object -ExpandProperty items
-        | Select-Object -ExpandProperty track -Property * -ExcludeProperty is_local, track
+        } `
+        | Select-Object -ExpandProperty items `
+        | Select-Object -ExpandProperty track -Property * -ExcludeProperty is_local, track `
         | ForEach-Object { 
-            @() + $_ + $_.artists + $_.album + $_.album.artists 
+            @() + $_ + $_.artists + $_.album + $_.album.artists `
             | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
         }
     }
@@ -1622,8 +1622,8 @@ function Get-SpotifySavedPlaylists {
                 -ContentType "application/json" `
                 -ErrorVariable "e"; $r 
         } 
-    } 
-    | Select-Object -ExpandProperty items
+    } `
+    | Select-Object -ExpandProperty items `
     | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
 }
 
@@ -1696,7 +1696,7 @@ function New-SpotifyPlaylist {
         -Authentication Bearer `
         -Token $global:SpotifyToken `
         -ContentType "application/json" `
-        -Body ($body | ConvertTo-Json -Depth 99)
+        -Body ($body | ConvertTo-Json -Depth 99) `
     | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
 }
 
@@ -1787,9 +1787,9 @@ function Remove-SpotifyPlaylistTracks {
     }
     end {
         $c = [pscustomobject]@{ i = 0 }
-        $pipe   
-        | Group-Object -Property { [System.Math]::Floor($c.i++ / 100) }
-        | ForEach-Object { [pscustomobject]@{ tracks = $_.Group | ForEach-Object { [pscustomobject]@{ uri = "spotify:track:$($_)" } } } }
+        $pipe `
+        | Group-Object -Property { [System.Math]::Floor($c.i++ / 100) } `
+        | ForEach-Object { [pscustomobject]@{ tracks = $_.Group | ForEach-Object { [pscustomobject]@{ uri = "spotify:track:$($_)" } } } } `
         | ForEach-Object {
             Invoke-RestMethod `
                 -Uri "https://api.spotify.com/v1/playlists/$($PlaylistId)/tracks" `
@@ -1798,7 +1798,7 @@ function Remove-SpotifyPlaylistTracks {
                 -Token $global:SpotifyToken `
                 -ContentType "application/json" `
                 -Body ($_ | ConvertTo-Json -Depth 99)
-        } 
+        } `
         | Out-Null
     }
 }
@@ -1941,27 +1941,27 @@ function Find-SpotifyItem {
         -ContentType "application/json"
 
     if ($r.playlists.items) {
-        $r.playlists.items
+        $r.playlists.items `
         | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 
     if ($r.albums.items) {
-        $r.albums.items
+        $r.albums.items `
         | ForEach-Object { 
             @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
         }
     }
 
     if ($r.tracks.items) {
-        $r.tracks.items
+        $r.tracks.items `
         | ForEach-Object { 
-            @() + $_ + $_.artists + $_.album + $_.album.artists 
+            @() + $_ + $_.artists + $_.album + $_.album.artists `
             | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
         }
     }
 
     if ($r.artists.items) {
-        $r.artists.items
+        $r.artists.items `
         | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
     }
 
@@ -2271,7 +2271,7 @@ function Get-SpotifyRecommendations {
     $c = Get-Command Get-SpotifyRecommendations
     foreach ($p in $PSBoundParameters.Keys) {
         $v = $PSBoundParameters[$p]
-        $e[$c.Parameters[$p].Aliases[0]] = $v.Count ? $v -join "," : $v
+        $e[$c.Parameters[$p].Aliases[0]] = $v.Count  | Where-Object  $v -join "," : $v
     }
     
     Invoke-RestMethod `
@@ -2279,10 +2279,10 @@ function Get-SpotifyRecommendations {
         -Method Get `
         -Authentication Bearer `
         -Token $global:SpotifyToken `
-        -ContentType "application/json"
-    | Select-Object -ExpandProperty tracks
+        -ContentType "application/json" `
+    | Select-Object -ExpandProperty tracks `
     | ForEach-Object { 
-        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        @() + $_ + $_.artists + $_.album + $_.album.artists `
         | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
     }
 }
@@ -2315,11 +2315,11 @@ function Get-SpotifySavedTracks {
                 -ContentType "application/json" `
                 -ErrorVariable "e"; $r 
         } 
-    } 
-    | Select-Object -ExpandProperty items
-    | Select-Object -ExpandProperty track -Property * -ExcludeProperty track
+    } `
+    | Select-Object -ExpandProperty items `
+    | Select-Object -ExpandProperty track -Property * -ExcludeProperty track `
     | ForEach-Object { 
-        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        @() + $_ + $_.artists + $_.album + $_.album.artists `
         | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
     }
 }
@@ -2357,9 +2357,9 @@ function Get-SpotifyTrack {
             -Method Get `
             -Authentication Bearer `
             -Token $global:SpotifyToken `
-            -ContentType "application/json"
+            -ContentType "application/json" `
         | ForEach-Object { 
-            @() + $_ + $_.artists + $_.album + $_.album.artists 
+            @() + $_ + $_.artists + $_.album + $_.album.artists `
             | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
         }
     }
@@ -2545,8 +2545,8 @@ function Get-SpotifyUserTopArtists {
                 -ContentType "application/json"; $r 
             break
         }
-    } 
-    | Select-Object -ExpandProperty items
+    } `
+    | Select-Object -ExpandProperty items `
     | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
 }
 
@@ -2589,10 +2589,10 @@ function Get-SpotifyUserTopTracks {
                 -ContentType "application/json"; $r 
             break
         }
-    } 
-    | Select-Object -ExpandProperty items
+    } `
+    | Select-Object -ExpandProperty items `
     | ForEach-Object { 
-        @() + $_ + $_.artists + $_.album + $_.album.artists 
+        @() + $_ + $_.artists + $_.album + $_.album.artists `
         | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
     }
 }
