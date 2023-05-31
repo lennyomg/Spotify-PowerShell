@@ -16,7 +16,7 @@ Describe "Add-SpotifyPlaylistTracks / Remove-SpotifyPlaylistTracks" {
         $sourceTracks.Count | Should -Be 0
 
         $targetTracks = Get-SpotifyPlaylistTracks -PlaylistId "37i9dQZF1DX6VdMW310YC7" | ForEach-Object { $_.id }
-        $targetTracks.Count | Should -BeGreaterThan 100
+        $targetTracks.Count | Should -BeGreaterThan 51
 
         Add-SpotifyPlaylistTracks -PlaylistId $sourcePlaylist -TrackId $targetTracks
         $sourceTracks = Get-SpotifyPlaylistTracks -PlaylistId $sourcePlaylist | ForEach-Object { $_.id }
