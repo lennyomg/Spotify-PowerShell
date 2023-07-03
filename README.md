@@ -13,7 +13,7 @@ Download all files from `module` directory. Copy the downloaded files to `$env:P
 3. Open application settings and add `https://lennyomg.github.io/Spotify-PowerShell/index.html` to the Redirect URIs list.
 4. Run `New-SpotifyAccessToken`.
 
-The command `New-SpotifyAccessToken` requests a new Spotify authorization token. Open the URL that the command prints to console and confirm authentication. 
+The command `New-SpotifyAccessToken` requests a new Spotify authorization token. Open the URL that the command prints to the console and confirm authentication. 
 
 ```
 New-SpotifyAccessToken -CliendId "spotify-app-id"
@@ -24,7 +24,7 @@ $url = New-SpotifyAccessToken -ClientId "spotify-app-id" -PassThru
 Start-Process $url
 ```
 
-After succesefull authentication you will be redirected to a page with a PowerShell command to complete authentication. 
+After successful authentication, you will be redirected to a page with a PowerShell command to complete authentication. 
 
 ```
 New-SpotifyAccessToken -AutorizationCode "code"
@@ -32,7 +32,7 @@ New-SpotifyAccessToken -AutorizationCode "code"
 
 ### Refresh authentication token
 
-Once in a while you must update the existing authentication token. Put `Update-SpotifyAccessToken` at the top of your script or call this command if you are getting the "401 token expired" error. 
+Once in a while, you must update the existing authentication token. Put `Update-SpotifyAccessToken` at the top of your script or call this command if you are getting the "401 token expired" error. 
 
 ### Examples
 
