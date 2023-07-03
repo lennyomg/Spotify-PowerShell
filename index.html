@@ -66,7 +66,7 @@
         }
 
         var code = findGetParameter("code");
-        document.getElementById("txtCode").value = "New-SpotifyAccessToken -AutorizationCode " + code;
+        document.getElementById("txtCode").value = "New-SpotifyAccessToken -AuthorizationCode " + code;
 
         document.getElementById("btnCopy").onclick = function () {
             document.getElementById("txtCode").select();
