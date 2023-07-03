@@ -14,7 +14,7 @@
         }
 
         .code {
-            min-height: 7em;
+            min-height: 15em;
             width: 600px;
         }
 
@@ -23,13 +23,15 @@
         }
     </style>
 
-    <title>PowerShell for Spotify</title>
+    <title>Spotify API for PowerShell</title>
 
 </head>
 
 <body>
     <div class="container">
-        <h2>PowerShell for Spotify</h2>
+        <h2>Spotify API for PowerShell</h2>
+
+        <div>Execute the following command to complete authentication.</div>
 
         <div class="row d-flex justify-content-center">
             <textarea id="txtCode" type="text" class="form-control code"></textarea>
@@ -63,7 +65,8 @@
             return result;
         }
 
-        document.getElementById("txtCode").value = findGetParameter("code");
+        var code = findGetParameter("code");
+        document.getElementById("txtCode").value = "New-SpotifyConnection -AutorizationCode " + code;
 
         document.getElementById("btnCopy").onclick = function () {
             document.getElementById("txtCode").select();
@@ -73,4 +76,3 @@
 </body>
 
 </html>
-

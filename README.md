@@ -1,29 +1,45 @@
-
 # PowerShell for Spotify
 
-PowerShell commands for Spotify Web API. Automatically unfolds paginated results and can add-remove more than 100 tracks in playlists. See [Wiki](https://github.com/lennyomg/Spotify-PowerShell/wiki) for the complete list of commands, documentation, and examples.
+PowerShell commands for Spotify Web API. Automatically unfolds paginated results and can add-remove more than 100 tracks in playlists. See [Wiki](https://github.com/lennyomg/Spotify-PowerShell/wiki) for the complete list of commands.
+
+### Installation
+
+Download all files from `module` directory. Copy the downloaded files to `$env:PSModulePath/Spotify` or import with `Import-Module <path>/Spotify.psd1`.
 
 ### First run
 
 1. Register a [Spotify developer account](https://developer.spotify.com).
 2. [Add](https://developer.spotify.com/documentation/general/guides/authorization/app-settings/) a new application.
 3. Open application settings and add `https://lennyomg.github.io/Spotify-PowerShell/index.html` to the Redirect URIs list.
-4. Download all files from `module` directory.
-5. Run `Import-Module "<path>/Spotify.psm1"`.
-6. Run `Connect-SpotifyApi` and follow instructions.
+4. Run `New-SpotifyAccessToken`.
 
-### Connect-SpotifyApi
+The command `New-SpotifyAccessToken` requests a new Spotify authorization token. Open the URL that the command prints to console and confirm authentication. 
 
-The command `Connect-SpotifyApi` refreshes the Spotify authorization token. Put this command at the top of your script. Call this command if you get "401 token expired" error. 
+```
+New-SpotifyAccessToken -CliendId "spotify-app-id"
+```
+or
+```
+$url = New-SpotifyAccessToken -ClientId "spotify-app-id" -PassThru
+Start-Process $url
+```
+
+After succesefull authentication you will be redirected to a page with a PowerShell command to complete authentication. 
+
+```
+New-SpotifyAccessToken -AutorizationCode "code"
+``` 
+
+### Refresh authentication token
+
+Once in a while you must update the existing authentication token. Put `Update-SpotifyAccessToken` at the top of your script or call this command if you are getting the "401 token expired" error. 
 
 ### Examples
 
 Collect all tracks from all saved albums, shuffle, and add to the playlist.
 
 ```
-Import-Module "./Spotify.psm1"
-Connect-SpotifyApi
-
+Update-SpotifyAccessToken
 Get-SpotifySavedAlbums
 | Get-SpotifyAlbumTracks
 | Select-Object -ExpandProperty id -Unique
@@ -34,9 +50,6 @@ Get-SpotifySavedAlbums
 Merge and shuffle multiple playlists into one, removing explicit tracks and certain artists.
 
 ```
-Import-Module "./Spotify.psm1"
-Connect-SpotifyApi
-
 function Merge-SpotifyPlaylist {
     param (
         $Target,
@@ -52,7 +65,7 @@ function Merge-SpotifyPlaylist {
     | Where-Object -Property is_local -EQ $false
     | Where-Object -Property explicit -EQ $false
     | Sort-Object { Get-Random }
-    | Where-Object { $_.artists[0].name -NotIn @("The 1975", "The Offspring", ) }
+    | Where-Object { $_.artists[0].name -NotIn @("The 1975", "The Offspring" ) }
     | Select-Object -ExpandProperty id -Unique
     | Add-SpotifyPlaylistTracks -PlaylistId $Target
 
@@ -61,17 +74,16 @@ function Merge-SpotifyPlaylist {
         -Description ("Mix of {0}." -f ($Source | Get-SpotifyPlaylist | Join-String -Property name -Separator ", "))
 }
 
+Update-SpotifyAccessToken
 Merge-SpotifyPlaylist ``
     -Target "3gf018H3XNln174XMdKiSa" ``
     -Source "7yml7RjHjsJ5XBLxAeRZZy", "37i9dQZF1DX82GYcclJ3Ug", "37i9dQZF1DXcF6B6QPhFDv"
 ```
 
-Make a custom request using the existing authorization token.
+Make a custom request using the existing authentication token.
 
 ```
-Import-Module "./Spotify.psm1"
-Connect-SpotifyApi
-
+Update-SpotifyAccessToken
 Invoke-RestMethod `
     -Uri "https://api.spotify.com/v1/me" `
     -Method Get `

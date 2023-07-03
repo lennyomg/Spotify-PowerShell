@@ -1,5 +1,5 @@
 #
-# Run unit tests and helper functions. Run 
+# Helper functions for unit tests
 #
 
 <#
@@ -175,6 +175,15 @@ function Update-CommandOutput {
 
 <#
 .SYNOPSIS
+Updates spotify test access token.
+#>
+function Update-SpotifyTestAccessToken {
+    . $PSScriptRoot/functions/Update-SpotifyAccessToken.ps1
+    Update-SpotifyAccessToken
+}
+
+<#
+.SYNOPSIS
 Runs tests.
 #>
 function Invoke-SpotifyTests {
@@ -183,7 +192,4 @@ function Invoke-SpotifyTests {
         throw "Tests failed."
     }
 }
-
-. $PSScriptRoot/functions/Connect-SpotifyApi.ps1
-Connect-SpotifyApi
 
