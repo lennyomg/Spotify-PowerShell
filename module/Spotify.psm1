@@ -53,22 +53,28 @@ function Add-SpotifyAlbum {
 
 <#
 .SYNOPSIS
-Get album.
+Get one or several albums.
 
 .DESCRIPTION 
-Get Spotify catalog information for a single album.
+Get Spotify catalog information for multiple albums identified by their Spotify IDs.
 
 .PARAMETER AlbumId
-The Spotify ID of the album. Example value: "4aawyAB9vmqN3uQ7FjRGTy".
+A list of the Spotify IDs for the albums. Can be more than 20.
 
 .EXAMPLE
 Get-SpotifyAlbum -AlbumId "4aawyAB9vmqN3uQ7FjRGTy"
+
+.EXAMPLE
+Get-SpotifyAlbum 382ObEPsp2rxGrnsizN5TX, 4aawyAB9vmqN3uQ7FjRGTy
+
+.EXAMPLE
+"382ObEPsp2rxGrnsizN5TX", "4aawyAB9vmqN3uQ7FjRGTy" | Get-SpotifyAlbum
 
 .FUNCTIONALITY
 Album
 
 .LINK
-https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-album
+https://developer.spotify.com/documentation/web-api/reference/get-multiple-albums
 #>
 function Get-SpotifyAlbum {
     [CmdletBinding()]
@@ -76,17 +82,34 @@ function Get-SpotifyAlbum {
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")]
         [ValidateNotNullOrEmpty()]
-        [string] $AlbumId
+        [string[]] $AlbumId
     )
+    begin {
+        $pipe = @()
+
+        function Invoke {
+            Invoke-RestMethod `
+                -Uri "https://api.spotify.com/v1/albums?ids=$($pipe -join ',')" `
+                -Method Get `
+                -Authentication Bearer `
+                -Token $global:SpotifyToken `
+                -ContentType "application/json"
+            | Select-Object -ExpandProperty albums
+            | ForEach-Object { 
+                @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+            }
+        }
+    }
     process {
-        Invoke-RestMethod `
-            -Uri "https://api.spotify.com/v1/albums/$($AlbumId)" `
-            -Method Get `
-            -Authentication Bearer `
-            -Token $global:SpotifyToken `
-            -ContentType "application/json"
-        | ForEach-Object { 
-            @() + $_ + $_.artists | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        $pipe += $AlbumId
+        if ($pipe.Length -ge 20) {
+            Invoke
+            $pipe = @()
+        }
+    }
+    end {
+        if ($pipe) {
+            Invoke
         }
     }
 }
@@ -310,16 +333,19 @@ function Add-SpotifyArtist {
 
 <#
 .SYNOPSIS
-Get artist.
+Get one or several artists.
 
 .DESCRIPTION 
-Get Spotify catalog information for a single artist identified by their unique Spotify ID.
+Get Spotify catalog information for several artists based on their Spotify IDs.
 
 .PARAMETER ArtistId
-The Spotify ID of the artist. Example value: "0TnOYISbd1XYRBk9myaseg".
+A list of the Spotify IDs for the artists. Can be more than 50.
 
 .EXAMPLE
-Get-SpotifyArtist "0TnOYISbd1XYRBk9myaseg"
+Get-SpotifyArtist -ArtistId "0TnOYISbd1XYRBk9myaseg"
+
+.EXAMPLE
+Get-SpotifyArtist 2CIMQHirSU0MQqyYHq0eOx, 57dN52uHvrHOxijzpIgu3E, 1vCWHaC5f2uS3yhpwWbIA6
 
 .EXAMPLE
 "2CIMQHirSU0MQqyYHq0eOx", "57dN52uHvrHOxijzpIgu3E", "1vCWHaC5f2uS3yhpwWbIA6" | Get-SpotifyArtist
@@ -328,7 +354,7 @@ Get-SpotifyArtist "0TnOYISbd1XYRBk9myaseg"
 Artist
 
 .LINK
-https://developer.spotify.com/documentation/web-api/reference/#/operations/get-an-artist
+https://developer.spotify.com/documentation/web-api/reference/get-multiple-artists
 #>
 function Get-SpotifyArtist {
     [CmdletBinding()]
@@ -336,16 +362,33 @@ function Get-SpotifyArtist {
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")] 
         [ValidateNotNullOrEmpty()]
-        [string] $ArtistId
+        [string[]] $ArtistId
     )
+    begin {
+        $pipe = @()
+
+        function Invoke {
+            Invoke-RestMethod `
+                -Uri "https://api.spotify.com/v1/artists?ids=$($pipe -join ',')" `
+                -Method Get `
+                -Authentication Bearer `
+                -Token $global:SpotifyToken `
+                -ContentType "application/json"
+            | Select-Object -ExpandProperty artists
+            | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
+        }
+    }
     process {
-        Invoke-RestMethod `
-            -Uri "https://api.spotify.com/v1/artists/$($ArtistId)" `
-            -Method Get `
-            -Authentication Bearer `
-            -Token $global:SpotifyToken `
-            -ContentType "application/json"
-        | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)"); $_ }
+        $pipe += $ArtistId
+        if ($pipe.Length -ge 50) {
+            Invoke
+            $pipe = @()
+        }
+    }
+    end {
+        if ($pipe) {
+            Invoke
+        }
     }
 }
 
@@ -2334,22 +2377,28 @@ function Get-SpotifySavedTracks {
 
 <#
 .SYNOPSIS
-Get track.
+Get one or several tracks.
 
 .DESCRIPTION 
-Get Spotify catalog information for a single track identified by its unique Spotify ID.
+Get Spotify catalog information for multiple tracks based on their Spotify IDs. 
 
 .PARAMETER TrackId
-The Spotify ID for the track. Example value: "11dFghVXANMlKmJXsNCbNl".
+A list of the Spotify IDs. Can be more than 50. Example value: "11dFghVXANMlKmJXsNCbNl".
 
 .EXAMPLE
 Get-SpotifyTrack -TrackId "11dFghVXANMlKmJXsNCbNl"
+
+.EXAMPLE
+Get-SpotifyTrack 11dFghVXANMlKmJXsNCbNl, 3WM935x8fQpvSskUP1LHPB
+
+.EXAMPLE
+"11dFghVXANMlKmJXsNCbNl", "3WM935x8fQpvSskUP1LHPB" | Get-SpotifyTrack
 
 .FUNCTIONALITY
 Track
 
 .LINK
-https://developer.spotify.com/documentation/web-api/reference/#/operations/get-track
+https://developer.spotify.com/documentation/web-api/reference/get-several-tracks
 #>
 function Get-SpotifyTrack {
     [CmdletBinding()]
@@ -2357,18 +2406,34 @@ function Get-SpotifyTrack {
         [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName, Position = 0)]
         [Alias("id")]
         [ValidateNotNullOrEmpty()]
-        [string] $TrackId
+        [string[]] $TrackId
     )
+    begin {
+        $pipe = @()
+
+        function Invoke {
+            Invoke-RestMethod `
+                -Uri "https://api.spotify.com/v1/tracks?ids=$($pipe -join ',')" `
+                -Method Get `
+                -Authentication Bearer `
+                -Token $global:SpotifyToken `
+                -ContentType "application/json"
+            | Select-Object -ExpandProperty tracks
+            | ForEach-Object { 
+                @() + $_ + $_.artists + $_.album + $_.album.artists 
+                | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_ }
+        }
+    }
     process {
-        Invoke-RestMethod `
-            -Uri "https://api.spotify.com/v1/tracks/$($TrackId)" `
-            -Method Get `
-            -Authentication Bearer `
-            -Token $global:SpotifyToken `
-            -ContentType "application/json"
-        | ForEach-Object { 
-            @() + $_ + $_.artists + $_.album + $_.album.artists 
-            | ForEach-Object { $_.PSObject.TypeNames.Add("spfy.$($_.type)") }; $_
+        $pipe += $TrackId
+        if ($pipe.Length -ge 50) {
+            Invoke
+            $pipe = @()
+        }
+    }
+    end {
+        if ($pipe) {
+            Invoke
         }
     }
 }
