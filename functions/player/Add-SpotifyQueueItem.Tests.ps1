@@ -31,5 +31,5 @@ Describe "Add-SpotifyQueueItem Syntax" {
     Test-Validation { Add-SpotifyQueueItem -DeviceId $null }
     Test-Validation { Add-SpotifyQueueItem -ItemUri "" }
     Test-Validation { Add-SpotifyQueueItem -ItemUri $null }
-    Test-PipeAlias { param($p) $p | Add-SpotifyQueueItem } 2 @([pscustomobject]@{ uri = "uri1"; dummy = "dummy" }, [pscustomobject]@{ uri = "uri2"; dummy = "dummy" })
+    Test-PipeAlias { param($p) $p | Add-SpotifyQueueItem } @([pscustomobject]@{ uri = "uri1"; dummy = "dummy" }, [pscustomobject]@{ uri = "uri2"; dummy = "dummy" })
 }

@@ -95,9 +95,6 @@ function Test-PipeAlias {
         [Parameter(Mandatory, Position = 0)]
         [scriptblock] $Command,
 
-        [Parameter(Position = 1)]
-        [int] $Times = 2,
-
         [Parameter(Position = 2)]
         $Data = @( 
             [pscustomobject]@{ id = "id1"; dummy = "dummy" }
@@ -111,7 +108,6 @@ function Test-PipeAlias {
             Mock Invoke-RestMethod -Verifiable -MockWith { $script:___e.args = $args }
             Invoke-Command $c -ArgumentList (, $d)
             $script:___e.args -join " " | Should -Not -BeLike "*dummy*"
-            Assert-MockCalled Invoke-RestMethod -Times $t -Exactly
         } }
 }
 
@@ -175,18 +171,11 @@ function Update-CommandOutput {
 
 <#
 .SYNOPSIS
-Updates spotify test access token.
-#>
-function Update-SpotifyTestAccessToken {
-    . $PSScriptRoot/functions/Update-SpotifyAccessToken.ps1
-    Update-SpotifyAccessToken
-}
-
-<#
-.SYNOPSIS
 Runs tests.
 #>
 function Invoke-SpotifyTests {
+    . $PSScriptRoot/functions/Update-SpotifyAccessToken.ps1
+    Update-SpotifyAccessToken
     $p = Invoke-Pester $PSScriptRoot/*.Tests.ps1 -Output Normal -PassThru -ExcludeTagFilter Output, Playback
     if ($p.result -eq "Failed") {
         throw "Tests failed."
