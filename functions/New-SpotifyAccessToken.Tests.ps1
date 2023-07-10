@@ -8,7 +8,8 @@ Describe "New-SpotifyAccessToken" {
 
     BeforeEach {
         $global:SpotifyToken = $null
-        
+        $global:SpotifyTokenPath = $null
+
         $script:TestContext = @{
             State = [pscustomobject]@{
                 ClientId = "test_id"
@@ -55,6 +56,13 @@ Describe "New-SpotifyAccessToken" {
         $r | Should -Not -BeNullOrEmpty
     }
 
+    It "ClientId Global State Path" {
+        $global:SpotifyTokenPath = "TestDrive:\state_custom.json"
+        New-SpotifyAccessToken -ClientId "test_id"
+        Test-Path "TestDrive:\state_custom.json" | Should -Be $true
+        Test-Path "TestDrive:\state.json" | Should -Be $false
+    }
+
     It "Code" {
         $global:SpotifyToken = $null
 
@@ -73,10 +81,19 @@ Describe "New-SpotifyAccessToken" {
         Assert-MockCalled Invoke-RestMethod -Times 1 -Exactly
     }
     
-    It "Code PassThru" -Skip {
+    It "Code PassThru" {
         $global:SpotifyToken = $null
         New-SpotifyAccessToken -ClientId "test_id" -StatePath "TestDrive:\state.json"
-        $r = New-SpotifyAccessToken -AuthorizationCode "code" -StatePath "TestDrive:\state.json"
+        $r = New-SpotifyAccessToken -AuthorizationCode "code" -StatePath "TestDrive:\state.json" -PassThru
         $r | Should -Not -BeNullOrEmpty
+    }
+
+    It "Code PassThru" {
+        $global:SpotifyToken = $null
+        $global:SpotifyTokenPath = "TestDrive:\state_custom.json"
+        New-SpotifyAccessToken -ClientId "test_id"
+        New-SpotifyAccessToken -AuthorizationCode "code" 
+        Test-Path "TestDrive:\state_custom.json" | Should -Be $true
+        Test-Path "TestDrive:\state.json" | Should -Be $false
     }
 }

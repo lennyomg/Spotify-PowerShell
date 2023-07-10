@@ -69,7 +69,7 @@ function New-SpotifyAccessToken {
 
         [switch] $PassThru,
 
-        [string] $StatePath = "$HOME/.spotify-pwsh-state"
+        [string] $StatePath = $global:SpotifyTokenPath ?? "$HOME/.spotify-pwsh-state"
     )
 
     if (!$AuthorizationCode) {

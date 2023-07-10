@@ -736,7 +736,7 @@ function New-SpotifyAccessToken {
 
         [switch] $PassThru,
 
-        [string] $StatePath = "$HOME/.spotify-pwsh-state"
+        [string] $StatePath = $global:SpotifyTokenPath ?? "$HOME/.spotify-pwsh-state"
     )
 
     if (!$AuthorizationCode) {
@@ -2564,7 +2564,7 @@ Call this command if you get the "401 token expired" error.
 Put this command at the top of your script.
 
 .PARAMETER StatePath
-Path to a file to store client information and authorization token.
+Path to a file to store client information and authorization token. 
 
 .EXAMPLE
 Update-SpotifyAccessToken
@@ -2580,7 +2580,7 @@ function Update-SpotifyAccessToken {
     [CmdletBinding(PositionalBinding = $false)]
     param(
         [switch] $PassThru,    
-        [string] $StatePath = "$HOME/.spotify-pwsh-state"
+        [string] $StatePath = $global:SpotifyTokenPath ?? "$HOME/.spotify-pwsh-state"
     )
     try {
         $state = Get-Content $StatePath | ConvertFrom-Json -Depth 99

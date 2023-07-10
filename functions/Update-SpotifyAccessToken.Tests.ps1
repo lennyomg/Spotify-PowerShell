@@ -8,7 +8,8 @@ Describe "Update-SpotifyAccessToken" {
 
     BeforeEach {
         $global:SpotifyToken = $null
-        
+        $global:SpotifyTokenPath = $null
+
         $script:TestContext = @{
             State = [pscustomobject]@{
                 ClientId = "test_id"
@@ -48,5 +49,13 @@ Describe "Update-SpotifyAccessToken" {
         $script:TestContext.State | ConvertTo-Json | Out-File "TestDrive:\state.json"
         $r = Update-SpotifyAccessToken -StatePath "TestDrive:\state.json" -PassThru
         $r | Should -Not -BeNullOrEmpty
+    }
+
+    It "Global StatePath" {
+        $script:TestContext.State | ConvertTo-Json | Out-File "TestDrive:\state_custom.json"
+        $global:SpotifyTokenPath = "TestDrive:\state_custom.json"
+        $r = Update-SpotifyAccessToken -PassThru
+        $r | Should -Not -BeNullOrEmpty
+        $r.access_token | Should -be "new_test_access_token"
     }
 }
