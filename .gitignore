@@ -1,2 +1,4 @@
 pi.txt
 .DS_Store
+out/*
+package/*
