@@ -1,10 +1,10 @@
 # PowerShell for Spotify
 
-PowerShell commands for Spotify Web API. Automatically unfolds paginated results and can add-remove more than 100 tracks in playlists. See [Wiki](https://github.com/lennyomg/Spotify-PowerShell/wiki) for the complete list of commands.
+PowerShell commands for Spotify Web API. Automatically unfolds paginated results, can add-remove more than 100 tracks in playlists, and does not require a local HTTP service for authentication. See [Wiki](https://github.com/lennyomg/Spotify-PowerShell/wiki) for the complete list of commands.
 
 ### Installation
 
-Download all files from `module` directory. Copy the downloaded files to `$env:PSModulePath/Spotify` or import with `Import-Module <path>/Spotify.psd1`.
+Download `Spotify-Powershell.zip` from the [latest release](https://github.com/lennyomg/Spotify-PowerShell/releases/latest) page and unpack it into one of [$env:PSModulePath](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.3) folders.
 
 ### First run
 
@@ -24,15 +24,15 @@ $url = New-SpotifyAccessToken -ClientId "spotify-app-id" -PassThru
 Start-Process $url
 ```
 
-After successful authentication, you will be redirected to a page with a PowerShell command to complete authentication. 
+After successful authentication on the Spotify web-site, you will be redirected to a page with a PowerShell command to complete authentication in PowerShell.  
 
 ```
 New-SpotifyAccessToken -AutorizationCode "code"
 ``` 
 
-### Refresh authentication token
+### Refresh authorization token
 
-Once in a while, you must update the existing authentication token. Put `Update-SpotifyAccessToken` at the top of your script or call this command if you are getting the "401 token expired" error. 
+Once in a while you must update the existing authorization token. Put `Update-SpotifyAccessToken` at the top of your script or call this command everytime you get the "401 token expired" error. 
 
 ### Examples
 
@@ -102,7 +102,7 @@ Invoke-SpotifyTests
 
 ### Build
 
-`Build.ps1` compiles all commands into one PSM1 file, and updates module metadata.
+`Build.ps1` compiles all commands into one PSM1 file, and updates module metadata. The associated wiki repository contains a script to update wiki pages based on built-in comments and module metadata.
 
 ### Docs
 
