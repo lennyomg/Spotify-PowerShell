@@ -12,7 +12,7 @@
 RootModule = './Spotify.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.0.66'
+ModuleVersion = '1.0.67'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()

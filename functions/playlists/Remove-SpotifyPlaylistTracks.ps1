@@ -47,7 +47,7 @@ function Remove-SpotifyPlaylistTracks {
         $c = [pscustomobject]@{ i = 0 }
         $pipe   
         | Group-Object -Property { [System.Math]::Floor($c.i++ / 100) }
-        | ForEach-Object { [pscustomobject]@{ tracks = $_.Group | ForEach-Object { [pscustomobject]@{ uri = "spotify:track:$($_)" } } } }
+        | ForEach-Object { [pscustomobject]@{ tracks = [array]($_.Group | ForEach-Object { [pscustomobject]@{ uri = "spotify:track:$($_)" } }) } }
         | ForEach-Object {
             Invoke-RestMethod `
                 -Uri "https://api.spotify.com/v1/playlists/$($PlaylistId)/tracks" `

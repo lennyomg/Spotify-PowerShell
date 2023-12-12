@@ -52,7 +52,7 @@ function Add-SpotifyPlaylistTracks {
         $c = [pscustomobject]@{ i = 0 }
         $pipe   
         | Group-Object -Property { [System.Math]::Floor($c.i++ / 100) }
-        | ForEach-Object { [pscustomobject]@{ uris = $_.Group | ForEach-Object { "spotify:track:$($_)" } } }
+        | ForEach-Object { [pscustomobject]@{ uris = [array]($_.Group | ForEach-Object { "spotify:track:$($_)" }) } }
         | ForEach-Object {
             Invoke-RestMethod `
                 -Uri "https://api.spotify.com/v1/playlists/$($PlaylistId)/tracks" `

@@ -28,6 +28,23 @@ Describe "Add-SpotifyPlaylistTracks / Remove-SpotifyPlaylistTracks" {
     }
 }
 
+Describe "Add-SpotifyPlaylistTracks / Remove-SpotifyPlaylistTracks Single"{
+    It "Default" {
+        $sourcePlaylist = (Get-SpotifySavedPlaylists | Where-Object { $_.name -eq "ps-test" }).id
+        $sourcePlaylist | Should -Not -BeNullOrEmpty
+
+        $track = "4iV5W9uYEdYUVa79Axb7Rh"
+
+        Add-SpotifyPlaylistTracks -PlaylistId $sourcePlaylist -TrackId $track
+        $resultTracks = Get-SpotifyPlaylistTracks -PlaylistId $sourcePlaylist | ForEach-Object { $_.id }
+        $resultTracks | Should -Contain $track
+
+        Remove-SpotifyPlaylistTracks -PlaylistId $sourcePlaylist -TrackId $track
+        $resultTracks = Get-SpotifyPlaylistTracks -PlaylistId $sourcePlaylist | ForEach-Object { $_.id }
+        $resultTracks | Should -Not -Contain $track
+    }
+}
+
 Describe "Add-SpotifyPlaylistTracks" {
     It "Grouping" {
         $script:__e = @{ body = [System.Collections.ArrayList]@() }
